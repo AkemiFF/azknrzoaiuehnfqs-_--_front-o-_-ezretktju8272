@@ -68,51 +68,6 @@ export default function ResponsableLayout(props) {
             setLink(links);
         }
 
-        if (router.asPath.includes("/responsable/handcraft")) {
-            let links = [
-                {
-                    icon: "pi pi-home",
-                    iconFill: "pi pi-warehouse",
-                    label: "Dashboard",
-                    link: "/responsable/handcraft/dashboard"
-                },
-                {
-                    icon: "pi pi-shopping-bag",
-                    iconFill: "pi pi-shopping-bag",
-                    label: "Order",
-                    link: "/responsable/handcraft/order"
-                },
-                {
-                    icon: "pi pi-shop",
-                    iconFill: "pi pi-shop",
-                    label: "Product",
-                    link: "/responsable/handcraft/product"
-                },
-                {
-                    icon: "pi pi-users",
-                    iconFill: "pi pi-user-edit",
-                    label: "Customers",
-                    link: "/responsable/handcraft/customer"
-                },
-                {
-                    icon: "pi pi-cog",
-                    iconFill: "pi pi-circle-on",
-                    label: "Setting",
-                    link: "/responsable/handcraft/setting"
-                },
-                {
-                    icon: "pi pi-sign-out",
-                    iconFill: "pi pi-sign-out",
-                    label: "Log out",
-                    command: () => {
-                        logOut();
-                        closeSidebar();
-                    }
-                },
-            ]
-            setLink(links);
-        }
-
         if (router.asPath.includes("/responsable/tour")) {
             let links = [
                 {

@@ -73,9 +73,6 @@ export default function AppTopbar(props) {
                         <Link style={{ textDecoration: "none" }} href={"/users/accommodation"}>
                             <span className={style.navbar_menu_item}>{t("accommodation")}</span>
                         </Link>
-                        <Link style={{ textDecoration: "none" }} href={"/users/handcraft"}>
-                            <span className={style.navbar_menu_item}>{t("handcraft")}</span>
-                        </Link>
                         <Link style={{ textDecoration: "none" }} href={"/users/tour"}>
                             <span className={style.navbar_menu_item}>{t("tour")}</span>
                         </Link>
@@ -131,9 +128,6 @@ export default function AppTopbar(props) {
                     </Link>
                     <Link className={style.sidebar_link} href={"/users/accommodation"}>
                         <span className={style.navbar_menu_item}>{t("accommodation")}</span>
-                    </Link>
-                    <Link className={style.sidebar_link} href={"/users/handcraft"}>
-                        <span className={style.navbar_menu_item}>{t("handcraft")}</span>
                     </Link>
                     <Link className={style.sidebar_link} href={"/users/tour"}>
                         <span className={style.navbar_menu_item}>{t("tour")}</span>
