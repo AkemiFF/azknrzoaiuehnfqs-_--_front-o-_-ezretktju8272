@@ -1,0 +1,24 @@
+.privacy_header {
+    margin : 11rem 14rem 0rem 14rem;
+}
+
+@media (max-width : 1000px) {
+    .privacy_header {
+        margin : 11rem 8rem 0rem 8rem;
+    }
+}
+
+@media (max-width : 600px) {
+    .privacy_header {
+        margin : 11rem 5rem 0rem 5rem;
+        font-size : 0.85em;
+    }
+}
+
+@media (max-width : 380px) {
+    .privacy_header {
+        margin : 11rem 2rem 0rem 2rem;
+        font-size : 0.8em;
+    }
+}
+

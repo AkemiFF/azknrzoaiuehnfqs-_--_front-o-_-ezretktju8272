@@ -1,0 +1,141 @@
+.container{
+    margin: 40px 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+
+.filter_header_top{
+    margin: 0 -10vw;
+    width: 100vw;
+    position: relative;
+    background-color: #305555;
+    height: 240px;
+    margin-bottom: 40px;
+}
+
+.filter_header_top_title_container{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #305555;
+    gap: 15px;
+    padding: 40px 10vw 70px 10vw;
+}
+
+.filter_parent{
+    width: 100%;
+    position: absolute;
+    padding: 0 10vw;
+}
+
+.filter_header_top_title{
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    letter-spacing: -2px;
+}
+
+.filter_header_top_subtitle{
+    font-weight: 600;
+}
+
+
+
+.filter_header_container{
+    display: flex;
+}
+
+.filter_header_left{
+    font-size: 16px;
+}
+.filter_header_left_bold{
+    font-family: 'Montserrat Bold';
+}
+
+.filter_container{
+    display: flex;
+    gap: 20px;
+}
+
+.filter_left{
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filter_right{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    height: 100%;
+}
+
+.list_produit{
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 20px;
+    display: flex;
+
+}
+@media screen and (max-width:1400px) {
+    .filter_header_left{
+        margin-top: 70px;
+    }
+}
+
+@media screen and (max-width:1000px) {
+    .filter_header_left{
+        margin-top: 70px;
+    }
+}
+@media (max-width:768px) {
+    .filter_container{
+        display: flex;
+        align-items:center ;
+        flex-direction: column;
+    }
+    .filter_left{
+        width: 100%;
+        overflow-x: auto;
+        height:17rem ;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .filter_header_left{
+        margin-top: 180px;
+    }
+}
+
+@media (max-width:460px) {
+    .container{
+        margin:0;
+        padding: 5%;
+    }
+    .filter_container{
+        display: flex;
+        align-items:center ;
+        flex-direction: column;
+    }
+    .filter_left{
+        margin-top: 150px;
+        width: 100%;
+        overflow-x: auto;
+        height:17rem ;
+        display: flex;
+        align-items: center;
+    }
+    .filter_header_left{
+        margin-top: 120px;
+    }
+    .list_produit{
+        width: 90%;
+        display: flex;
+        grid-template-columns: 1fr 1fr; /* Affiche les images en une seule colonne */
+        grid-template-rows: auto; 
+    }
+}

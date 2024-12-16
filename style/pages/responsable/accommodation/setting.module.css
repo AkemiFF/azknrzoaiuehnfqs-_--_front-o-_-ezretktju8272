@@ -1,0 +1,47 @@
+.container{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    gap: 40px;
+}
+
+.left_container{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    width: 200px;
+}
+
+.left_top_container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.left_top_title{
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: -2px;
+    font-weight: 100;
+    font-style: oblique;
+}
+
+.left_top_subtitle{
+    color: #2a2a2a;
+    font-weight: 600;
+}
+
+.left_body_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+.text_button{
+    color: #000;
+}
+
+.right_body_container{
+    width: 100%;
+}

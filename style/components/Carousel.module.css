@@ -1,0 +1,8 @@
+.image_src {
+    width: 100%;
+    height: 30rem;
+    min-height: 30rem;
+    /* height: 100%; */
+    object-fit: cover;
+    filter: brightness(0.8) contrast(1.1) saturate(0.8) blur(4);
+}

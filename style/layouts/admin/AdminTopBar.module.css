@@ -1,0 +1,39 @@
+.container{
+    position: fixed;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    left: 0;    
+    display: flex;
+    width: 100vw;
+    z-index: 99;
+    box-shadow: 0 2px 6px #0000002c;
+}
+
+.navbar{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    gap: 60px;
+}
+
+.button_menu{
+    border: none;
+    color: #305555;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.nav_title_link{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    text-decoration: none;
+    font-size: 24px;
+    font-weight: 800;
+    color: #305555;
+    font-family: 'Montserrat Bold';
+}

@@ -1,0 +1,285 @@
+.container{
+    margin: 40px 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+.handcraft_filter_container{
+    margin: 0 -10vw;
+    width: 100vw;
+    background-color: #305555;
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    color: #fff;
+    padding: 30px 10vw;
+
+}
+
+.image_header_filter{
+    height: 240px;
+    border-radius: 5px;
+}
+
+.right_container{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}   
+
+.right_title_container{
+    display: flex;
+    flex-direction: column;
+    padding-right: 120px;
+    gap: 20px;
+}
+
+.right_title{
+    font-weight: 100;
+    font-size: 36px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    letter-spacing: -2px;
+}
+
+.categorie_container{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    justify-content: center;
+    align-items: center;
+}
+
+.categorie_top{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.categorie_title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size: 32px;
+    letter-spacing: -2px;
+}
+
+
+.categorie_subtitle{
+    font-size: 16px;
+    text-align: center;
+    width: 80%;
+}
+
+.image_categorie_container{
+    width: 80%;
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.image_categorie{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image_categorie_content{
+    position: relative;
+    max-width: 350px;
+    flex-grow: 1;
+    flex: 1  350px;
+    cursor: pointer;
+}
+
+.image_categorie_detail{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(#0000,#0009);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    color: #fff;
+    padding: 50px 10px;
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.top_value_container{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+
+.top_value_top{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.top_value_title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size: 32px;
+    letter-spacing: -2px;
+}
+
+.top_value_body_image_container{
+    width: 40%;
+}
+
+.top_value_body_image{
+    width:100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.top_value_subtitle{
+    font-size: 16px;
+    text-align: center;
+    width: 80%;
+}
+
+.top_value_body{
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+.top_value_body_left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.top_value_left_detail_container{
+    display: flex;
+    align-items: center;
+    gap: 70px;
+    padding: 40px;
+}
+
+
+
+.top_value_left_detail_image{
+    width: 40px;
+    height: 40px;
+}
+
+.top_value_left_detail{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 600px;
+}
+
+.top_value_left_detail_title{
+    font-size: 26px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    letter-spacing: -2px;
+    font-weight: 100;
+}
+
+
+.suggestion_container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.suggestion_title_container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.suggestion_title{
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    font-size: 32px;
+    letter-spacing: -2px;
+}
+.suggestion_subtitle{
+    width: 50vw;
+    text-align: center;
+    font-size: 15px;
+}
+
+.suggestion_item_container{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+
+
+@media (max-width:1400px) {
+    .handcraft_filter_container{
+        flex-direction: column;
+    }
+}
+@media (max-width:1000px) {
+    .top_value_body_left{
+        width: 100%;
+    }
+    .top_value_body_image_container{
+        display: none;
+    }
+    .right_title_container span{
+        font-size: 16px;
+    }
+    span.right_title{
+        font-size: 24px;
+    }
+}
+
+@media (max-width:600px) {
+    .handcraft_filter_container{
+        padding:20px;
+    }
+    .image_header_filter{
+        display: none;
+    }
+    .right_title_container span{
+        font-size: 12px;
+        text-align: center;
+    }
+    span.right_title{
+        font-size: 24px;
+    }
+    .top_value_left_detail_container{
+        flex-direction: column;
+        align-items: center;
+    }
+    .top_value_left_detail{
+        width: 100%;
+        text-align: center;
+    }
+    .right_title_container{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+    }
+}

@@ -1,0 +1,231 @@
+.top_container{
+    width: 100%;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_container_title_container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.button_add{
+    background-color: #305555;
+    color: #fff;
+    border: none;
+}
+.centered_title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.top_container_title{
+    color: #4a4a4a;
+    font-weight: 600;
+}
+
+.top_container_subtitle{
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    letter-spacing: -2px;
+    font-weight: 100;
+}
+
+
+.container{
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    padding: 30px;
+}
+
+.left_container{
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    width : 60%;
+    margin-left : 2rem;
+}
+
+
+.card_detail_container{
+    display: flex;
+    gap: 20px;
+}
+
+.card_detail{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 6px #0000002c;
+    border-radius: 5px;
+    padding: 20px;
+    width: 300px;
+}
+
+.card_detail_text{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.card_detail_title{
+    font-size: 15px;
+    font-weight: 600;
+    color: #4a4a4a;
+}
+
+.card_detail_value{
+    font-size: 24px;
+    font-weight: 700;
+    font-family: 'Montserrat Bold';
+}
+
+.detail_dashboard{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top : -2rem;
+}
+
+.transactionTitle {
+    margin-top : -4rem;
+}
+
+.detail_transaction{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top : 0.5rem;
+}
+
+.detail_transaction2{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-top : 4.5rem;
+}
+
+.detail_dashboard_title{
+    color: #305555;
+    font-family: 'Montserrat Bold';
+    font-weight: 900;
+}
+
+.stateDetailsTitle {
+    margin-top : -3rem;
+}
+
+.card1{
+    background-color: #fff;
+    box-shadow: 0 2px 6px #0000002c;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+.card{
+    margin-top : -6rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px #0000002c;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+.card2{
+    margin-top : 0rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px #0000002c;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+.card3{
+    margin-top : -1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 6px #0000002c;
+    border-radius: 5px;
+    padding: 20px 0;
+}
+
+.card1 canvas {
+    height : 200px;
+}
+
+.right_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin : -2rem 0rem 0rem 2rem;
+}
+
+.calendar_container {
+    margin-top : -1rem;
+}
+
+.attribution {
+    margin-top : 2rem;
+}
+
+@media (max-width : 1700px) {
+    .left_container{
+        width : 55%;
+        margin-left : 1rem;
+    }
+    .container {
+        margin-top : 1rem;
+    }
+    .calendar_container ,.custom_calendar .p-calendar .p-datepicker {
+        width : auto;
+        overflow-x : hidden;
+    }
+    .card_detail {
+        width : 250px;
+    } 
+}
+
+@media (max-width : 1530px) {
+    .left_container{
+        width : 60%;
+        margin-left : 1rem;
+    }
+    .right_container{
+        width : 35%;
+    }
+}
+
+@media (max-width : 1480px) {
+    .left_container{
+        width : 60%;
+        margin-left : -1.5rem;
+    }
+    .top_container {
+        margin-left : -2rem;
+    }
+    .top_container_subtitle {
+        font-size : 1.75em;
+    }
+    .card_detail_container {
+        margin-left : 2rem;
+    }
+    .card_detail_value {
+        font-size : 1.25em;
+    }
+    .card_detail_title {
+        font-size : 0.9em;
+    }
+    .card_detail {
+        width : 210px;
+    }
+    .right_container {
+        font-size : 0.8em;
+    }
+}
+
+
+

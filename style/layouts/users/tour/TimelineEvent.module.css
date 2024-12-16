@@ -1,0 +1,53 @@
+.container{
+    background-color: transparent;
+    align-items: flex-start;
+}
+
+.numero{
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #335555;
+    font-size: 14px;
+    color: #fff;
+    font-weight: 700;
+}
+
+.evenement_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 500px;
+}
+
+.evenement_head{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+
+.evenementDate{
+    font-size: 12px;
+    font-weight: 600;
+    color: #000000a2;
+}
+
+.evenementTitle{
+    font-size: 16px;
+    color: #000;
+    font-weight: 700;
+    font-family: 'Montserrat Bold';
+}
+
+.description{
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.connector{
+    border:2px solid #335555;
+}

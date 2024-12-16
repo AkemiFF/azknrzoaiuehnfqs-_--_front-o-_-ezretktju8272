@@ -1,0 +1,571 @@
+.container{
+    margin: 40px 10vw;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+
+.filter_header_top{
+    margin: 0 -10vw;
+    width: 100vw;
+    position: relative;
+    background-color: #305555;
+    height: 240px;
+    margin-bottom: 40px;
+}
+
+.filter_header_top_title_container{
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    background-color: #305555;
+    gap: 15px;
+    padding: 40px 10vw 70px 10vw;
+}
+
+.filter_parent{
+    width: 100%;
+    position: absolute;
+    padding: 0 10vw;
+}
+
+.filter_header_top_title{
+    font-size: 32px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-style: oblique;
+    letter-spacing: -2px;
+}
+
+.filter_header_top_subtitle{
+    font-weight: 600;
+}
+
+.header_container{
+    display: flex;
+    gap: 20px;
+    align-content: center;
+    justify-content: space-between;
+}
+
+.header_left{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.header_left_title{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 34px;
+    font-style: oblique;
+    letter-spacing: -2px;
+}
+.header_left_detail{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    font-weight: 700;
+    flex-wrap: wrap;
+}
+
+.header_left_review{
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.header_left_localisation{
+    display: flex;
+    gap: 9px;
+    align-items: center;
+    font-weight: 700;
+    color: #0009;
+}
+
+.header_right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.header_right_button_container{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.header_right_button{
+    color: #000;
+    font-weight: 700;
+    background-color: #fff;
+}
+
+.header_right_button_label{
+    color: #000;
+    font-weight: 700;
+}
+
+.body_accommodation{
+    position: relative;
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+
+.tab_container{
+    width: 100%;
+    background-color: #D4E4E2;
+}
+
+
+.tab_active{
+    background-color: #D4E4E2;
+    letter-spacing: 1px;
+    gap: 10px;
+    color: #305555;
+    font-family: 'Montserrat Bold'!important;
+    font-weight: bolder;
+    border-bottom: 4px solid #305555;
+    transition: all 0.5 ease;
+    align-items: center;
+    justify-content: center;
+}
+.tab{
+    background-color: #D4E4E2;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    letter-spacing: 1px;
+    gap: 10px;
+    color: #000;
+    border-bottom: 1px solid #000;
+    transition: all 0.5 ease;
+}
+
+.overview{
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+.accommodation_detail{
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+}
+
+.accommodation_detail_title{
+    font-size: 26px;
+    letter-spacing: -1px;
+    font-style: oblique;
+    font-weight: 700;
+    color: #000;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.paragraphe{
+    font-size: 15px;
+}
+
+.amenties_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 90px;
+}
+
+.amenties{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.amenties_title{
+    font-size: 17px;
+    font-family: 'Montserrat Bold';
+    font-weight: 800;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    color: #000;
+}
+
+.amenties_detail_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #000;
+}
+
+.amenties_detail{
+    display: flex;
+    font-weight: 600;
+    gap: 15px;
+    align-items: center;
+    color: #000;
+    font-size: 15px;
+}
+
+
+.review_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.note_container_header{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.note_container_header_left{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.note_container_header_label{
+    font-family: 'Montserrat Bold';
+    font-weight: 700;
+    font-size: 32px;
+    color: #000;
+}
+
+.note_container_header_value{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.note_container_header_left_review{
+    font-weight: 700;
+    color: #000;
+}
+
+.button_review_filter{
+    background-color: #1e1e1e;
+    color: #fff;
+    border: none;
+}
+
+.note_content_container{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.accommodation_card_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 700px;
+}
+
+.accommodation_card{
+    width: 100%;
+    padding: 20px;
+    background-color: #eff6f5;
+    box-shadow: 0 2px 6px #0000002c;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+}
+
+.card_check_header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.check_price_container{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.check_price{
+    font-family: 'Montserrat Bold';
+    font-size: 32px;
+}
+
+.card_check_header_right{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    font-weight: 600;
+}
+
+
+.check_in_container{
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.check_parent{
+    margin-top: 20px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.input_number{
+    width: 430px;
+    background-color: transparent;
+}
+
+.check_cadre_container{
+    border: 1px solid #d4d4d4;
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+}
+
+.check_cadre_label{
+    color: #414141;
+}
+
+.check_cadre_value{
+    color: #000;
+    font-weight: 700;
+}
+
+.check_detail_price_container{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.check_detail_price{
+    display: flex;
+    justify-content: space-between;
+}
+.check_detail_price_value{
+    font-weight: 700;
+    font-family: "Montserrat Bold";
+}
+.check_detail_price_total_label{
+    font-size: 24px;
+    font-family: "Montserrat Bold";
+    color: #305555;
+    font-weight: 700;
+}
+.check_detail_price_total_value{
+    font-size: 24px;
+    font-family: "Montserrat Bold";
+    color: #305555;
+    font-weight: 700;
+}
+
+.card_availability_title{
+    font-size: 24px;
+    font-family: "Montserrat Bold";
+    color: #305555;
+    font-weight: 700;
+}
+
+.separateur{
+    border: 0;
+    border-top: 1px solid #00000015;
+}
+
+.card_availability_parent{
+    width: 100%;
+    max-height: 600px;
+    height: fit-content;
+    
+}
+.chambre_list{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.chambre_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.chambre_top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+.checkbox_container{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+}
+
+.checkbox{
+    position: relative;
+    cursor: pointer;
+    box-sizing: border-box;
+    width: 1rem;
+    border-radius: 4px;
+    height: 1rem;
+    background-color: transparent;
+    flex-shrink: 0;
+}
+.checkbox:focus{
+    outline: none;
+    box-shadow: none;
+}
+.checkbox::before{
+    content: "\2714"; 
+    display: flex;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: 100%;
+    left: 50%;  
+    transform: translate(-50%, -50%);
+    font-weight: 600;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    font-size: 12px;
+    border-radius: 4px;
+    color: #fff;
+    opacity: 0;
+    background-color: #000;
+}
+.checkbox:checked::before{
+    opacity: 1;
+    transition: all 0s!important;
+}
+
+.checkbox_label{
+    font-size: 20px;
+    font-style: oblique;
+    letter-spacing: -1px;
+    font-weight: 600;
+}
+
+.chambre_price{
+    font-weight: 700;
+    font-family: "Montserrat Bold";
+    font-size: 32px;
+}
+
+.chambre_body{
+    display: flex;
+    gap: 20px;
+}
+
+.chambre_image{
+    width: 220px;
+    height: 160px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.chambre_detail{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    font-weight: 700;
+}
+
+
+@media (max-width:1200px) {
+    .header_container{
+        flex-direction: column;
+    }
+}
+
+@media (max-width:1490px) {
+    .body_accommodation{
+        flex-direction: column;
+    }
+
+    .accommodation_card_container{
+        width: 100%;
+        flex-direction: row;
+    }
+
+}
+
+@media (max-width:1200px) {
+
+    .accommodation_card_container{
+        width: 100%;
+        flex-direction: column;
+    }
+
+}
+
+@media (max-width:600px) {
+    .input_number{
+        width: 100%;
+    }   
+
+    .chambre_price{
+        font-size: 20px;
+    }
+
+    .chambre_body{
+        flex-direction: column;
+    }
+}
+
+
+
+
+@media (max-width:1600px) {
+    .filter_container{
+        flex-direction: column;
+    }
+    .filter_left{
+        width: 100%;
+        overflow-x: auto;
+        flex-direction: row;
+    }
+}
+
+@media (max-width:1520px) {
+    .filter_header_top{
+        margin-bottom: 100px;
+    }
+}
+@media (max-width:941px) {
+    .filter_header_top{
+        margin-bottom: 200px;
+    }
+}
+@media (max-width:790px) {
+    .filter_header_top{
+        margin-bottom: 100px;
+    }
+}
+@media (max-width:720px) {
+    .filter_header_top{
+        margin-bottom: 260px;
+    }
+}
+@media (max-width:700px) {
+    .filter_header_top{
+        margin-bottom: 100px;
+    }
+}
+@media (max-width:500px) {
+    .filter_header_top{
+        margin-bottom: 160px;
+    }
+}

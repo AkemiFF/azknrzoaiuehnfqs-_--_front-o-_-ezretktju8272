@@ -1,0 +1,93 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+}
+
+
+.user_title_container {
+    padding: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.input_edit {
+    width: 18rem;
+    height: 2rem;
+    border: none;
+    border-radius: 6px;
+    text-indent: .5rem;
+}
+
+.user_avatar {
+    width: 150px;
+    height: 150px;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    background-color: #305555;
+}
+
+.user_title_left {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.user_title {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    .title {
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+
+.button_edit {
+    color: #305555;
+    border: 2px solid #305555;
+}
+
+.detail_user_container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px 40px;
+    width: 100%;
+}
+
+.detail_user_top_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    .title {
+        font-weight: 700;
+        font-size: 20px;
+    }
+}
+
+.detail_user_body_container {
+    display: flex;
+    gap: 20px 0;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.detail_user {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 40%;
+
+    .title {
+        font-weight: 600;
+        font-size: 17px;
+    }
+}

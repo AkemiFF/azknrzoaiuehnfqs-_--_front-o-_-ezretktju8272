@@ -1,0 +1,105 @@
+.container{
+    background-color: #fff;
+    border-radius: 5px;
+    display: flex;
+    box-shadow: 0 2px 6px #0000002c;
+    margin-bottom: 20px;
+}
+
+.image_container{
+    width: 260px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 5px;
+}
+
+.hotel_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px;
+    width: 100%;
+}
+.hotel_container_top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+    gap: 10px;
+}
+
+.hotel_container_top_left{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hotel_container_top_left_title{
+    font-size: 28px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    letter-spacing: -2px;
+    font-style: oblique;
+    font-weight: 100;
+}
+
+.hotel_container_top_left_subtitle{
+    font-weight: 700;
+    color: #292929;
+}
+
+
+.hotel_container_top_right{
+    font-size: 16px;
+    font-family: 'Montserrat Bold';
+    display: flex;
+    align-items: center;
+    font-weight: 700;
+    color: #292929;
+}
+
+.price{
+    font-weight: 700;
+    font-size: 32px;
+    color: #000;
+}
+
+.hotel_title_container{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.detail{
+    padding-left: 50px;
+    display: flex;
+    font-weight: 700;
+    color: #767373;
+}
+
+
+.hotel_description{
+    font-size: 14px;
+}
+
+.bottom{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.travel_container{
+    padding-left: 50px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    color: #767373;
+}
+
+.travel_distance{
+    color: #000;
+    font-family: 'Montserrat Bold';
+    font-weight: 700;
+}

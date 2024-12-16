@@ -1,0 +1,28 @@
+.container{
+    width: 330px;
+    padding: 0 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.container_label{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.title{
+    font-size: 14px;
+    font-family: 'Montserrat SemiBold';
+}
+
+.note{
+    font-size: 14px;
+    font-family: 'Montserrat Bold';
+}
+
+.bar{
+    height: 5px;
+    background-color: #0003;
+}

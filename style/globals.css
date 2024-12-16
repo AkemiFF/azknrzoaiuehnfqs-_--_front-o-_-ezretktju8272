@@ -1,0 +1,329 @@
+@font-face {
+    font-family: 'Montserrat';
+    src: url(./font/Montserrat-Regular.ttf);
+    display: swap;
+}
+@font-face {
+    font-family: 'Montserrat Bold';
+    src: url(./font/Montserrat-Bold.ttf);
+}
+@font-face {
+    font-family: 'Montserrat Semibold';
+    src: url(./font/Montserrat-SemiBold.ttf);
+}
+
+*{
+    font-family: 'Montserrat';
+}
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #D4E4E2;
+    overflow-x: hidden;
+}
+
+.button-primary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 40px;
+    color: #fff;
+    font-weight: 700;
+    background-color: #305555;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+.button-primary:hover{
+    background-color: #3a6666;
+}
+.button-primary:disabled{
+    background-color: #3055554D;
+}
+.button-secondary{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 15px 40px;
+    color: #305555;
+    font-weight: 700;
+    background-color: #fff;
+    border-radius: 10px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.separateur{
+  border: 0;
+  border-top: 1px solid #00000015;
+}
+
+.nprogress-busy{
+    display: none;
+}
+
+.p-paginator{
+    background-color: transparent;
+    color: #000;
+    display: flex;
+    gap: 30px;
+}
+
+.p-paginator-pages{
+    display: flex;
+    gap: 30px;
+}
+
+.p-paginator-page{
+    border-radius: 0px;
+    border: 1px solid #305555;
+    font-weight: 700; 
+}
+
+.p-highlight{
+    background-color: #305555;
+    color: #fff;
+}
+
+.p-paginator-next{
+    border-radius: 0px;
+    border: 1px solid #305555;
+    font-weight: 700;   
+}
+
+.p-paginator-prev{
+    border-radius: 0px;
+    border: 1px solid #305555;
+    font-weight: 700;   
+}
+
+.p-paginator-first{
+    display: none;
+}
+.p-paginator-last{
+    display: none;
+}
+
+.p-dataview{
+    background-color: transparent;
+}
+
+.p-dataview-content{
+    background-color: transparent;
+}
+
+.p-stepper-panels{
+    display: none;
+}
+
+.p-stepper-action{
+    background-color: transparent;
+}
+
+.p-stepper-header.p-highlight .p-stepper-number{
+    background-color: #D4E4E2;
+    color: #305555;
+}
+
+.p-stepper-number{
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: #000;
+    font-weight: 600;
+}
+
+.p-stepper-separator{
+    background-color: #D4E4E2;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* styles/global.css */
+
+/* Container style */
+  
+  /* FullCalendar base styles */
+  .fc {
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Header styles */
+  .fc-toolbar {
+    background-color: #fff;
+    padding: 10px;
+  }
+  
+  .fc-toolbar h2 {
+    font-size: 18px!important;
+    color: #305555;
+  }
+
+  
+  
+  /* Event styles */
+  .fc table{
+    border: none!important;
+  }
+
+  .fc-event {
+    background-color: #D4E4E2;
+    color: #000;
+    border: none;
+    padding: 5px;
+    border-radius: 3px;
+  }
+
+  .fc-license-message{
+    display: none;
+  }
+
+  .fc-timeline-lane.fc-resource{
+    height: 60px!important;
+  }
+
+  .fc-datagrid-header.fc-scrollgrid-sync-table{
+    width: 200px!important;
+  }
+
+  .fc-resource-timeline-divider.fc-cell-shaded{
+    border: none!important;
+  }
+  
+  .fc-timeline-lane.fc-resource,
+  table.fc-scrollgrid-sync-table tbody{
+    border: none!important;
+  }
+
+  table.fc-scrollgrid colgroup{
+    width: 200px!important;
+  }
+  
+  table.fc-scrollgrid-sync-table  colgroup col:first-child{
+    width: 100px!important;
+  }
+
+  .fc-datagrid-cell-frame,
+  .fc-datagrid-cell-cushion{
+    height: 62px!important;
+  }
+
+
+
+  .fc-datagrid-header.fc-scrollgrid-sync-table{
+    height: 80px;
+    display: none;
+  }
+  .fc-timeline-slot.fc-timeline-slot-label.fc-day{
+    height: 80px!important;
+  }
+
+  .fc-timeline-slot-frame{
+    height: 80px!important;
+    display: flex!important;
+    padding: 0!important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .fc-timeline-slot-frame{
+    padding: 0!important;
+    height: 80px;
+  }
+  
+  /* Resource area styles */
+  /* .fc-timeline .fc-resource-area {
+    background-color: #0080ff;
+  }
+   */
+
+  /* .fc-timeline .fc-resource-cell {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    border-right: 1px solid #ff0000;
+  }
+   */
+  /* Date cell styles */
+  /* .fc-timeline .fc-day {
+    border-right: 1px solid #ff0000;
+    padding: 10px;
+  }
+   */
+  /* .fc-timeline .fc-day:hover {
+    background-color: #f8f9fa;
+  } */
+  
+  /* Hide the time slots */
+  .fc-timeline .fc-time-grid .fc-time {
+    display: none;
+  }
+  
+  /* Customize header date format */
+  .fc-timeline .fc-header-toolbar .fc-toolbar-chunk:first-child {
+    text-align: left;
+  }
+  
+  .fc-timeline .fc-header-toolbar .fc-toolbar-chunk:last-child {
+    text-align: right;
+  }
+  
+  .fc-timeline .fc-header-toolbar h2 {
+    font-size: 1.2em;
+  }
+
+  .fc-timeline-slot-cushion.fc-scrollgrid-sync-inner{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .fc-day-today .fc-timeline-slot-frame{
+    width: 100%;
+    height: 100%;
+    background-color: #305555 !important;
+    color: #fff;
+  }
+
+
+
+
+.chat_bot_btn{
+  position: fixed;
+  right: 0;
+  bottom: 10vh;
+  height: 70px;
+  font-size: 24px;
+  width: 70px;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  z-index: 999;
+}
+
+
+@media (max-width:900px) {
+  .chat_bot_btn{
+    width: 40px;
+    height: 40px;
+  }
+}

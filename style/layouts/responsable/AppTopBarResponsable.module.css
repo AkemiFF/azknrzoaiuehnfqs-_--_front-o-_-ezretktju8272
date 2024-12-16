@@ -1,0 +1,89 @@
+.container{
+    position: absolute;
+    background-color: #fff;
+    top: 0;
+    right: 0;
+    left: 0;    
+    display: flex;
+    width: 100vw;
+    z-index: 99;
+
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        align-items: center;
+        padding: 1vw 12vw;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    .nav_title{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    
+
+    .input_search{
+        padding: 16px;
+        background-color: #D4E4E2;
+        border: none;
+        width: 100%;
+        border-radius: 100px;
+    }
+
+    .user{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+        
+
+    .user_container{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 16px;
+        border-radius: 10px;
+    }
+
+
+    .username_image{
+        background-color: #305555;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Montserrat Bold'!important;
+        font-weight: 700;
+        width: 50px;
+        height: 50px;
+    }
+
+    .username{
+        font-weight: 700;
+        font-size: 18px;
+        color: #000;
+    }
+    .job{
+        font-size: 14px;
+        color: #000;
+    }
+}
+
+
+@media screen and (max-width: 1000px) {
+    .input_search{
+        padding: 16px;
+        background-color: #D4E4E2;
+        border: none;
+        width: 100%;
+        border-radius: 100px;
+    }
+    .search_contaner{
+        padding: 0px;
+    }
+}

@@ -1,0 +1,113 @@
+.header_faq {
+    margin : 12rem 16rem;
+    display : flex;
+    flex-direction : row;
+    justify-content : between;
+}
+
+.img_header_faq {
+    width : 20rem;
+    height : 25rem;
+    border-radius : 10px;
+}
+
+.faq_container {
+    width : 75%;
+    margin : 4rem 16rem;
+}
+
+.faq_div_container {
+    margin-bottom : 4rem;
+}
+
+.faqIntrotitle {
+    margin-top : 3rem;
+    width : 70%;
+}
+
+.faqIntroTxt {
+    margin-top : 2rem;
+    width : 70%;
+}
+
+@media (max-width : 1500px) {
+    .header_faq {
+        margin : 10rem 10rem;
+        display : flex;
+        flex-direction : row;
+        justify-content : between;
+    }
+    .img_header_faq {
+        width : 16rem;
+        height : 20rem;
+        margin-top : 2rem;
+    }
+    .faq_container {
+        width : 75%;
+        margin : 4rem 12rem;
+    }
+}
+
+@media (max-width : 1000px) {
+    .img_header_faq {
+        margin-top : 4rem;
+    }
+    .faq_container {
+        width : 75%;
+        margin : 4rem auto;
+    }
+}
+
+@media (max-width : 768px) {
+    .img_header_faq {
+        margin-top : 4rem;
+    }
+    .faq_container {
+        width : 75%;
+        margin : 4rem auto;
+    }
+    .header_faq {
+        margin : 6rem 7rem;
+        display : flex;
+        flex-direction : column;
+        justify-content : center;
+        text-align : center;
+    }
+    .img_header_faq {
+        width : 15rem;
+        height : 24rem;
+        margin-top : 1rem;
+    }
+    .faqIntrotitle {
+        width : 100%;
+    }
+    .faqIntroTxt {
+        width : 100%;
+    }
+}
+
+@media (max-width : 550px) {
+    .header_faq, .faq_container {
+        font-size : 0.85em;
+    }
+    .img_header_faq {
+        height : 17rem;
+    }
+}
+
+@media (max-width : 400px) {
+    .header_faq {
+        margin : 1rem 2rem 0rem 4rem;
+        font-size : 0.8em;
+    }
+    .faq_container {
+        font-size : 0.75em;
+    }
+    .img_header_faq {
+        width : 14rem;
+        height : 15rem;
+        margin-top : 1rem;
+        margin-left : -1rem;
+    }
+}
+

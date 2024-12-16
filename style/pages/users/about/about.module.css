@@ -1,0 +1,497 @@
+.body_about {
+    overflow-x : hidden;
+}
+
+.header_container {
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+    background-color : #305555;
+    padding : 3rem;
+    color : white;
+    margin-bottom : 4rem;
+    width : 100vw;
+}
+
+.aboutAftrip_container {
+    margin-left : 5rem;
+}
+
+.img_header_container {
+    display : flex;
+    flex-direction : row;
+    margin-left : -2rem;
+    margin-top : 2rem;
+}
+
+.mission_container {
+    margin : 3rem 8rem 3rem 8rem;
+}
+
+.section_mission_text {
+    margin-left : 5rem;
+}
+
+.steps_container {
+    margin : 8rem 8rem 3rem 8rem;
+}
+
+.img_step_container {
+    background-color : #305555;
+    padding : 2rem;
+    border-radius : 5px;
+}
+
+.register_container {
+    margin : 3rem 0rem 0rem 6rem;
+}
+
+.register2_container {
+    margin : 3rem 0rem 0rem 6rem;
+}
+
+.img_step2_container {
+    background-color : #305555;
+    padding : 2rem;
+    border-radius : 5px;
+    margin-right : 20rem;
+}
+
+.section_step_container {
+    display : flex;
+    flex-direction : row;
+    margin : 3rem 0rem 0rem 22rem;
+    justify-content : center;
+}
+
+.missionText {
+    margin-top : -1rem;
+    width : 75%;
+}
+
+.section_step2_container {
+    display : flex;
+    flex-direction : row-reverse;
+    margin : 3rem 0rem 0rem 22rem;
+    justify-content : center;
+}
+
+.reviewAbout_item_container {
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+    margin : 2rem 0rem 8rem 0rem;
+}
+
+.section_faq_container {
+    display : flex;
+    flex-direction : row;
+    justify-content : center;
+    margin : 4rem 14rem 0rem 14rem;
+}
+
+.custom_btn_faq {
+    display : flex;
+    justify-content : center;
+    background-color : #305555;
+    color : white;
+    border : none;
+    outline : none;
+    margin : 3rem auto;
+    padding : 1rem 5rem;
+}
+
+.aboutAftrip_txt {
+    width : 60%;
+}
+
+.registerTxt {
+    width : 60%;
+}
+
+.registerTxt {
+    width : 80%;
+}
+
+.section_big {
+    display : flex;
+    flex-direction : row;
+    margin-top : 3rem;
+}
+
+.accordion {
+    width : 50%;
+    margin-right : 1rem;
+}
+
+@media (max-width : 1600px) {
+    .aboutAftrip_txt {
+        width : 80%;
+    }
+    .img_header_container {
+        margin-top : 3rem;
+    }
+    .section_step_container, .section_step2_container {
+        margin : 3rem 0rem 0rem 9rem;
+    }
+    .img_step2_container {
+        margin-right : 9rem;
+    }
+}
+
+@media (max-width : 1450px) {
+    .aboutAftrip_container {
+        margin-left : 3rem;
+    }
+    
+    .img_header_container {
+        margin-right : 4rem;
+        margin-top : 2rem;
+    }
+
+    .section_step2_container {
+         margin : 3rem 0rem 0rem 9rem;
+    }
+
+    .img_header {
+        width : 12rem;
+        height : 12rem;
+    }
+}
+
+@media (max-width : 1350px) {
+    .img_mission {
+        width : 32rem;
+        height : 25rem;
+        margin-top : 3rem;
+    }
+    .section_mission_text {
+        margin-left : 1.5rem;
+    }
+    .img_step2_container {
+        margin-right : -1rem;
+    }
+    .review_container {
+       margin-left : 1rem;
+    }
+    .section_faq_container {
+        margin : 4rem 8rem 0rem 8rem;
+    }
+} 
+
+@media (max-width : 1250px) {
+    .section_step_container {
+        margin: 5rem 0rem 0rem 2rem;
+    }
+    .header_container {
+        margin : auto;
+    }
+    .section_faq_container {
+        margin : 4rem 4rem 0rem 4rem;
+    }
+    .aboutAftrip_container {
+        width : 110%;
+    }
+    .img_header {
+        width : 9rem;
+        height : 9rem;
+    }
+    .img_header_container {
+        margin-top : 4.5rem;
+    }
+    .steps_container {
+        justify-content : between;
+    }
+}
+
+@media (max-width : 1000px) {
+    .header_container {
+        flex-direction : column;
+        text-align : center;
+    }
+    .img_header {
+        width : 14rem;
+        height : 10rem;
+    }
+    .aboutAftrip_container {
+        text-align : center;
+    }
+    .img_header_container {
+        margin : 3rem auto 0rem auto ;
+        align-items : center;
+    }
+    .aboutTitle {
+        margin-left : -10rem;
+        font-size: 2.3em;
+    }
+    .section_mission_text {
+        margin-left : -3rem;
+    }
+    .img_mission {
+        width : 20rem;
+        height : 15rem;
+        margin-top : 11rem;
+    }
+    .img_step_container {
+        width :  260px;
+        height : 260px;
+    }
+    .img_register {
+        width : 200px;
+        height : 200px;
+    }
+    .register_container {
+        margin : -2rem 0rem 0rem 6rem;
+    }
+    .registerTxt {
+        width : 90%;
+    }
+}
+
+@media (max-width : 800px) {
+    .img_header {
+        width : 10rem;
+        height : 7rem;
+    }
+    .section_big {
+        flex-direction : column-reverse;
+    }
+    .img_mission {
+        width : 28rem;
+        height : 15rem;
+        margin : 0rem auto 0rem 3rem;
+    }
+    .section_mission_text {
+        margin : 2rem auto 0rem 0rem;
+        width : 130%;
+    }
+    .section_step_container {
+        flex-direction : column-reverse;
+    }
+    .section_step2_container {
+        flex-direction : column-reverse;
+    }
+    .register2_container {
+        text-align : center;
+        width : 120%;
+        margin : -1rem auto 0rem -6rem;
+    }
+    .register_container {
+        text-align : center;
+        width : 120%;
+        margin : -3rem auto 0rem -2rem;
+    }
+    .registerTitle {
+        margin-left : -4rem;
+    }
+    .img_step_container {
+        margin : 1rem auto auto auto;
+        width : 330px;
+        height : 300px;
+    }
+    .img_register {
+        width : 250px;
+        height : 250px;
+    }
+    .img_step2_container {
+        margin : 1rem auto auto -2rem;
+        width : 330px;
+        height : 300px;
+    }
+    .img_register {
+        width : 250px;
+        height : 250px;
+    }
+    .reviewsP {
+        margin : 0rem 6rem;
+    }
+    .reviewAbout_item_container {
+        flex-direction : column;
+        align-items : center;
+        justify-content : center;
+        margin : 3rem auto auto auto;
+    }
+}
+
+@media (max-width : 600px) {
+    .header_container {
+        font-size : 0.75em;
+    }
+    .img_header {
+        width : 7rem;
+        height : 5rem;
+    }
+    .mission_container {
+        font-size : 0.75em;
+    }
+    .img_mission {
+        width : 20rem;
+        height : 10rem;
+        margin : -1rem auto 0rem 0rem;
+    }
+    .steps_container {
+        font-size : 0.75em;
+        margin-top : 2rem;
+    }
+    .img_step_container {
+        margin : 1rem auto auto -0.5rem;
+        width : 280px;
+        height : 280px;
+    }
+    .img_register {
+        width : 200px;
+        height : 200px;
+    }
+    .img_step2_container {
+        margin : 1rem auto auto -7rem;
+        width : 280px;
+        height : 280px;
+    }
+    .img2_register {
+        width : 200px;
+        height : 200px;
+    }
+    .reviewsContainer {
+        font-size : 0.75em;
+    }
+    .faqContainer {
+        font-size : 0.75em;
+    }
+    .section_faq_container {
+        flex-direction : column;
+    }
+    .accordion {
+        width : 85%;
+        margin : -1rem 0rem 1rem 3rem;
+    }
+    .accordionHeader {
+        font-size : 0.8em;
+    }
+}
+
+@media (max-width : 480px) {
+    .img_mission {
+        width : 14rem;
+        height : 8rem;
+        margin : -1rem auto 0rem 0rem;
+    }
+    .section_mission_text {
+        width : 190%;
+        margin-left : -3rem;
+    }
+    .registerTitle {
+        margin-left : 0rem;
+    }
+    .registerTxt {
+        margin-left : -3rem;
+        width : 150%;
+    }
+    .img_step_container {
+        margin : auto auto auto -3rem;
+    }
+    .register2Title {
+        width : 12rem;
+        margin-left : -2rem;
+    }
+    .register2Txt {
+        margin-left : -5rem;
+        width : 350%;
+    }
+    .img_step2_container {
+        margin : auto -6rem auto -10rem;
+    }
+    .section_faq_container {
+        font-size : 0.75em;
+    }
+    .img_header_container {
+        flex-direction : column;
+    }
+    .img_header {
+        width : 17rem;
+        height : 10rem;
+        margin : 0rem 0rem 3rem 1rem;
+    }
+    .aboutAftrip_txt {
+        margin-left : -1rem;
+    }
+    .aboutTitle {
+        margin-left : -7.5rem;
+    }
+}
+
+@media (max-width : 390px) {
+    .aboutTitle {
+        font-size : 1.7em;
+    }
+    .img_header {
+        width : 12rem;
+        height : 7rem;
+        margin : 0rem 0rem 1.5rem 1rem;
+    }
+    .mission_container {
+        width : 80%;
+        margin-left : 3rem;
+    }
+    .img_mission {
+        margin : 0rem 3rem 0rem 2rem;
+    }
+    .section_mission_text {
+        width : 120%;
+        margin-left : 0rem;
+    }
+    .steps_container {
+        width : 65%;
+        margin-left : 4.25rem;
+    }
+    .registerTxt {
+        margin-left : 0rem;
+        width : 100%;
+    }
+    .img_step_container {
+        width : 200px;
+        height : 200px;
+        margin-left : 0rem; 
+    }
+    .img_register {
+        width : 150px;
+        height : 150px;
+    }
+    .steps2_container {
+        width : 65%;
+        margin-left : 4.25rem;
+    }
+    .register2Txt {
+        margin-left : 0rem;
+        width : 180%;
+        margin-left : -2rem;
+    }
+    .register2Title {
+        margin-left : -1rem;
+    }
+    .img_step2_container {
+        width : 200px;
+        height : 200px;
+        margin-left : -7rem; 
+    }
+    .img2_register {
+        width : 150px;
+        height : 150px;
+    }
+    .reviewsContainer {
+        font-size : 0.65em;
+    }
+    .faqContainer {
+        font-size : 0.7em;
+        margin : 3rem 3rem;
+    }
+    .accordion {
+        width : 160%;
+        margin-left : -2.5rem;
+    }
+    .custom_btn_faq {
+        padding : 0.5rem 3rem;
+        font-size : 0.8rem;
+    }
+}
+
+

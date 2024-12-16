@@ -1,0 +1,260 @@
+.container{
+    background-color: #305555;
+    width: 100vw;
+    flex-direction: column;
+    display: flex;
+}
+
+.footer{
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    display: flex;
+    padding: 60px 200px;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+}
+
+.about{
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 70px;
+}
+.about_aftrip{
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.about_aftrip_label{
+    width: 276px;
+    font-size: 14px;
+    color: #fff;
+    font-style: oblique;
+}
+.about_menu, .about_menu1{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about_menu_title{
+    color: #fff;
+    font-family: 'Montserrat Bold';
+    font-weight: 800;
+    line-height: 21.82px;
+    font-size: 16px;
+}
+.about_menu_item_container{
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+.about_menu_item{
+    text-decoration: none;
+    font-size: 14px;
+    color: #fff;
+    line-height: 19.1px;
+    cursor: pointer;
+}
+
+.about_info, .about_info2{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.about_info_title{
+    color: #fff;
+    font-family: 'Montserrat Bold';
+    font-weight: 800;
+    line-height: 21.82px;
+    font-size: 16px;
+}
+.about_info_item_container{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+.about_info_item{
+    display: flex;
+    gap: 5px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 14px;
+    color: #fff;
+    line-height: 19.1px;
+    cursor: pointer;
+}
+
+.copyright{
+    position: absolute;
+    bottom: 2px;
+    right: 4px;
+    font-size: 8px;
+    color: #fff
+}
+
+@media (max-width:1400px) {
+    .footer{
+        padding: 40px;
+        justify-content: flex-start;
+        align-items: flex-start;
+    }
+
+    .about{
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width : 1260px) {
+    .footer{
+        padding: 60px 10px;
+    }
+    .about_aftrip_label{
+        font-size : 0.8em;
+    }
+    .about_menu, .about_menu1, .about_info, .about_info2 {
+        margin-left : -1rem;
+    }
+    .about_info_item, .about_menu_item {
+        font-size : 0.8em;
+    }
+}
+
+@media (max-width : 1100px) {
+    .about_aftrip {
+        margin-left: 2rem;
+    }
+    .about_aftrip_label{
+        width : 30%;
+    }
+    .about_menu1 {
+        margin-left : -28rem;
+    }
+}
+
+@media (max-width : 1000px) {
+    .footer{
+        padding: 35px 10px;
+    }
+    .about_aftrip {
+        margin-left : 4rem;
+    }
+    .about_aftrip_label{
+        width : 35%;
+    }
+    .about_menu1 {
+        margin-top : 0.75rem;
+        margin-left : -20rem;
+    }
+    .about_menu {
+        margin-top : 0.75rem;
+        margin-left : 2rem;
+    }
+    .about_info {
+        margin-left : 12rem;
+    }
+    .about_info2 {
+        margin-left : 6rem;
+    }
+}
+
+@media (max-width : 800px) {
+    .about_aftrip {
+        margin-left : 1.5rem;
+    }
+    .about_menu1 {
+        margin-left : -25rem;
+    }
+    .about_menu {
+        margin-left : -1rem;
+    }
+    .about_info2 {
+        margin-left : 4rem;
+    }
+}
+
+@media (max-width : 640px) {
+    .about_aftrip {
+        margin-left : 6rem;
+    }
+    .about_menu1 {
+        margin-left : -23rem;
+    }
+    .about_menu {
+        margin-left : 6rem;
+    }
+    .about_info {
+        margin-left : 1rem;
+    }
+    .about_info2 {
+        margin-left : 16rem;
+    }
+}
+
+@media (max-width : 540px) {
+    .about_aftrip {
+        margin-left : 3rem;
+    }
+    .about_menu1 {
+        margin-left : -25rem;
+    }
+    .about_menu {
+        margin-left : 4rem;
+    }
+    .about_info {
+        margin-left : -1rem;
+    }
+    .about_info2 {
+        margin-left : 12rem;
+    }
+}
+
+@media (max-width : 465px) {
+    .about_aftrip {
+        margin-left : 1rem;
+    }
+    .about_menu1 {
+        margin-left : -27rem;
+    }
+    .about_menu {
+        margin-left : 2rem;
+    }
+    .about_info {
+        margin-left : -3rem;
+    }
+    .about_info2 {
+        margin-left : 10rem;
+    }
+}
+
+@media (max-width : 400px) {
+    .footer{
+        flex-direction : column;
+    }
+    .about_aftrip {
+        margin-left : 8rem;
+    }
+    .about_aftrip_label {
+        width : 75%;
+        text-align : center;
+        margin-left : -2rem;
+    }
+    .about_menu1 {
+        margin-left : 8rem;
+        text-align : center;
+    }
+    .about_menu {
+        margin-left : 5.5rem;
+        text-align : center;
+    }
+    .about_info {
+        margin-left : 6.5rem;
+        text-align : center;
+    }
+    .about_info2 {
+        margin-left : 7rem;
+        text-align : center;
+    }
+}

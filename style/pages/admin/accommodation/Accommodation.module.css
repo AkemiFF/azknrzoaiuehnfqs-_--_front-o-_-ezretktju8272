@@ -1,0 +1,57 @@
+.container{
+    width: 100%;
+    padding: 40px;
+    height: 100%;
+    background-color: #f6f6f6;
+}
+.leftToolbar{
+    display: flex;
+    gap: 20px;
+}
+.header_datatable{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+.image_data{
+    width: 90px;
+    height: 60px;
+    border-radius: 5px;
+    object-fit: cover;
+    box-shadow: 0 2px 6px #0000005a;
+}
+.actionBodyTemplate{
+    display: flex;
+    gap: 10px;
+}
+
+
+
+.add_container{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 900px;
+    width: 900px;
+}
+
+
+.input_container{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input_container span{
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.add_input{
+    width: 100%;
+    padding: 10px 16px;
+    border: 1px solid #0000005a;
+    border-radius: 5px;
+}

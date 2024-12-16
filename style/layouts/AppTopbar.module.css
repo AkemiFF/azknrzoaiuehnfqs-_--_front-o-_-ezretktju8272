@@ -1,0 +1,306 @@
+.container{
+    position: absolute;
+    background-color: #D4E4E2;
+    top: 0;
+    right: 0;
+    left: 0;    
+    display: flex;
+    width: 100vw;
+    z-index: 99;
+
+    .right_container{
+        display: flex;
+        gap: 10px;
+        .icon_cog{
+            background-color:transparent;
+            border: none;
+            text-transform: uppercase;
+            color: #305555;
+        }
+    }
+
+
+    
+    .navbar{
+        display: flex;
+        width: 100vw;
+        align-items: center;
+        padding: 1vw 12vw;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    .nav_title{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav_image{
+        width: 100px;
+        height: 106px;
+    }
+
+    .navbar_menu_container{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .navbar_menu_item{
+        color: #000;
+        font-weight: 700;
+    }
+
+
+    .button_group{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+        
+
+    .user_container{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 16px;
+        border-radius: 10px;
+    }
+
+    .user_container:hover{
+        background-color: #305555;
+        color: #fff;
+    }
+    .user_container:focus{
+        background-color: #305555;
+        color: #fff;
+    }
+
+
+    .username_image{
+        background-color: #305555;
+        color: #fff;
+        font-size: 20px;
+        font-family: 'Montserrat Bold'!important;
+        font-weight: 700;
+        width: 50px;
+        height: 50px;
+    }
+
+    .username{
+        font-weight: 700;
+        font-size: 14px;
+        color: #000;
+    }
+
+}
+
+.container_home{
+    position: absolute;
+    background-color: #305555;
+    top: 0;
+    right: 0;
+    left: 0;    
+    display: flex;
+    width: 100vw;
+    z-index: 99;
+
+    .right_container{
+        display: flex;
+        gap: 10px;
+        .icon_cog{
+            background-color: transparent;
+            border: none;
+            color: #fff;
+            text-transform: uppercase;
+        }
+    }
+
+    .navbar{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100vw;
+        align-items: center;
+        padding: 1vw 12vw;
+        box-sizing: border-box;
+        justify-content: space-between;
+    }
+
+    .nav_title{
+        display: flex;
+        gap: 8px;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .nav_image{
+        width: 100px;
+        height: 106px;
+    }
+
+    .navbar_menu_container{
+        display: flex;
+        gap: 50px;
+        align-items: center;
+    }
+
+    .navbar_menu_item{
+        color: #fff;
+        font-weight: 700;
+    }
+
+
+    .button_group{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+        
+
+    .user_container{
+        display: flex;
+        gap: 20px;
+        align-items: center;
+        cursor: pointer;
+        padding: 10px 16px;
+        border-radius: 10px;
+    }
+
+    .user_container:hover{
+        background-color: #fff;
+        color: #305555;
+    }
+    .user_container:focus{
+        background-color: #fff;
+        color: #305555;
+    }
+
+
+    .username_image{
+        background-color: #fff;
+        color: #305555;
+        font-size: 20px;
+        font-family: 'Montserrat Bold'!important;
+        font-weight: 700;
+        width: 50px;
+        height: 50px;
+    }
+
+    .username{
+        font-weight: 700;
+        font-size: 14px;
+        color: #000;
+    }
+
+}
+
+.menu{
+    background-color: #D4E4E2;
+}
+.menu_item_container{
+    color: #fff;
+}
+
+.menu_item{
+    color: #305555;
+}
+
+.button_bar{
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: #305555;
+    background-color: #fff;
+    cursor: pointer;
+}
+
+.sidebar_container{
+    display:flex;
+    flex-direction: column;
+}
+
+.sidebar_link{
+    text-decoration: none;
+    color: #000;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.sidebar_profil{
+    display: flex;
+    padding: 10px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #000;
+    align-items: center;
+    gap: 10px;
+    font-weight: 700;
+    .username_image{
+        width: 40px;
+        height: 40px;
+        background-color: #305555;
+        color: #fff;
+        font-size: 20px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width:1700px) {
+
+    .button_bar{
+        display: flex;
+    }
+
+    .container .navbar_menu_container{
+        display: none;
+    }
+
+    .container .right_container{
+        display: none;
+    }
+
+    .container .nav_image{
+        width: 80px;
+        height: 85px;
+    }
+    
+    .container_home .navbar_menu_container{
+        display: none;
+    }
+
+    .container_home .right_container{
+        display: none;
+    }
+
+    .container_home .nav_image{
+        width: 80px;
+        height: 85px;
+    }
+
+
+}
+
+@media (max-width:600px) {
+    .container .navbar{
+        padding: 20px;
+    }
+
+    .container .nav_image{
+        width: 60px;
+        height: 62px;
+    }
+    
+    .container_home .navbar{
+        padding: 20px;
+    }
+
+    .container_home .nav_image{
+        width: 60px;
+        height: 62px;
+    }
+}
