@@ -67,9 +67,6 @@ export default function AppTopbar(props) {
                     </div>
                     <Button onClick={() => setSidebarVisible(true)} className={style.button_bar} icon="pi pi-bars" />
                     <div className={style.navbar_menu_container}>
-                        <Link style={{ textDecoration: "none" }} href={"/users"}>
-                            <span className={style.navbar_menu_item}>{t("home")}</span>
-                        </Link>
                         <Link style={{ textDecoration: "none" }} href={"/users/accommodation"}>
                             <span className={style.navbar_menu_item}>{t("accommodation")}</span>
                         </Link>
