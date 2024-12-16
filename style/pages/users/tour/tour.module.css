@@ -1,1004 +1,1063 @@
-.container{
-    margin: 40px 10vw;
-    display: flex;
-    flex-direction: column;
-    gap: 100px;
-}
-
-.tour_filter_container{
-    margin: 0 -10vw;
-    width: 100vw;
-    background-color: #305555;
-    display: flex;
-    align-items: center;
-    gap: 70px;
-    color: #fff;
-    padding: 30px 10vw;
-
-}
-
-.image_header_filter{
-    height: 240px;
-    border-radius: 5px;
-}
-
-.right_container{
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.right_title_container{
-    display: flex;
-    flex-direction: column;
-    padding-right: 120px;
-    gap: 20px;
-}
-
-.right_title{
-    font-weight: 100;
-    font-size: 36px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    letter-spacing: -2px;
-}
-
-
-.categorie_container{
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-    justify-content: center;
-    align-items: center;
-}
-
-.categorie_top{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
-.categorie_title{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    font-size: 32px;
-    letter-spacing: -2px;
-}
-
-
-.categorie_subtitle{
-    font-size: 16px;
-    text-align: center;
-    width: 80%;
-}
-
-
-.image_categorie_container{
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    width: 100%;
-    gap: 20px;
-}
-
-.image_categorie{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.image_categorie{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.image_middle{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, auto);
-    gap: 10px;
-}
-
-.image_categorie_content:first-child{
-    grid-row: 1 / -1;
-    grid-column: 1 / 2;
-    position: relative;
-    cursor: pointer;
-    max-width: 400px;
-}
-
-.image_categorie_content:last-child{
-    grid-row: 1 / -1;
-    grid-column: 3 / 4;
-    position: relative;
-    cursor: pointer;
-    max-width: 400px;
-}
-.image_categorie_content:not(:first-child):not(:last-child)  {
-    position: relative;
-}
-
-.image_categorie_detail{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(#0000,#0009);
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: center;
-    color: #fff;
-    padding: 50px 10px;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-
-
-
-.top_value_container{
-    display: flex;
-    flex-direction: column;
-    gap: 35px;
-}
-
-.top_value_top{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-.top_value_title{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    font-size: 32px;
-    letter-spacing: -2px;
-}
-
-
-.top_value_subtitle{
-    font-size: 16px;
-    text-align: center;
-    width: 80%;
-}
-
-.top_value_body{
-    display: flex;
-    align-content: center;
-    gap: 20px;
-    width: 100%;
-}
-
-.top_value_body_left{
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
-    margin-left: 150px;
-}
-
-
-.top_value_left_detail_container{
-    display: flex;
-    align-items: center;
-    gap: 70px;
-    padding: 40px;
-}
-
-
-
-.top_value_left_detail_image{
-    width: 40px;
-    height: 40px;
-}
-
-.top_value_left_detail{
-    display: flex;
-    flex-direction: column;
-    overflow-wrap: break-word;
-    gap: 10px;
-    width: 600px;
-}
-
-.top_value_left_detail_title{
-    font-size: 26px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    letter-spacing: -2px;
-    font-weight: 100;
-}
-
-
-.suggestion_container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.suggestion_title_container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.suggestion_title{
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    font-size: 32px;
-    letter-spacing: -2px;
-}
-.suggestion_subtitle{
-    width: 50vw;
-    text-align: center;
-    font-size: 15px;
-}
-
-.suggestion_item_container{
-    width: 100%;
-    display: flex;
-    gap: 20px;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    align-items: center;
-}
-
-.group_trip_container{
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    width: 100%;
-    gap: 50px;
-}
-
-
-.image_group_trip{
-    height: 400px;
-    width: auto;
-    object-fit: cover;
-}
-
-.group_trip_detail{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 40px;
-}
-
-.group_trip_title{
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    font-size: 32px;
-    letter-spacing: -2px;
-}
-
-.group_trip_subtitle{
-    font-size: 15px;
-    width: 600px;
-}
-
-.list_operator_container{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-.list_operator_title{
-    width: 100%;
-    text-align: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-style: oblique;
-    font-size: 32px;
-    letter-spacing: -2px;
-}
-.list_operator{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-}
-
-.operator{
-    width: 400px;
-    height: 250px;
-    position: relative;
-    overflow: hidden;
-    border-radius: 20px;
-}
-
-.image_operator{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.operator_detail{
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    background: linear-gradient(#0000,#0009);
-    padding: 30px;
-    color: #fff;
-    text-decoration: none;
-    font-size: 24px;
-    font-weight: 700;
-}
-
-@media screen and (max-width: 1500px){
-    .image_group_trip{
-        height: 380px;
-        width: auto;
-        object-fit: cover;
-    }
-}
-
-/* Media query pour les écrans de 1400px ou moins */
-@media screen and (max-width: 1400px) {
-    .top_value_body{
-        display: flex;
-        align-items: center;
-    }
-    .top_value_body_left{
-        margin-left: 50px;
-        margin-right: 80px;
-    }
-    .group_trip_detail{
-        display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 40px;
-    margin-left: 140px;
-    margin-right: 140px;
-    }
-    .right_title_container{
-        padding-right: 10px;
-        margin-left: 20px;
-    }
-    .image_header_filter{
-        height: 150px;
-        border-radius: 5px;
-    }
-    .container {
-        margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
-        gap: 50px; /* Réduit l'espace entre les éléments */
-    }
-
-    .tour_filter_container {
-        margin: 0; /* Supprime les marges */
-        width: 100%; /* Remplit la largeur complète de l'écran */
-        padding: 20px; /* Ajuste le padding pour ne pas dépasser */
-        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .right_container {
-        padding-left: 10px;
-        padding-right: 10px; /* Réduit le padding pour les petits écrans */
-    }
-
-    .right_title {
-        font-size: 24px; /* Réduit la taille de la police */
-        padding-right: 0; /* Évite de dépasser les bords de l'écran */
-    }
-
-    .categorie_container {
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .categorie_title {
-        font-size: 24px; /* Réduit la taille de la police */
-    }
-
-    .categorie_subtitle {
-        font-size: 14px; /* Réduit la taille de la police */
-        width: 90%; /* Utilise plus de largeur de l'écran */
-    }
+@keyframes continuousRotate {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+  }
+  
+  .container{
+      margin: 40px 10vw;
+      display: flex;
+      flex-direction: column;
+      gap: 100px;
+  }
+  
+  .tour_filter_container{
+      margin: 0 -10vw;
+      width: 100vw;
+      background-color: #2c3e50; /* Updated background color */
+      border-radius: 10px; /* Added border radius */
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added box shadow */
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      color: #fff;
+      padding: 30px 10vw;
+  
+  }
+  
+  .image_header_filter{
+      height: 240px;
+      border-radius: 5px;
+  }
+  
+  .right_container{
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+  }
+  
+  .right_title_container{
+      display: flex;
+      flex-direction: column;
+      padding-right: 120px;
+      gap: 20px;
+  }
+  
+  .right_title{
+      font-weight: 600; /* Updated font-weight */
+      font-size: 36px;
+      font-family: 'Poppins', sans-serif; /* Updated font-family */
+      font-style: oblique;
+      letter-spacing: -0.5px; /* Updated letter-spacing */
+  }
+  
+  
+  .categorie_container{
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  .categorie_top{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  }
+  
+  .categorie_title{
+      font-family: 'Poppins', sans-serif; /* Updated font-family */
+      font-style: oblique;
+      font-size: 32px;
+      font-weight: 600; /* Updated font-weight */
+      letter-spacing: -0.5px; /* Updated letter-spacing */
+  }
+  
+  
+  .categorie_subtitle{
+      font-size: 16px;
+      text-align: center;
+      width: 80%;
+      font-family: 'Open Sans', sans-serif; /* Updated font-family */
+      line-height: 1.6; /* Updated line-height */
+  }
+  
+  
+  .image_categorie_container{
+      display: flex;
+      width: 200%; /* Double the width to allow for seamless looping */
+      animation: continuousRotate 60s linear infinite;
+      align-items: center;
+      gap: 20px;
+  }
+  
+  .image_categorie_container:hover {
+    animation-play-state: paused;
+  }
+  
+  .image_categorie{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease, filter 0.3s ease; /* Added transition */
+  }
+  
+  .image_categorie:hover {
+    transform: scale(1.05); /* Added hover effect */
+    filter: brightness(1.1); /* Added hover effect */
+  }
+  
+  .image_categorie{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .image_middle{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      gap: 10px;
+  }
+  
+  .image_categorie_content:first-child{
+      grid-row: 1 / -1;
+      grid-column: 1 / 2;
+      position: relative;
+      cursor: pointer;
+      max-width: 400px;
+  }
+  
+  .image_categorie_content:last-child{
+      grid-row: 1 / -1;
+      grid-column: 3 / 4;
+      position: relative;
+      cursor: pointer;
+      max-width: 400px;
+  }
+  .image_categorie_content:not(:first-child):not(:last-child)  {
+      position: relative;
+  }
+  
+  .image_categorie_detail{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(#0000,#0009);
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: center;
+      color: #fff;
+      padding: 50px 10px;
+      font-size: 24px;
+      font-weight: 700;
+  }
+  
+  
+  
+  
+  .top_value_container{
+      display: flex;
+      flex-direction: column;
+      gap: 35px;
+  }
+  
+  .top_value_top{
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+  }
+  .top_value_title{
+      font-family: 'Poppins', sans-serif; /* Updated font-family */
+      font-style: oblique;
+      font-size: 32px;
+      font-weight: 600; /* Updated font-weight */
+      letter-spacing: -0.5px; /* Updated letter-spacing */
+  }
+  
+  
+  .top_value_subtitle{
+      font-size: 16px;
+      text-align: center;
+      width: 80%;
+      font-family: 'Open Sans', sans-serif; /* Updated font-family */
+      line-height: 1.6; /* Updated line-height */
+  }
+  
+  .top_value_body{
+      display: flex;
+      align-content: center;
+      gap: 20px;
+      width: 100%;
+  }
+  
+  .top_value_body_left{
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      margin-left: 150px;
+  }
+  
+  
+  .top_value_left_detail_container{
+      display: flex;
+      align-items: center;
+      gap: 70px;
+      padding: 40px;
+  }
+  
+  
+  
+  .top_value_left_detail_image{
+      width: 40px;
+      height: 40px;
+  }
+  
+  .top_value_left_detail{
+      display: flex;
+      flex-direction: column;
+      overflow-wrap: break-word;
+      gap: 10px;
+      width: 600px;
+  }
+  
+  .top_value_left_detail_title{
+      font-size: 26px;
+      font-family: 'Poppins', sans-serif; /* Updated font-family */
+      font-style: oblique;
+      letter-spacing: -0.5px; /* Updated letter-spacing */
+      font-weight: 100;
+  }
+  
+  
+  .suggestion_container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+  }
+  
+  .suggestion_title_container{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+  }
+  
+  .suggestion_title{
+      text-align: center;
+      font-family: 'Poppins', sans-serif; /* Updated font-family */
+      font-style: oblique;
+      font-size: 32px;
+      font-weight: 600; /* Updated font-weight */
+      letter-spacing: -0.5px; /* Updated letter-spacing */
+  }
+  .suggestion_subtitle{
+      width: 50vw;
+      text-align: center;
+      font-size: 15px;
+      font-family: 'Open Sans', sans-serif; /* Updated font-family */
+      line-height: 1.6; /* Updated line-height */
+  }
+  
+  .suggestion_item_container{
+      width: 100%;
+      display: flex;
+      gap: 20px;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      align-items: center;
+  }
+  
+  .group_trip_container{
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 50px;
+  }
+  
+  
+  .image_group_trip{
+      height: 400px;
+      width: auto;
+      object-fit: cover;
+  }
+  
+  .group_trip_detail{
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+  }
+  
+  .group_trip_title{
+      font-family: 'Poppins', sans-serif; /* Updated font-family */
+      font-style: oblique;
+      font-size: 32px;
+      font-weight: 600; /* Updated font-weight */
+      letter-spacing: -0.5px; /* Updated letter-spacing */
+  }
+  
+  .group_trip_subtitle{
+      font-size: 15px;
+      width: 600px;
+      font-family: 'Open Sans', sans-serif; /* Updated font-family */
+      line-height: 1.6; /* Updated line-height */
+  }
+  
+  .list_operator_container{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+  }
+  .list_operator_title{
+      width: 100%;
+      text-align: center;
+      font-family: 'Poppins', sans-serif; /* Updated font-family */
+      font-style: oblique;
+      font-size: 32px;
+      font-weight: 600; /* Updated font-weight */
+      letter-spacing: -0.5px; /* Updated letter-spacing */
+  }
+  .list_operator{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+  }
+  
+  .operator {
+      width: 400px;
+      height: 250px;
+      position: relative;
+      overflow: hidden;
+      border-radius: 20px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease; /* Added transition */
+  }
+  
+  .operator:hover {
+    transform: translateY(-5px); /* Added hover effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Added hover effect */
+  }
+  
+  .image_operator{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+  }
+  
+  .operator_detail{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      background: linear-gradient(#0000,#0009);
+      padding: 30px;
+      color: #fff;
+      text-decoration: none;
+      font-size: 24px;
+      font-weight: 700;
+  }
+  
+  .button-primary {
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Added transition */
+  }
+  
+  .button-primary:hover {
+    transform: translateY(-2px); /* Added hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Added hover effect */
+  }
+  
+  @media screen and (max-width: 1500px){
+      .image_group_trip{
+          height: 380px;
+          width: auto;
+          object-fit: cover;
+      }
+  }
+  
+  /* Media query pour les écrans de 1400px ou moins */
+  @media screen and (max-width: 1400px) {
+      .top_value_body{
+          display: flex;
+          align-items: center;
+      }
+      .top_value_body_left{
+          margin-left: 50px;
+          margin-right: 80px;
+      }
+      .group_trip_detail{
+          display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+      margin-left: 140px;
+      margin-right: 140px;
+      }
+      .right_title_container{
+          padding-right: 10px;
+          margin-left: 20px;
+      }
+      .image_header_filter{
+          height: 150px;
+          border-radius: 5px;
+      }
+      .container {
+          margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
+          gap: 50px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .tour_filter_container {
+          margin: 0; /* Supprime les marges */
+          width: 100%; /* Remplit la largeur complète de l'écran */
+          padding: 20px; /* Ajuste le padding pour ne pas dépasser */
+          box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .right_container {
+          padding-left: 10px;
+          padding-right: 10px; /* Réduit le padding pour les petits écrans */
+      }
+  
+      .right_title {
+          font-size: 24px; /* Réduit la taille de la police */
+          padding-right: 0; /* Évite de dépasser les bords de l'écran */
+      }
+  
+      .categorie_container {
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .categorie_title {
+          font-size: 24px; /* Réduit la taille de la police */
+      }
+  
+      .categorie_subtitle {
+          font-size: 14px; /* Réduit la taille de la police */
+          width: 90%; /* Utilise plus de largeur de l'écran */
+      }
+      .image_categorie_container {
+          display: flex;
+          grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
+          gap: 10px; /* Espace entre les images */
+          width: 100%; /* Utilise toute la largeur disponible */
+      }
+      .image_categorie {
+          width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
+          height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
+          object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
+      }
+  
+      .image_middle {
+          display: flex;
+          grid-template-columns: 1fr 1fr; /* Affiche les images en une seule colonne */
+          grid-template-rows: auto; /* Ajuste automatiquement les lignes */
+      }
+  
+  
+      .top_value_body{
+          display: flex;
+          text-align: center;
+      }
+  
+  
+  
+      .top_value_left_detail_container {
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+          padding: 20px; /* Réduit le padding */
+          width: 100%; /* Utilise toute la largeur disponible */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+      }
+  
+      .top_value_left_detail {
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements */
+          overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+      }
+  
+      .top_value_left_detail_title {
+          font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
+          line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
+          word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
+          margin-right: 0; /* Supprime toute marge droite */
+      }
+      .group_trip_subtitle {
+          font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements horizontaux */
+          word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+          line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
+          padding: 10px; /* Ajoute du padding pour un espacement confortable */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+          text-align: center; /* Centre le texte */
+      }
+  
+      .top_value_subtitle, .top_value_title {
+          font-size: 16px; /* Ajuste la taille de la police */
+          width: 100%; /* Assure que le texte prend toute la largeur disponible */
+          text-align: center; /* Centre le texte si nécessaire */
+      }
+  
+      .operator {
+          width: 100%; /* Utilise toute la largeur disponible */
+          height: auto; /* Ajuste automatiquement la hauteur */
+      }
+      .image_group_trip{
+          height: 400px;
+          width: auto;
+          object-fit: cover;
+      }
+      .top_value_container{
+          display: flex;
+          text-align: center;
+      }
+  }
+  
+  /* Media query pour les écrans de 1000px ou moins */
+  @media screen and (max-width: 1000px) {
+      
+      .right_title_container{
+          padding-right: 10px;
+          margin-left: 20px;
+      }
+      .image_header_filter{
+          height: 150px;
+          border-radius: 5px;
+      }
+      .container {
+          margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
+          gap: 50px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .tour_filter_container {
+          margin: 0; /* Supprime les marges */
+          width: 100%; /* Remplit la largeur complète de l'écran */
+          padding: 20px; /* Ajuste le padding pour ne pas dépasser */
+          box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .right_container {
+          padding-left: 10px;
+          padding-right: 10px; /* Réduit le padding pour les petits écrans */
+      }
+  
+      .right_title {
+          font-size: 24px; /* Réduit la taille de la police */
+          padding-right: 0; /* Évite de dépasser les bords de l'écran */
+      }
+  
+      .categorie_container {
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .categorie_title {
+          font-size: 24px; /* Réduit la taille de la police */
+      }
+  
+      .categorie_subtitle {
+          font-size: 14px; /* Réduit la taille de la police */
+          width: 90%; /* Utilise plus de largeur de l'écran */
+      }
+      .image_categorie_container {
+          display: flex;
+          grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
+          gap: 10px; /* Espace entre les images */
+          width: 100%; /* Utilise toute la largeur disponible */
+      }
+      .image_categorie {
+          width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
+          height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
+          object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
+      }
+  
+      .image_middle {
+          display: flex;
+          grid-template-columns: 1fr 1fr; /* Affiche les images en une seule colonne */
+          grid-template-rows: auto; /* Ajuste automatiquement les lignes */
+      }
+  
+      .top_value_left_detail_container {
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+          padding: 20px; /* Réduit le padding */
+          width: 100%; /* Utilise toute la largeur disponible */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+      }
+  
+      .top_value_left_detail {
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements */
+          overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+      }
+  
+      .top_value_left_detail_title {
+          font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
+          line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
+          word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
+          margin-right: 0; /* Supprime toute marge droite */
+      }
+      .group_trip_subtitle {
+          font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements horizontaux */
+          word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+          line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
+          padding: 10px; /* Ajoute du padding pour un espacement confortable */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+          text-align: center; /* Centre le texte */
+      }
+  
+      .top_value_subtitle, .top_value_title {
+          font-size: 16px; /* Ajuste la taille de la police */
+          width: 100%; /* Assure que le texte prend toute la largeur disponible */
+      }
+  
+      .operator {
+          width: 100%; /* Utilise toute la largeur disponible */
+          height: auto; /* Ajuste automatiquement la hauteur */
+      }
+      .image_group_trip{
+          height: 400px;
+          width: auto;
+          object-fit: cover;
+      }
+      .top_value_container{
+          margin-left: -5px;
+      }
+  }
+  
+  
+  /* Media query pour les écrans de 800px ou moins */
+  @media screen and (max-width: 800px) {
+      .right_title_container{
+          padding-right: 10px;
+          margin-left: 20px;
+      }
+      .image_header_filter{
+          height: 150px;
+          border-radius: 5px;
+      }
+      .container {
+          margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
+          gap: 50px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .tour_filter_container {
+          margin: 0; /* Supprime les marges */
+          width: 100%; /* Remplit la largeur complète de l'écran */
+          padding: 20px; /* Ajuste le padding pour ne pas dépasser */
+          box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .right_container {
+          padding-left: 10px;
+          padding-right: 10px; /* Réduit le padding pour les petits écrans */
+      }
+  
+      .right_title {
+          font-size: 24px; /* Réduit la taille de la police */
+          padding-right: 0; /* Évite de dépasser les bords de l'écran */
+      }
+  
+      .categorie_container {
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .categorie_title {
+          font-size: 24px; /* Réduit la taille de la police */
+      }
+  
+      .categorie_subtitle {
+          font-size: 14px; /* Réduit la taille de la police */
+          width: 90%; /* Utilise plus de largeur de l'écran */
+      }
+      .image_categorie_container {
+          display: flex;
+          grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
+          gap: 10px; /* Espace entre les images */
+          width: 100%; /* Utilise toute la largeur disponible */
+      }
+      .image_categorie {
+          width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
+          height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
+          object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
+      }
+  
+      .image_middle {
+          display: none;
+          grid-template-columns: 1fr; /* Affiche les images en une seule colonne */
+          grid-template-rows: auto; /* Ajuste automatiquement les lignes */
+      }
+  
+      .top_value_left_detail_container {
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+          padding: 20px; /* Réduit le padding */
+          width: 100%; /* Utilise toute la largeur disponible */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+      }
+  
+      .top_value_left_detail {
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements */
+          overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+      }
+  
+      .top_value_left_detail_title {
+          font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
+          line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
+          word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
+          margin-right: 0; /* Supprime toute marge droite */
+      }
+      .group_trip_subtitle {
+          font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements horizontaux */
+          word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+          line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
+          padding: 10px; /* Ajoute du padding pour un espacement confortable */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+          text-align: center; /* Centre le texte */
+      }
+  
+      .top_value_subtitle, .top_value_title {
+          font-size: 16px; /* Ajuste la taille de la police */
+          width: 100%; /* Assure que le texte prend toute la largeur disponible */
+          text-align: center; /* Centre le texte si nécessaire */
+      }
+  
+      .operator {
+          width: 100%; /* Utilise toute la largeur disponible */
+          height: auto; /* Ajuste automatiquement la hauteur */
+      }
+      .image_group_trip{
+          height: 250px;
+          width: auto;
+          object-fit: cover;
+      }
+      .top_value_container{
+          margin-left: -5px;
+      }
+  }
+  
+  @media screen and (max-width: 690px){
+      .group_trip_detail{
+          display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 40px;
+      margin-left: 100px;
+      }
+  } 
+  
+  /* Media query pour les écrans de 600px ou moins */
+  @media screen and (max-width: 600px) {
+      .right_title_container{
+          padding-right: 10px;
+          margin-left: 20px;
+      }
+      .image_header_filter{
+          height: 150px;
+          border-radius: 5px;
+      }
+      .container {
+          margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
+          gap: 50px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .tour_filter_container {
+          margin: 0; /* Supprime les marges */
+          width: 100%; /* Remplit la largeur complète de l'écran */
+          padding: 20px; /* Ajuste le padding pour ne pas dépasser */
+          box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .right_container {
+          padding-left: 10px;
+          padding-right: 10px; /* Réduit le padding pour les petits écrans */
+      }
+  
+      .right_title {
+          font-size: 24px; /* Réduit la taille de la police */
+          padding-right: 0; /* Évite de dépasser les bords de l'écran */
+      }
+  
+      .categorie_container {
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .categorie_title {
+          font-size: 24px; /* Réduit la taille de la police */
+      }
+  
+      .categorie_subtitle {
+          font-size: 14px; /* Réduit la taille de la police */
+          width: 90%; /* Utilise plus de largeur de l'écran */
+      }
+      .image_categorie_container {
+          display: flex;
+          grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
+          gap: 10px; /* Espace entre les images */
+          width: 100%; /* Utilise toute la largeur disponible */
+      }
+      .image_categorie {
+          width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
+          height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
+          object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
+      }
+  
+      .image_middle {
+          display: none;
+          grid-template-columns: 1fr; /* Affiche les images en une seule colonne */
+          grid-template-rows: auto; /* Ajuste automatiquement les lignes */
+      }
+  
+      .top_value_left_detail_container {
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+          padding: 20px; /* Réduit le padding */
+          width: 100%; /* Utilise toute la largeur disponible */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+      }
+  
+      .top_value_left_detail {
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements */
+          overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+      }
+  
+      .top_value_left_detail_title {
+          font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
+          line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
+          word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
+          margin-right: 0; /* Supprime toute marge droite */
+      }
+      .group_trip_subtitle {
+          font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements horizontaux */
+          word-wrap: break-word; /* Coupe les mots longs pour éviter lesdébordements */
+          line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
+          padding: 10px; /* Ajoute du padding pour un espacement confortable */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+          text-align: center; /* Centre le texte */
+      }
+  
+      .top_value_subtitle, .top_value_title {
+          font-size: 16px; /* Ajuste la taille de la police */
+          width: 100%; /* Assure que le texte prend toute la largeur disponible */
+          text-align: center; /* Centre le texte si nécessaire */
+      }
+  
+      .operator {
+          width: 100%; /* Utilise toute la largeur disponible */
+          height: auto; /* Ajuste automatiquement la hauteur */
+      }
+      .image_group_trip{
+          height: 250px;
+          width: auto;
+          object-fit: cover;
+      }
+      .top_value_container{
+          margin-left: -5px;
+      }
+      .group_trip_detail{
+          display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      margin-left: 50px;
+  }
+  }
+  
+  
+  /* Media query pour les écrans de 480px ou moins */
+  @media screen and (max-width: 480px) {
+      .top_value_body_left{
+          margin-left: 30px;
+          margin-right: 0px;
+      }
+      .group_trip_detail{
+          display: flex;
+          align-items: center;
+          flex-direction: column;
+          gap: 30px;
+          margin-left: 0px;
+  }
+  
+      .top_value_container{
+          margin-left: -5px;
+      }
+      .right_title_container{
+          padding-right: 10px;
+          margin-left: 20px;
+      }
+      .image_header_filter{
+          height: 150px;
+          border-radius: 5px;
+      }
+      .container {
+          margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
+          gap: 50px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .tour_filter_container {
+          margin: 0; /* Supprime les marges */
+          width: 100%; /* Remplit la largeur complète de l'écran */
+          padding: 20px; /* Ajuste le padding pour ne pas dépasser */
+          box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .right_container {
+          padding-left: 10px;
+          padding-right: 10px; /* Réduit le padding pour les petits écrans */
+      }
+  
+      .right_title {
+          font-size: 24px; /* Réduit la taille de la police */
+          padding-right: 0; /* Évite de dépasser les bords de l'écran */
+      }
+  
+      .categorie_container {
+          gap: 20px; /* Réduit l'espace entre les éléments */
+      }
+  
+      .categorie_title {
+          font-size: 24px; /* Réduit la taille de la police */
+      }
+  
+      .categorie_subtitle {
+          font-size: 14px; /* Réduit la taille de la police */
+          width: 90%; /* Utilise plus de largeur de l'écran */
+      }
+      .image_categorie_container {
+          display: flex;
+          grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
+          gap: 10px; /* Espace entre les images */
+          width: 100%; /* Utilise toute la largeur disponible */
+      }
+      .image_categorie {
+          width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
+          height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
+          object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
+      }
+  
+      .image_middle {
+          display: none;
+          grid-template-columns: 1fr; /* Affiche les images en une seule colonne */
+          grid-template-rows: auto; /* Ajuste automatiquement les lignes */
+      }
+  
+      .top_value_left_detail_container {
+          flex-direction: column; /* Empile les éléments verticalement */
+          gap: 20px; /* Réduit l'espace entre les éléments */
+          padding: 20px; /* Réduit le padding */
+          width: 100%; /* Utilise toute la largeur disponible */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+      }
+  
+      .top_value_left_detail {
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements */
+          overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+      }
+  
+      .top_value_left_detail_title {
+          font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
+          line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
+          word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
+          margin-right: 0; /* Supprime toute marge droite */
+      }
+      .group_trip_subtitle {
+          font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
+          width: 100%; /* Utilise toute la largeur disponible */
+          max-width: 100%; /* Empêche les débordements horizontaux */
+          word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
+          line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
+          padding: 10px; /* Ajoute du padding pour un espacement confortable */
+          box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+          text-align: center; /* Centre le texte */
+      }
+  
+      .top_value_subtitle, .top_value_title {
+          font-size: 16px; /* Ajuste la taille de la police */
+          width: 100%; /* Assure que le texte prend toute la largeur disponible */
+          text-align: center; /* Centre le texte si nécessaire */
+      }
+  
+      .operator {
+          width: 100%; /* Utilise toute la largeur disponible */
+          height: auto; /* Ajuste automatiquement la hauteur */
+      }
+      .image_group_trip{
+          height: 250px;
+          width: auto;
+          object-fit: cover;
+      }
+      .top_value_body_left{
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+          margin-left: -5px;
+      }
+  }
+  
+  @media screen and (max-width: 360px) {
+      .group_trip_detail{
+          display: flex;
+      align-items: center;
+      flex-direction: column;
+      gap: 30px;
+      margin-left: -10px;
+  }
+  .image_group_trip{
+      height: 240px;
+      width: auto;
+      object-fit: cover;
+  }
+  .top_value_body{
+      margin-left: -60px;
+  }
+  }
+  
+  @media screen and (max-width: 768px) {
     .image_categorie_container {
-        display: flex;
-        grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
-        gap: 10px; /* Espace entre les images */
-        width: 100%; /* Utilise toute la largeur disponible */
+      width: 300%; /* Increase width for smaller screens to maintain smooth animation */
     }
-    .image_categorie {
-        width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
-        height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
-        object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
-    }
-
-    .image_middle {
-        display: flex;
-        grid-template-columns: 1fr 1fr; /* Affiche les images en une seule colonne */
-        grid-template-rows: auto; /* Ajuste automatiquement les lignes */
-    }
-
-
-    .top_value_body{
-        display: flex;
-        text-align: center;
-    }
-
-
-
-    .top_value_left_detail_container {
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-        padding: 20px; /* Réduit le padding */
-        width: 100%; /* Utilise toute la largeur disponible */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-    }
-
-    .top_value_left_detail {
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements */
-        overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-    }
-
-    .top_value_left_detail_title {
-        font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
-        line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
-        word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
-        margin-right: 0; /* Supprime toute marge droite */
-    }
-    .group_trip_subtitle {
-        font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements horizontaux */
-        word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-        line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
-        padding: 10px; /* Ajoute du padding pour un espacement confortable */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-        text-align: center; /* Centre le texte */
-    }
-
-    .top_value_subtitle, .top_value_title {
-        font-size: 16px; /* Ajuste la taille de la police */
-        width: 100%; /* Assure que le texte prend toute la largeur disponible */
-        text-align: center; /* Centre le texte si nécessaire */
-    }
-
-    .operator {
-        width: 100%; /* Utilise toute la largeur disponible */
-        height: auto; /* Ajuste automatiquement la hauteur */
-    }
-    .image_group_trip{
-        height: 400px;
-        width: auto;
-        object-fit: cover;
-    }
-    .top_value_container{
-        display: flex;
-        text-align: center;
-    }
-}
-
-/* Media query pour les écrans de 1000px ou moins */
-@media screen and (max-width: 1000px) {
-    
-    .right_title_container{
-        padding-right: 10px;
-        margin-left: 20px;
-    }
-    .image_header_filter{
-        height: 150px;
-        border-radius: 5px;
-    }
-    .container {
-        margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
-        gap: 50px; /* Réduit l'espace entre les éléments */
-    }
-
-    .tour_filter_container {
-        margin: 0; /* Supprime les marges */
-        width: 100%; /* Remplit la largeur complète de l'écran */
-        padding: 20px; /* Ajuste le padding pour ne pas dépasser */
-        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .right_container {
-        padding-left: 10px;
-        padding-right: 10px; /* Réduit le padding pour les petits écrans */
-    }
-
-    .right_title {
-        font-size: 24px; /* Réduit la taille de la police */
-        padding-right: 0; /* Évite de dépasser les bords de l'écran */
-    }
-
-    .categorie_container {
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .categorie_title {
-        font-size: 24px; /* Réduit la taille de la police */
-    }
-
-    .categorie_subtitle {
-        font-size: 14px; /* Réduit la taille de la police */
-        width: 90%; /* Utilise plus de largeur de l'écran */
-    }
+  }
+  
+  @media screen and (max-width: 480px) {
     .image_categorie_container {
-        display: flex;
-        grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
-        gap: 10px; /* Espace entre les images */
-        width: 100%; /* Utilise toute la largeur disponible */
-    }
-    .image_categorie {
-        width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
-        height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
-        object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
-    }
-
-    .image_middle {
-        display: flex;
-        grid-template-columns: 1fr 1fr; /* Affiche les images en une seule colonne */
-        grid-template-rows: auto; /* Ajuste automatiquement les lignes */
-    }
-
-    .top_value_left_detail_container {
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-        padding: 20px; /* Réduit le padding */
-        width: 100%; /* Utilise toute la largeur disponible */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-    }
-
-    .top_value_left_detail {
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements */
-        overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-    }
-
-    .top_value_left_detail_title {
-        font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
-        line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
-        word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
-        margin-right: 0; /* Supprime toute marge droite */
-    }
-    .group_trip_subtitle {
-        font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements horizontaux */
-        word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-        line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
-        padding: 10px; /* Ajoute du padding pour un espacement confortable */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-        text-align: center; /* Centre le texte */
-    }
-
-    .top_value_subtitle, .top_value_title {
-        font-size: 16px; /* Ajuste la taille de la police */
-        width: 100%; /* Assure que le texte prend toute la largeur disponible */
-    }
-
-    .operator {
-        width: 100%; /* Utilise toute la largeur disponible */
-        height: auto; /* Ajuste automatiquement la hauteur */
-    }
-    .image_group_trip{
-        height: 400px;
-        width: auto;
-        object-fit: cover;
-    }
-    .top_value_container{
-        margin-left: -5px;
-    }
-}
-
-
-/* Media query pour les écrans de 800px ou moins */
-@media screen and (max-width: 800px) {
-    .right_title_container{
-        padding-right: 10px;
-        margin-left: 20px;
-    }
-    .image_header_filter{
-        height: 150px;
-        border-radius: 5px;
-    }
-    .container {
-        margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
-        gap: 50px; /* Réduit l'espace entre les éléments */
-    }
-
-    .tour_filter_container {
-        margin: 0; /* Supprime les marges */
-        width: 100%; /* Remplit la largeur complète de l'écran */
-        padding: 20px; /* Ajuste le padding pour ne pas dépasser */
-        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .right_container {
-        padding-left: 10px;
-        padding-right: 10px; /* Réduit le padding pour les petits écrans */
-    }
-
-    .right_title {
-        font-size: 24px; /* Réduit la taille de la police */
-        padding-right: 0; /* Évite de dépasser les bords de l'écran */
-    }
-
-    .categorie_container {
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .categorie_title {
-        font-size: 24px; /* Réduit la taille de la police */
-    }
-
-    .categorie_subtitle {
-        font-size: 14px; /* Réduit la taille de la police */
-        width: 90%; /* Utilise plus de largeur de l'écran */
-    }
-    .image_categorie_container {
-        display: flex;
-        grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
-        gap: 10px; /* Espace entre les images */
-        width: 100%; /* Utilise toute la largeur disponible */
-    }
-    .image_categorie {
-        width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
-        height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
-        object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
-    }
-
-    .image_middle {
-        display: none;
-        grid-template-columns: 1fr; /* Affiche les images en une seule colonne */
-        grid-template-rows: auto; /* Ajuste automatiquement les lignes */
-    }
-
-    .top_value_left_detail_container {
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-        padding: 20px; /* Réduit le padding */
-        width: 100%; /* Utilise toute la largeur disponible */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-    }
-
-    .top_value_left_detail {
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements */
-        overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-    }
-
-    .top_value_left_detail_title {
-        font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
-        line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
-        word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
-        margin-right: 0; /* Supprime toute marge droite */
-    }
-    .group_trip_subtitle {
-        font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements horizontaux */
-        word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-        line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
-        padding: 10px; /* Ajoute du padding pour un espacement confortable */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-        text-align: center; /* Centre le texte */
-    }
-
-    .top_value_subtitle, .top_value_title {
-        font-size: 16px; /* Ajuste la taille de la police */
-        width: 100%; /* Assure que le texte prend toute la largeur disponible */
-        text-align: center; /* Centre le texte si nécessaire */
-    }
-
-    .operator {
-        width: 100%; /* Utilise toute la largeur disponible */
-        height: auto; /* Ajuste automatiquement la hauteur */
-    }
-    .image_group_trip{
-        height: 250px;
-        width: auto;
-        object-fit: cover;
-    }
-    .top_value_container{
-        margin-left: -5px;
-    }
-}
-
-@media screen and (max-width: 690px){
-    .group_trip_detail{
-        display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 40px;
-    margin-left: 100px;
-    }
-} 
-
-/* Media query pour les écrans de 600px ou moins */
-@media screen and (max-width: 600px) {
-    .right_title_container{
-        padding-right: 10px;
-        margin-left: 20px;
-    }
-    .image_header_filter{
-        height: 150px;
-        border-radius: 5px;
-    }
-    .container {
-        margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
-        gap: 50px; /* Réduit l'espace entre les éléments */
-    }
-
-    .tour_filter_container {
-        margin: 0; /* Supprime les marges */
-        width: 100%; /* Remplit la largeur complète de l'écran */
-        padding: 20px; /* Ajuste le padding pour ne pas dépasser */
-        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .right_container {
-        padding-left: 10px;
-        padding-right: 10px; /* Réduit le padding pour les petits écrans */
-    }
-
-    .right_title {
-        font-size: 24px; /* Réduit la taille de la police */
-        padding-right: 0; /* Évite de dépasser les bords de l'écran */
-    }
-
-    .categorie_container {
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .categorie_title {
-        font-size: 24px; /* Réduit la taille de la police */
-    }
-
-    .categorie_subtitle {
-        font-size: 14px; /* Réduit la taille de la police */
-        width: 90%; /* Utilise plus de largeur de l'écran */
-    }
-    .image_categorie_container {
-        display: flex;
-        grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
-        gap: 10px; /* Espace entre les images */
-        width: 100%; /* Utilise toute la largeur disponible */
-    }
-    .image_categorie {
-        width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
-        height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
-        object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
-    }
-
-    .image_middle {
-        display: none;
-        grid-template-columns: 1fr; /* Affiche les images en une seule colonne */
-        grid-template-rows: auto; /* Ajuste automatiquement les lignes */
-    }
-
-    .top_value_left_detail_container {
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-        padding: 20px; /* Réduit le padding */
-        width: 100%; /* Utilise toute la largeur disponible */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-    }
-
-    .top_value_left_detail {
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements */
-        overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-    }
-
-    .top_value_left_detail_title {
-        font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
-        line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
-        word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
-        margin-right: 0; /* Supprime toute marge droite */
-    }
-    .group_trip_subtitle {
-        font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements horizontaux */
-        word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-        line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
-        padding: 10px; /* Ajoute du padding pour un espacement confortable */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-        text-align: center; /* Centre le texte */
-    }
-
-    .top_value_subtitle, .top_value_title {
-        font-size: 16px; /* Ajuste la taille de la police */
-        width: 100%; /* Assure que le texte prend toute la largeur disponible */
-        text-align: center; /* Centre le texte si nécessaire */
-    }
-
-    .operator {
-        width: 100%; /* Utilise toute la largeur disponible */
-        height: auto; /* Ajuste automatiquement la hauteur */
-    }
-    .image_group_trip{
-        height: 250px;
-        width: auto;
-        object-fit: cover;
-    }
-    .top_value_container{
-        margin-left: -5px;
-    }
-    .group_trip_detail{
-        display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: 50px;
-}
-}
-
-
-/* Media query pour les écrans de 480px ou moins */
-@media screen and (max-width: 480px) {
-    .top_value_body_left{
-        margin-left: 30px;
-        margin-right: 0px;
-    }
-    .group_trip_detail{
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 30px;
-        margin-left: 0px;
-}
-
-    .top_value_container{
-        margin-left: -5px;
-    }
-    .right_title_container{
-        padding-right: 10px;
-        margin-left: 20px;
-    }
-    .image_header_filter{
-        height: 150px;
-        border-radius: 5px;
-    }
-    .container {
-        margin: 20px 5vw; /* Réduit les marges pour les petits écrans */
-        gap: 50px; /* Réduit l'espace entre les éléments */
-    }
-
-    .tour_filter_container {
-        margin: 0; /* Supprime les marges */
-        width: 100%; /* Remplit la largeur complète de l'écran */
-        padding: 20px; /* Ajuste le padding pour ne pas dépasser */
-        box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale */
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .right_container {
-        padding-left: 10px;
-        padding-right: 10px; /* Réduit le padding pour les petits écrans */
-    }
-
-    .right_title {
-        font-size: 24px; /* Réduit la taille de la police */
-        padding-right: 0; /* Évite de dépasser les bords de l'écran */
-    }
-
-    .categorie_container {
-        gap: 20px; /* Réduit l'espace entre les éléments */
-    }
-
-    .categorie_title {
-        font-size: 24px; /* Réduit la taille de la police */
-    }
-
-    .categorie_subtitle {
-        font-size: 14px; /* Réduit la taille de la police */
-        width: 90%; /* Utilise plus de largeur de l'écran */
-    }
-    .image_categorie_container {
-        display: flex;
-        grid-template-columns: 1fr 1fr; /* Affiche les images en deux colonnes */
-        gap: 10px; /* Espace entre les images */
-        width: 100%; /* Utilise toute la largeur disponible */
-    }
-    .image_categorie {
-        width: 100%; /* Assure que chaque image remplit la largeur de sa colonne */
-        height: auto; /* Ajuste la hauteur automatiquement pour garder le ratio d'aspect */
-        object-fit: cover; /* Couvre l'image tout en maintenant le ratio */
-    }
-
-    .image_middle {
-        display: none;
-        grid-template-columns: 1fr; /* Affiche les images en une seule colonne */
-        grid-template-rows: auto; /* Ajuste automatiquement les lignes */
-    }
-
-    .top_value_left_detail_container {
-        flex-direction: column; /* Empile les éléments verticalement */
-        gap: 20px; /* Réduit l'espace entre les éléments */
-        padding: 20px; /* Réduit le padding */
-        width: 100%; /* Utilise toute la largeur disponible */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-    }
-
-    .top_value_left_detail {
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements */
-        overflow-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-    }
-
-    .top_value_left_detail_title {
-        font-size: 18px; /* Réduit la taille de la police pour les petits écrans */
-        line-height: 1.2; /* Ajuste l'espacement vertical des lignes */
-        word-wrap: break-word; /* Coupe les mots pour éviter les débordements */
-        margin-right: 0; /* Supprime toute marge droite */
-    }
-    .group_trip_subtitle {
-        font-size: 14px; /* Réduit la taille de la police pour une meilleure lisibilité */
-        width: 100%; /* Utilise toute la largeur disponible */
-        max-width: 100%; /* Empêche les débordements horizontaux */
-        word-wrap: break-word; /* Coupe les mots longs pour éviter les débordements */
-        line-height: 1.4; /* Ajuste l'espacement vertical des lignes pour la lisibilité */
-        padding: 10px; /* Ajoute du padding pour un espacement confortable */
-        box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
-        text-align: center; /* Centre le texte */
-    }
-
-    .top_value_subtitle, .top_value_title {
-        font-size: 16px; /* Ajuste la taille de la police */
-        width: 100%; /* Assure que le texte prend toute la largeur disponible */
-        text-align: center; /* Centre le texte si nécessaire */
-    }
-
-    .operator {
-        width: 100%; /* Utilise toute la largeur disponible */
-        height: auto; /* Ajuste automatiquement la hauteur */
-    }
-    .image_group_trip{
-        height: 250px;
-        width: auto;
-        object-fit: cover;
-    }
-    .top_value_body_left{
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        margin-left: -5px;
-    }
-}
-
-@media screen and (max-width: 360px) {
-    .group_trip_detail{
-        display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 30px;
-    margin-left: -10px;
-}
-.image_group_trip{
-    height: 240px;
-    width: auto;
-    object-fit: cover;
-}
-.top_value_body{
-    margin-left: -60px;
-}
-}
+      width: 400%; /* Further increase width for very small screens */
+    }
+  }
+  
+  
