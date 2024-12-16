@@ -1,0 +1,14 @@
+[
+    {
+        "id":1,
+        "type_name":"Hotels"
+    },
+    {
+        "id":2,
+        "type_name":"Resorts"
+    },
+    {
+        "id":3,
+        "type_name":"Vacation Rentals"
+    }
+]

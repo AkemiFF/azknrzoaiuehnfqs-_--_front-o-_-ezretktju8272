@@ -1,0 +1,120 @@
+[
+    {
+        "id": 1,
+        "nom": "Ambatondrazaka",
+        "imageLink": "/images/region/atsimo-atsinanana.jpg"
+    },
+    {
+        "id": 2,
+        "nom": "Ambositra"
+    },
+    {
+        "id": 3,
+        "nom": "Ambovombe",
+        "imageLink": "/images/region/atsimo-andrefana.jpg"
+    },
+    {
+        "id": 4,
+        "nom": "Antananarivo"
+    },
+    {
+        "id": 5,
+        "nom": "Antsirabe"
+    },
+    {
+        "id": 6,
+        "nom": "Antsohihy",
+        "imageLink": "/images/region/fitovinany.jpg"
+    },
+    {
+        "id": 7,
+        "nom": "Antsiranana"
+    },
+    {
+        "id": 8,
+        "nom": "Atsinanana",
+        "imageLink": "/images/region/ihorombe.jpg"
+    },
+    {
+        "id": 9,
+        "nom": "Farafangana",
+        "imageLink": "/images/region/boeny.jpg"
+    },
+    {
+        "id": 10,
+        "nom": "Fenoarivo",
+        "imageLink": "/images/region/androy.jpg"
+    },
+    {
+        "id": 11,
+        "nom": "Fianarantsoa",
+        "imageLink": "/images/region/melaky.jpg"
+    },
+    {
+        "id": 12,
+        "nom": "Ihosy",
+        "imageLink": "/images/region/sofia.jpg"
+    },
+    {
+        "id": 13,
+        "nom": "Mahajanga",
+        "imageLink": "/images/region/menabe.jpg"
+    },
+    {
+        "id": 14,
+        "nom": "Maintirano",
+        "imageLink": "/images/region/vatovavy.jpg"
+    },
+    {
+        "id": 15,
+        "nom": "Maevatanana",
+        "imageLink": "/images/region/bongolava.jpg"
+    },
+    {
+        "id": 16,
+        "nom": "Manakara",
+        "imageLink": "/images/region/betsiboka.jpg"
+    },
+    {
+        "id": 17,
+        "nom": "Mananjary",
+        "imageLink": "/images/region/diana.jpg"
+    },
+    {
+        "id": 18,
+        "nom": "Miarinarivo"
+    },
+    {
+        "id": 19,
+        "nom": "Morondava",
+        "imageLink": "/images/region/amoron-i-mania.jpg"
+    },
+    {
+        "id": 20,
+        "nom": "Sambava"
+    },
+    {
+        "id": 21,
+        "nom": "Sava",
+        "imageLink": "/images/region/sava.jpg"
+    },
+    {
+        "id": 22,
+        "nom": "Toamasina",
+        "imageLink": "/images/region/anosy.jpg"
+    },
+    {
+        "id": 23,
+        "nom": "Tôlagnaro",
+        "imageLink": "/images/region/amoron-i-mania.jpg"
+    },
+    {
+        "id": 24,
+        "nom": "Toliara",
+        "imageLink": "/images/region/amoron-i-mania.jpg"
+    },
+    {
+        "id": 25,
+        "nom": "Tsiroanomandidy"
+    }
+]

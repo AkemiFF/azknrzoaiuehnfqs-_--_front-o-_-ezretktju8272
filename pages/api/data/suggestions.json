@@ -1,0 +1,26 @@
+[
+    {
+        "id":1,
+        "name":"Hotel Le louvre",
+        "image":"/images/hotel/hotel.jpg",
+        "ville":"Ivato , Antananarivo ,101",
+        "description":"Lorem ipsum dolor sit amet kasd erat ut consequat sadipscing. Diam no in feugiat nonumy ipsum ea sanctus sed takimata clita tempor sed sadipscing dolor takimata ea adipiscing iusto. Et aliquyam possim sea. Invidunt sea invidunt erat eos.",
+        "note_moyenne":2
+    },
+    {
+        "id":2,
+        "name":"Luxura palace",
+        "image":"/images/hotel/hotel2.jpg",
+        "ville":"Ananalakely , Antananarivo ,101",
+        "description":"Lorem ipsum dolor sit amet kasd erat ut consequat sadipscing. Diam no in feugiat nonumy ipsum ea sanctus sed takimata clita tempor sed sadipscing dolor takimata ea adipiscing iusto. Et aliquyam possim sea. Invidunt sea invidunt erat eos.",
+        "note_moyenne":3
+    },
+    {
+        "id":3,
+        "name":"Royale Palace",
+        "image":"/images/hotel/chambre.jpg",
+        "ville":"Tomboarivo , Antsirabe ,110",
+        "description":"Lorem ipsum dolor sit amet kasd erat ut consequat sadipscing. Diam no in feugiat nonumy ipsum ea sanctus sed takimata clita tempor sed sadipscing dolor takimata ea adipiscing iusto. Et aliquyam possim sea. Invidunt sea invidunt erat eos.",
+        "note_moyenne":4
+    }
+]

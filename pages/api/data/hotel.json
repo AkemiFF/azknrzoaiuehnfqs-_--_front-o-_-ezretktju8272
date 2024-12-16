@@ -1,0 +1,13 @@
+[
+    {
+        "id":1,
+        "nom":"Le Louvre Hotel & Spa",
+        "lat":-18,
+        "lng":47,
+        "price":25.5,
+        "description":"Lorem ipsum dolor sit amet sit delenit sea sanctus ut takimata erat. Sadipscing odio amet dolor. Amet elitr elitr dolore gubergren rebum takimata gubergren dolore. Et tation takimata lorem dolore et facilisi eos aliquyam possim justo consequat justo dolor sit qui. Clita aliquyam dolores wisi wisi vero nobis takimata et vel justo hendrerit. Sed voluptua duo elitr liber magna dignissim ipsum dolor elit lorem dolor justo amet odio. Takimata amet nonumy diam dolore amet feugiat et dolore sit invidunt. Dolor nonummy eirmod hendrerit ea sit ipsum in aliquam voluptua sed. Lorem nonumy lorem wisi adipiscing consequat et. Amet ea eu diam no kasd eos dolor erat dolor accusam duo consetetur dolor sanctus. In ea eu labore dolor diam sea aliquyam justo duo sed aliquam amet ipsum. Amet in amet tincidunt volutpat kasd dignissim at eirmod tempor dolor et. Sanctus elitr voluptua dolor diam gubergren diam feugiat lorem lorem justo dolores dolor. Duo clita dolor in sit. Eu accusam ipsum lorem tempor nisl nonummy et et ad ad sit augue suscipit. Autem et iriure amet invidunt et. Vel diam in voluptua voluptua no dolor stet. At amet dolor. Ut sadipscing diam sit aliquip sit est sed nostrud. Labore justo et sed et et ut gubergren.",
+        "note":4,
+        "imageCouverture":"/images/hotel/chambre.jpg",
+        "views":348
+    }
+]

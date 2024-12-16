@@ -1,0 +1,128 @@
+[
+    {
+        "id":1,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":2,
+        "idTypeAccommodation":1,
+        "nom_hebergement":" le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":3,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":4,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":5,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hot",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/hotel.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":6,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":7,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":8,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":9,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":10,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":11,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/hotel.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":12,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":13,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    },
+    {
+        "id":14,
+        "idTypeAccommodation":1,
+        "nom_hebergement":"Hotel le louvrer",
+        "nombre_etoile_hebergement":4,
+        "images":"/images/hotel/chambre.jpg",
+        "min_prix_nuit_chambre":"$95",
+        "description_hebergement":"Lorem ipsum dolor sit amet dolore gubergren diam sit ut eum amet ea ipsum diam iriure magna. Quis lorem amet eum sea eos magna erat. Rebum lorem dolore nonumy labore delenit ea ut est sadipscing amet labore erat duis justo liber. Liber amet iusto labore magna aliquip clita labore. Facer dolor te elitr duo labore dolore dolore sit dolore. Stet sed invidunt magna ea invidunt commodo ea vulputate esse accusam amet elitr. Duo duis sed lorem et ea vel sanctus amet vero accusam iriure clita. Vel ipsum aliquyam et et lorem odio in rebum. Ea amet ipsum lorem eum eos et dolor aliquam justo ex. At labore rebum duo justo sanctus soluta stet sadipscing."
+    }
+]

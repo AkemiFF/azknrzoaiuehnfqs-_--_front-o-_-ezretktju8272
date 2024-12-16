@@ -1,0 +1,27 @@
+[
+    {
+        "id": 1,
+        "label": "facebook",
+        "icon": "pi pi-facebook"
+    },
+    {
+        "id": 2,
+        "label": "instagram",
+        "icon": "pi pi-instagram"
+    },
+    {
+        "id": 3,
+        "label": "twitter",
+        "icon": "pi pi-twitter"
+    },
+    {
+        "id": 4,
+        "label": "linkedin",
+        "icon": "pi pi-linkedin"
+    },
+    {
+        "id": 5,
+        "label": "youtube",
+        "icon": "pi pi-youtube"
+    }
+]
