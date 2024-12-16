@@ -21,11 +21,6 @@ export default function ChoixType() {
             choix = "accommodation";
             localStorage.setItem("type_etablissement", 1)
         }
-        else if (choixEtablissement == 2) {
-            localStorage.setItem("type_etablissement", 2)
-
-            choix = "handcraft";
-        }
         else if (choixEtablissement == 3) {
             choix = "tour"; localStorage.setItem("type_etablissement", 3)
 
@@ -61,15 +56,6 @@ export default function ChoixType() {
                             <div className={style.button_text}>
                                 <span className={style.button_text_title}>{t("accommodation")}</span>
                                 <span className={style.button_text_subtitle}>{t("button_home_accommodation")}</span>
-                            </div>
-                        </div>
-                        <div onClick={() => setChoixEtablissement(2)} className={choixEtablissement == 2 ? style.button_container_active : style.button_container}>
-                            <div className={style.image_icon}>
-                                <Image imageClassName={style.icon} src="/images/users/handcraft.svg" alt="accommodation" />
-                            </div>
-                            <div className={style.button_text}>
-                                <span className={style.button_text_title}>{t("handcraft")}</span>
-                                <span className={style.button_text_subtitle}>{t("button_home_handcraft")}</span>
                             </div>
                         </div>
                         <div onClick={() => setChoixEtablissement(3)} className={choixEtablissement == 3 ? style.button_container_active : style.button_container}>
