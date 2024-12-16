@@ -17,18 +17,8 @@ const nextConfig = {
         hostname: '127.0.0.1',
       },
       {
-        protocol: 'http',
-        hostname: '192.168.88.57',
-      },
-
-      {
-        protocol: 'http',
-        hostname: '34.122.163.41',
-      },
-
-      {
         protocol: 'https',
-        hostname: 'admin-server.craft-aftrip.com',
+        hostname: 'api.craft-aftrip.com',
       },
     ],
   },
