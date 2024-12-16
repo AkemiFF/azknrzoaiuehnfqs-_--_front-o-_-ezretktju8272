@@ -14,7 +14,7 @@ export default function Responsable() {
             if (user.type_etablissement == 1) {
                 router.push("/responsable/accommodation");
             } else if (user.type_etablissement == 2) {
-                router.push("/responsable/handcraft");
+                router.push("https://shoplg.online/users");
             } else if (user.type_etablissement == 3) {
                 router.push("/responsable/tour");
             } else {

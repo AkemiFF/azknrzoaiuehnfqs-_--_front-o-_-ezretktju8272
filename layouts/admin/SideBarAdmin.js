@@ -30,7 +30,11 @@ export default function SideBarAdmin(props) {
                 <span className={style.link}>Accommodation</span>
                 <i style={{ display: sideBar == true ? "none" : "block" }} className='pi pi-chevron-right' />
             </Link>
-//handcraft etait ici
+            <Link className={style.container_link} href={"https://shoplg.online/users"}>
+                <i className='pi pi-shopping-bag' />
+                <span className={style.link}>Shop</span>
+                <i style={{ display: sideBar == true ? "none" : "block" }} className='pi pi-chevron-right' />
+            </Link>
             <Link className={style.container_link} href={"/admin/trip"}>
                 <i className='pi pi-compass' />
                 <span className={style.link}>Trip</span>

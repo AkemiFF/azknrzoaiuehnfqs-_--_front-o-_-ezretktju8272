@@ -137,24 +137,6 @@ export default function Home() {
 
                 <div className={style.image_carousel}>
                     <div className={style.carousel}>
-                        {/* <Carousel
-                            pt={{
-                                previousButton: {
-                                    style: { display: "none" }
-                                },
-                                nextButton: {
-                                    style: { display: "none" }
-                                }
-                            }}
-                            circular
-                            itemTemplate={imageCarouselTemplate}
-                            value={images}
-                            containerClassName={style.carousel_container}
-                            contentClassName={style.carousel_container}
-                            numVisible={1}
-                            numScroll={1}
-                            autoplayInterval={3000}
-                        /> */}
                         <SwiperCarousel />
 
                     </div>

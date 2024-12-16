@@ -64,7 +64,6 @@ const SwiperCarousel = () => {
                         setAccommodations(data);
                     }
 
-                    // if (swiperRef.current && swiperRef.current.swiper) {
                     if (swiperRef.current && swiperRef.current.swiper) {
                         swiperRef.current.swiper.autoplay.stop();
                         swiperRef.current.swiper.slideTo(0); // Revenir à la première slide pour éviter le glitch
