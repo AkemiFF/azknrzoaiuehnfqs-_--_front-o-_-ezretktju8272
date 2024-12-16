@@ -29,18 +29,18 @@ export default function Home() {
                                     <span className={style.button_text_subtitle}>{t("button_home_accommodation")}</span>
                                 </div>
                             </Link>
-                            <Link href={"/users/handcraft"} className={style.button_container}>
+                            <Link href={"https://shoplg.online/users"} className={style.button_container}>
                                 <div className={style.image_icon}>
-                                    <Image imageClassName={style.icon} src="/images/users/handcraft.svg" alt="accommodation" />
+                                    <Image imageClassName={style.icon} src="/images/users/handcraft.svg" alt="shoplg.online" />
                                 </div>
                                 <div className={style.button_text}>
-                                    <span className={style.button_text_title}>{t("handcraft")}</span>
+                                    <span className={style.button_text_title}>{t("Shop")}</span>
                                     <span className={style.button_text_subtitle}>{t("button_home_handcraft")}</span>
                                 </div>
                             </Link>
                             <Link href={"/users/tour"} className={style.button_container}>
                                 <div className={style.image_icon}>
-                                    <Image imageClassName={style.icon} src="/images/users/tour.svg" alt="accommodation" />
+                                    <Image imageClassName={style.icon} src="/images/users/tour.svg" alt="tour" />
                                 </div>
                                 <div className={style.button_text}>
                                     <span className={style.button_text_title}>{t("tour")}</span>
