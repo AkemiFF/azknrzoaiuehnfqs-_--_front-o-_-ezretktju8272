@@ -60,7 +60,6 @@ export default function DashBoard() {
     const [recentAccomodationBooking, setRecentAccomodationBooking] = useState([]);
     const [recentHandcraftBooking, setRecentHandcraftBooking] = useState([]);
     const [nbAccomodations, setNbAccomodation] = useState();
-    const [nbHandcrafts, setNbHandcraft] = useState();
     const [nbTour, setNbTour] = useState();
 
     const [recentBooking, setRecentBooking] = useState([]);
@@ -90,7 +89,6 @@ export default function DashBoard() {
                     setCurrentSiteStats(data);
 
                     setNbAccomodation(data.nombre_hebergement);
-                    setNbHandcraft(data.nombre_artisanat);
                     setNbTour(data.nombre_tour_operateur);
 
 
@@ -127,7 +125,6 @@ export default function DashBoard() {
                     setLastWeekStats(data);
                     setTourData(data.reservations_voyages);
                     setAccomodationData(data.reservations_hebergement);
-                    setHandcraftData(data.achats_produits_artisanaux);
                     setCurrentWeek(data.derniers_jours);
 
                 })
@@ -164,7 +161,6 @@ export default function DashBoard() {
 
                     setMonthlyTourData(data.reservations_voyages);
                     setMonthlyAccomodationData(data.reservations_hebergement);
-                    setMonthlyHandcraftData(data.achats_produits_artisanaux);
                     setCurrentMonth(data.derniers_mois);
 
 
@@ -193,12 +189,10 @@ export default function DashBoard() {
         setStaticData(true)
         setTourData([45, 72, 53, 91, 62, 80, 39]);
         setAccomodationData([35, 67, 59, 82, 48, 93, 50]);
-        setHandcraftData([52, 78, 61, 90, 40, 84, 46]);
         setCurrentWeek(['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun']);
         // Données mensuelles statiques
         setMonthlyTourData([120, 50, 80, 100, 90, 110, 130]);
         setMonthlyAccomodationData([110, 140, 190, 150, 170, 160, 140]);
-        setMonthlyHandcraftData([100, 130, 160, 140, 150, 180, 120]);
 
         setRecentTourBooking(
             [
@@ -233,7 +227,6 @@ export default function DashBoard() {
         ]);
 
         setNbAccomodation(854);
-        setNbHandcraft(52);
         setNbTour(8);
     }
     const loadDynamicData = () => {
@@ -242,14 +235,12 @@ export default function DashBoard() {
         // Données hebdomadaire dynamique
         setTourData(lastWeekStats.reservations_voyages);
         setAccomodationData(lastWeekStats.reservations_hebergement);
-        setHandcraftData(lastWeekStats.achats_produits_artisanaux);
         setCurrentWeek(lastWeekStats.derniers_jours);
 
         // Données mensuelles dynamique
 
         setMonthlyTourData(lastMonthStats.reservations_voyages);
         setMonthlyAccomodationData(lastMonthStats.reservations_hebergement);
-        setMonthlyHandcraftData(lastMonthStats.achats_produits_artisanaux);
         setCurrentMonth(lastMonthStats.derniers_mois);
 
         // reservationRecent
@@ -258,11 +249,9 @@ export default function DashBoard() {
         setRecentTourBooking([]);
         setRecentAccomodationBooking([]);
 
-        setRecentHandcraftBooking([]);
 
 
         setNbAccomodation(currentSiteStats.nombre_hebergement);
-        setNbHandcraft(currentSiteStats.nombre_artisanat);
         setNbTour(currentSiteStats.nombre_tour_operateur);
     }
 
@@ -360,9 +349,8 @@ export default function DashBoard() {
         };
         setLineTourData(dataTourLine);
         setLineAccomodationData(dataAccomodationLine);
-        setLineHandcraftData(dataHandCraftLine);
         setLineOptions(optionsLine);
-    }, [AccomodationData, HandcraftData, TourData, currentWeek])
+    }, [AccomodationData, TourData, currentWeek])
 
 
     useEffect(() => {
@@ -379,14 +367,6 @@ export default function DashBoard() {
                     fill: false,
                     tension: 0.4,
                     borderColor: documentStyle.getPropertyValue('--blue-500')
-                },
-                {
-                    label: 'Handcraft State',
-                    data: monthlyHandcraftData,
-                    fill: false,
-                    // borderDash: [5, 5],
-                    tension: 0.4,
-                    borderColor: documentStyle.getPropertyValue('--teal-500')
                 },
                 {
                     label: 'Tour State',
@@ -430,7 +410,7 @@ export default function DashBoard() {
 
         setChartData(data);
         setChartOptions(options);
-    }, [currentMonth, monthlyAccomodationData, monthlyHandcraftData, monthlyTourData]);
+    }, [currentMonth, monthlyAccomodationData, monthlyTourData]);
 
     const bodyTag = (item) => {
         return !item.ban ? <Tag severity="success" value="900$"></Tag> : <Tag severity="warning" value="600$"></Tag>
@@ -444,9 +424,6 @@ export default function DashBoard() {
         else if (value == options[2]) {
             setRecentBooking(recentTourBooking);
         }
-        else if (value == options[1]) {
-            setRecentBooking(recentHandcraftBooking);
-        }
         setValue(item);
     }
     return (
@@ -458,7 +435,6 @@ export default function DashBoard() {
             <div className={style.top_container}>
                 <div className={style.top_container_title_container}>
                     <span className={style.top_container_title}>Dashboard</span>
-                    <span className={style.top_container_subtitle}>Craft-Aftrip</span>
                 </div>
 
                 <div className={style.card_detail_container}>
@@ -477,14 +453,6 @@ export default function DashBoard() {
                         <div className={style.card_detail_text}>
                             <span className={style.card_detail_title}>Accommodations</span>
                             <span className={style.card_detail_value}>{nbAccomodations}</span>
-                        </div>
-                    </div>
-
-                    <div className={style.card_detail}>
-                        <i className="pi pi-calendar" style={{ fontSize: "32px" }} />
-                        <div className={style.card_detail_text}>
-                            <span className={style.card_detail_title}>Handcrafts</span>
-                            <span className={style.card_detail_value}>{nbHandcrafts}</span>
                         </div>
                     </div>
 

@@ -27,7 +27,9 @@ export default function AppFooter() {
                             <Link style={{ textDecoration: "none" }} href={"/users/accommodation"}>
                                 <span className={style.about_menu_item}>{t("accommodation")}</span>
                             </Link>
-// handcraft etait ici
+                            <Link style={{ textDecoration: "none" }} href={"https://shoplg.online/users"}>
+                                <span className={style.about_menu_item}>{t("Shop")}</span>
+                            </Link>
                             <Link style={{ textDecoration: "none" }} href={"/users/tour"}>
                                 <span className={style.about_menu_item}>{t("tour")}</span>
                             </Link>
