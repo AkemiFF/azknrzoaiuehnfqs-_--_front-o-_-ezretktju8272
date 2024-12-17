@@ -121,21 +121,21 @@ export default function Tour() {
                     <div className={style.top_value_body}>
                         <div className={style.top_value_body_left}>
                             <div className={style.top_value_left_detail_container}>
-                                <Image src="/images/artisanat/bousole.svg" alt="bousole" imageClassName={style.top_value_left_detail_image} />
+                                <Image src="/images/tours/bousole.svg" alt="bousole" imageClassName={style.top_value_left_detail_image} />
                                 <div className={style.top_value_left_detail}>
                                     <span className={style.top_value_left_detail_title}>{t("plan_trip")}</span>
                                     <span>{t("discover_some_unique_trip")}</span>
                                 </div>
                             </div>
                             <div className={style.top_value_left_detail_container}>
-                                <Image src="/images/artisanat/map.svg" alt="map" imageClassName={style.top_value_left_detail_image} />
+                                <Image src="/images/tours/map.svg" alt="map" imageClassName={style.top_value_left_detail_image} />
                                 <div className={style.top_value_left_detail}>
                                     <span className={style.top_value_left_detail_title}>{t("explore_save")}</span>
                                     <span>{t("discover_explore_save")}</span>
                                 </div>
                             </div>
                             <div className={style.top_value_left_detail_container}>
-                                <Image src="/images/artisanat/palm.svg" alt="palm" imageClassName={style.top_value_left_detail_image} />
+                                <Image src="/images/tours/palm.svg" alt="palm" imageClassName={style.top_value_left_detail_image} />
                                 <div className={style.top_value_left_detail}>
                                     <span className={style.top_value_left_detail_title}>{t("enjoy_trip")}</span>
                                     <span>{t("discover_enjoy_trip")}</span>

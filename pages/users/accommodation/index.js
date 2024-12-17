@@ -180,33 +180,39 @@ export default function Home() {
                         <Image imageClassName={style.image_service} alt="accommodation" className={style.image_service_container} src="/images/accommodation.webp" />
 
                         <div className={style.service_detail_container}>
-                            <div className={style.service_card}>
-                                <span className={style.service_card_title}>{t("quality")}</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
-                            </div>
-                            <div className={style.service_card}>
-                                <span className={style.service_card_title}>{t("transparency")}</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
-                            </div>
-                            <div className={style.service_card}>
-                                <span className={style.service_card_title}>{t("custormer_experience")}</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
-                            </div>
-                            <div className={style.service_card}>
-                                <span className={style.service_card_title}>Support</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
-                            </div>
+                        <div className={style.service_card}>
+    <span className={style.service_card_title}>{t("quality")}</span>
+    <span className={style.service_card_content}>
+        Nous nous engageons à fournir des produits et services de la plus haute qualité, répondant aux attentes et dépassant les standards du marché.
+    </span>
+</div>
+<div className={style.service_card}>
+    <span className={style.service_card_title}>{t("transparency")}</span>
+    <span className={style.service_card_content}>
+        La transparence est au cœur de nos valeurs. Nous assurons une communication claire et honnête avec nos clients et partenaires.
+    </span>
+</div>
+<div className={style.service_card}>
+    <span className={style.service_card_title}>{t("custormer_experience")}</span>
+    <span className={style.service_card_content}>
+        Nous mettons tout en œuvre pour offrir une expérience client exceptionnelle, en mettant l'accent sur la satisfaction et l'accompagnement.
+    </span>
+</div>
+<div className={style.service_card}>
+    <span className={style.service_card_title}>Support</span>
+    <span className={style.service_card_content}>
+        Notre équipe de support est disponible pour répondre à vos questions et résoudre vos problèmes rapidement et efficacement.
+    </span>
+</div>
+
                         </div>
                     </div>
                 </div>
 
                 <div className={style.review_container}>
                     <div className={style.review_top}>
-                        <span className={style.review_title}>See the customer’s review</span>
-                        <span className={style.review_subtitle}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat explicabo
-                            cupiditate laboriosam blanditiis recusandae iste
-                        </span>
+                        <span className={style.review_title}>{t("avis_clients_title")}</span>
+                        <span className={style.review_subtitle}>{t("avis_clients_subtitle")}</span>
                     </div>
                     <div className={style.review_item_container}>
                         {
