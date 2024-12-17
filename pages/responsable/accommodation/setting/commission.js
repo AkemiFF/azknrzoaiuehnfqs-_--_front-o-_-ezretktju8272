@@ -20,17 +20,6 @@ export default function Commission() {
     const { t } = useTranslation();
     const { user } = useContext(ResponsableLayoutContext);
     const toast = useRef(null);
-
-    const [menuSidebar, setMenuSidebar] = useState([
-        { label: "Profil" },
-        { label: "Info" },
-        { label: "Commission" },
-        { label: "Notification" },
-        { label: "Security" },
-        { label: "Help" }
-    ]);
-
-
     const menu = 2;
     const [priceIntervalle, setPriceIntervalle] = useState([0, 100]);
     const [commission, setCommission] = useState(7);
@@ -163,7 +152,7 @@ export default function Commission() {
             </Head>
 
             <div className={style.container}>
-                <SideBarMenu menu={menu} />
+                <SideBarMenu menu={menu} router={router} />
                 <div className={style.right_body_container}>
                     <div className={style.left_top_container}>
                         <span className={style.left_top_subtitle}>Accommodation</span>
