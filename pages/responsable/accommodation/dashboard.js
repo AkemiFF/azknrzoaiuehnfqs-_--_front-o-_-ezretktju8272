@@ -1,16 +1,15 @@
-import Head from "next/head";
-import style from './../../../style/pages/responsable/accommodation/dahsboard.module.css'
-import { Button } from "primereact/button";
-import { Chart } from "primereact/chart";
-import { useEffect, useState, useContext } from "react";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-import { Calendar } from "primereact/calendar";
-import { useRouter } from "next/router";
-import { getCsrfFromToken } from '@/util/csrf';
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
 import UrlConfig from "@/util/config";
 import { getResponsableAccessToken } from "@/util/Cookies";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { Button } from "primereact/button";
+import { Calendar } from "primereact/calendar";
+import { Chart } from "primereact/chart";
+import { Column } from "primereact/column";
+import { DataTable } from "primereact/datatable";
+import { useContext, useEffect, useState } from "react";
+import style from './../../../style/pages/responsable/accommodation/dahsboard.module.css';
 
 
 
@@ -58,275 +57,266 @@ export default function DashBoard() {
     }, [user])
 
     function FetchDashboard_Hotel(id_hebergement) {
-        getCsrfFromToken()
-            .then(csrfToken => {
-                // Fetch Hotel Data
-                fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/get-id-hebergement/${id_hebergement}/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(hotelData => {
-                        setNameHotel(hotelData);
-                    })
-                    .catch(err => console.error('Erreur lors de la récupération du nom de l\'hôtel:', err));
 
-                // Fetch Hotel Statistics
-                fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/${id_hebergement}/stats/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(Total => {
-                        setTotalBookings(Total);
-                        setTotalGuest(Total);
-                        setTotalRooms(Total);
-                    })
-                    .catch(err => console.error('Erreur lors de la récupération des statistiques de l\'hôtel:', err));
+        fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/get-id-hebergement/${id_hebergement}/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(hotelData => {
+                setNameHotel(hotelData);
+            })
+            .catch(err => console.error('Erreur lors de la récupération du nom de l\'hôtel:', err));
+
+        // Fetch Hotel Statistics
+        fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/${id_hebergement}/stats/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(Total => {
+                setTotalBookings(Total);
+                setTotalGuest(Total);
+                setTotalRooms(Total);
+            })
+            .catch(err => console.error('Erreur lors de la récupération des statistiques de l\'hôtel:', err));
 
 
-                // Fetch Recent Bookings
-                fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/${id_hebergement}/recent-reservations/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(RecentBooking => {
-                        setRecentBooking(
-                            RecentBooking.recent_reservations.map(res => ({
-                                id: res.client_reserve.id,
-                                name: res.client_reserve.first_name + " " + res.client_reserve.last_name,
-                                room: res.chambre_reserve,
-                                guests: res.nombre_personnes_reserve,
-                                check_in: res.date_debut_reserve,
-                                check_out: res.date_fin_reserve
-                            }))
-                        )
-
-                    })
-                    .catch(err => console.error('Erreur lors de la récupération des Booking recents:', err));
-
-                // Fetch Reservations Par Jour
-                fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/reservations-by-day/${id_hebergement}/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(reservationData => {
-                        const reservations = reservationData.reservations_by_day;
-
-                        // Data for the chart, using the fetched data
-                        const data = {
-                            labels: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
-                            datasets: [
-                                {
-                                    label: "States Booking reservations",
-                                    backgroundColor: "#305555",
-                                    borderColor: "#305555",
-                                    data: [
-                                        reservations.Lundi,
-                                        reservations.Mardi,
-                                        reservations.Mercredi,
-                                        reservations.Jeudi,
-                                        reservations.Vendredi,
-                                        reservations.Samedi,
-                                        reservations.Dimanche
-                                    ]
-                                }
-                            ]
-                        };
-
-                        // Options for the chart
-                        const options = {
-                            maintainAspectRatio: false,
-                            aspectRatio: 0.6,
-                            plugins: {
-                                legend: {
-                                    labels: {
-                                        color: "#000"
-                                    }
-                                }
-                            },
-                            scales: {
-                                x: {
-                                    ticks: {
-                                        color: "#4a4a4a",
-                                        font: {
-                                            weight: 500
-                                        }
-                                    },
-                                    grid: {
-                                        display: false,
-                                        drawBorder: false
-                                    }
-                                },
-                                y: {
-                                    ticks: {
-                                        color: "#4a4a4a"
-                                    },
-                                    grid: {
-                                        display: false,
-                                        drawBorder: false
-                                    }
-                                }
-                            }
-                        };
-                        const dataLine = {
-                            labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-                            datasets: [
-                                {
-                                    label: "New booking",
-                                    backgroundColor: "rgba(48, 85, 85,0.2)",
-                                    borderColor: "#305555",
-                                    data: [
-                                        reservations.Lundi,
-                                        reservations.Mardi,
-                                        reservations.Mercredi,
-                                        reservations.Jeudi,
-                                        reservations.Vendredi,
-                                        reservations.Samedi,
-                                        reservations.Dimanche
-                                    ],
-
-                                    tension: 0.4,
-                                    fill: true
-                                }
-                            ]
-                        };
-                        const optionsLine = {
-                            maintainAspectRatio: false,
-                            aspectRatio: 1.9,
-                            plugins: {
-                                legend: {
-                                    labels: {
-                                        fontColor: "#000"
-                                    }
-                                }
-                            },
-                            scales: {
-                                x: {
-                                    ticks: {
-                                        color: "#4a4a4a",
-                                        font: {
-                                            weight: 500
-                                        }
-                                    },
-                                    grid: {
-                                        display: false,
-                                        drawBorder: false
-                                    }
-                                },
-                                y: {
-                                    ticks: {
-                                        color: "#4a4a4a"
-                                    },
-                                    grid: {
-                                        display: false,
-                                        drawBorder: false
-                                    }
-                                }
-                            }
-                        };
-                        setLineData(dataLine);
-                        setLineOptions(optionsLine);
-
-                        setBarData(data);
-                        setBarOptions(options);
-                    })
-                    .catch(err => console.error('Erreur lors de la récupération des réservations par jour:', err));
-
-
-                //Fetch Booking state par Mois
-                // Fecth Booking State
-                fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/${id_hebergement}/reservations/mois/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(data => {
-                        const allMonths = [
-                            'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
-                            'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
-                        ];
-
-                        // Create an object to map reservations by month
-                        const reservationsByMonth = {};
-
-                        data.reservations_by_month.forEach(item => {
-                            const month = new Date(item.month).toLocaleDateString('en-US', { month: 'short' });
-                            reservationsByMonth[month] = item.total_reservations;
-                        });
-
-                        // Create an array of reservation data, using 0 if no data for the month
-                        const reservationsData = allMonths.map(month => reservationsByMonth[month] || 0);
-                        const dataHorizontal = {
-                            labels: allMonths,
-                            datasets: [
-                                {
-                                    label: "Booking",
-                                    backgroundColor: "#D4E4E2",
-                                    borderColor: "#D4E4E2",
-                                    data: reservationsData
-                                }
-                            ]
-                        };
-                        const optionsHorizontal = {
-                            indexAxis: 'y',
-                            maintainAspectRatio: false,
-                            aspectRatio: 0.5,
-                            plugins: {
-                                legend: {
-                                    labels: {
-                                        fontColor: "#000"
-                                    }
-                                }
-                            },
-                            scales: {
-                                x: {
-                                    ticks: {
-                                        color: "#4a4a4a",
-                                        font: {
-                                            weight: 500
-                                        }
-                                    },
-                                    grid: {
-                                        display: false,
-                                        drawBorder: false
-                                    }
-                                },
-                                y: {
-                                    ticks: {
-                                        color: "#4a4a4a"
-                                    },
-                                    grid: {
-                                        display: false,
-                                        drawBorder: false
-                                    }
-                                }
-                            }
-                        };
-                        setBarHorizontalData(dataHorizontal);
-                        setBarHorizontalOptions(optionsHorizontal);
-
-                    })
+        // Fetch Recent Bookings
+        fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/${id_hebergement}/recent-reservations/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(RecentBooking => {
+                setRecentBooking(
+                    RecentBooking.recent_reservations.map(res => ({
+                        id: res.client_reserve.id,
+                        name: res.client_reserve.first_name + " " + res.client_reserve.last_name,
+                        room: res.chambre_reserve,
+                        guests: res.nombre_personnes_reserve,
+                        check_in: res.date_debut_reserve,
+                        check_out: res.date_fin_reserve
+                    }))
+                )
 
             })
-            .catch(err => console.error('Erreur lors de la récupération du token CSRF:', err));
+            .catch(err => console.error('Erreur lors de la récupération des Booking recents:', err));
+
+        // Fetch Reservations Par Jour
+        fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/reservations-by-day/${id_hebergement}/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(reservationData => {
+                const reservations = reservationData.reservations_by_day;
+
+                // Data for the chart, using the fetched data
+                const data = {
+                    labels: ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'],
+                    datasets: [
+                        {
+                            label: "States Booking reservations",
+                            backgroundColor: "#305555",
+                            borderColor: "#305555",
+                            data: [
+                                reservations.Lundi,
+                                reservations.Mardi,
+                                reservations.Mercredi,
+                                reservations.Jeudi,
+                                reservations.Vendredi,
+                                reservations.Samedi,
+                                reservations.Dimanche
+                            ]
+                        }
+                    ]
+                };
+
+                // Options for the chart
+                const options = {
+                    maintainAspectRatio: false,
+                    aspectRatio: 0.6,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                color: "#000"
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: "#4a4a4a",
+                                font: {
+                                    weight: 500
+                                }
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: "#4a4a4a"
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        }
+                    }
+                };
+                const dataLine = {
+                    labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+                    datasets: [
+                        {
+                            label: "New booking",
+                            backgroundColor: "rgba(48, 85, 85,0.2)",
+                            borderColor: "#305555",
+                            data: [
+                                reservations.Lundi,
+                                reservations.Mardi,
+                                reservations.Mercredi,
+                                reservations.Jeudi,
+                                reservations.Vendredi,
+                                reservations.Samedi,
+                                reservations.Dimanche
+                            ],
+
+                            tension: 0.4,
+                            fill: true
+                        }
+                    ]
+                };
+                const optionsLine = {
+                    maintainAspectRatio: false,
+                    aspectRatio: 1.9,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                fontColor: "#000"
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: "#4a4a4a",
+                                font: {
+                                    weight: 500
+                                }
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: "#4a4a4a"
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        }
+                    }
+                };
+                setLineData(dataLine);
+                setLineOptions(optionsLine);
+
+                setBarData(data);
+                setBarOptions(options);
+            })
+            .catch(err => console.error('Erreur lors de la récupération des réservations par jour:', err));
+
+
+        //Fetch Booking state par Mois
+        // Fecth Booking State
+        fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/${id_hebergement}/reservations/mois/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(data => {
+                const allMonths = [
+                    'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun',
+                    'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'
+                ];
+
+                // Create an object to map reservations by month
+                const reservationsByMonth = {};
+
+                data.reservations_by_month.forEach(item => {
+                    const month = new Date(item.month).toLocaleDateString('en-US', { month: 'short' });
+                    reservationsByMonth[month] = item.total_reservations;
+                });
+
+                // Create an array of reservation data, using 0 if no data for the month
+                const reservationsData = allMonths.map(month => reservationsByMonth[month] || 0);
+                const dataHorizontal = {
+                    labels: allMonths,
+                    datasets: [
+                        {
+                            label: "Booking",
+                            backgroundColor: "#D4E4E2",
+                            borderColor: "#D4E4E2",
+                            data: reservationsData
+                        }
+                    ]
+                };
+                const optionsHorizontal = {
+                    indexAxis: 'y',
+                    maintainAspectRatio: false,
+                    aspectRatio: 0.5,
+                    plugins: {
+                        legend: {
+                            labels: {
+                                fontColor: "#000"
+                            }
+                        }
+                    },
+                    scales: {
+                        x: {
+                            ticks: {
+                                color: "#4a4a4a",
+                                font: {
+                                    weight: 500
+                                }
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        },
+                        y: {
+                            ticks: {
+                                color: "#4a4a4a"
+                            },
+                            grid: {
+                                display: false,
+                                drawBorder: false
+                            }
+                        }
+                    }
+                };
+                setBarHorizontalData(dataHorizontal);
+                setBarHorizontalOptions(optionsHorizontal);
+
+            })
+
     }
 
 
