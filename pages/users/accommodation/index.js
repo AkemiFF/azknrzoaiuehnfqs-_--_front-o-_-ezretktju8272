@@ -1,18 +1,16 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import style from '../../../style/pages/users/accommodation/accommodation.module.css';
 import CardSuggestion from "@/components/card/CardSuggestion";
+import Filter from "@/components/Filter";
+import Review from "@/components/Review";
+import SwiperCarousel from "@/components/Swiper";
+import { UrlConfig } from "@/util/config";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { Button } from "primereact/button";
-import Review from "@/components/Review";
-import Filter from "@/components/Filter";
-import { useTranslation } from "react-i18next";
 import { Image } from "primereact/image";
-import { Carousel } from "primereact/carousel";
 import { Rating } from "primereact/rating";
-import { UrlConfig } from "@/util/config";
-import CarouselContinu from "@/components/CarouselContinu";
-import SwiperCarousel from "@/components/Swiper";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import style from '../../../style/pages/users/accommodation/accommodation.module.css';
 export default function Home() {
 
     const { t } = useTranslation();
@@ -182,31 +180,37 @@ export default function Home() {
                         <div className={style.service_detail_container}>
                             <div className={style.service_card}>
                                 <span className={style.service_card_title}>{t("quality")}</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
+                                <span className={style.service_card_content}>
+                                    Nous nous engageons à fournir des produits et services de la plus haute qualité, répondant aux attentes et dépassant les standards du marché.
+                                </span>
                             </div>
                             <div className={style.service_card}>
                                 <span className={style.service_card_title}>{t("transparency")}</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
+                                <span className={style.service_card_content}>
+                                    La transparence est au cœur de nos valeurs. Nous assurons une communication claire et honnête avec nos clients et partenaires.
+                                </span>
                             </div>
                             <div className={style.service_card}>
                                 <span className={style.service_card_title}>{t("custormer_experience")}</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
+                                <span className={style.service_card_content}>
+                                    Nous mettons tout en œuvre pour offrir une expérience client exceptionnelle, en mettant l&apos;accent sur la satisfaction et l&apos;accompagnement.
+                                </span>
                             </div>
                             <div className={style.service_card}>
                                 <span className={style.service_card_title}>Support</span>
-                                <span className={style.service_card_content}>Lorem ipsum dolor sit amet veniam wisi dolore clita lorem augue sed aliquam et invidunt eos clita ea eros. Sanctus sit accusam ipsum dolores clita ipsum elitr labore sea voluptua duo amet.</span>
+                                <span className={style.service_card_content}>
+                                    Notre équipe de support est disponible pour répondre à vos questions et résoudre vos problèmes rapidement et efficacement.
+                                </span>
                             </div>
+
                         </div>
                     </div>
                 </div>
 
                 <div className={style.review_container}>
                     <div className={style.review_top}>
-                        <span className={style.review_title}>See the customer’s review</span>
-                        <span className={style.review_subtitle}>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat explicabo
-                            cupiditate laboriosam blanditiis recusandae iste
-                        </span>
+                        <span className={style.review_title}>{t("avis_clients_title")}</span>
+                        <span className={style.review_subtitle}>{t("avis_clients_subtitle")}</span>
                     </div>
                     <div className={style.review_item_container}>
                         {

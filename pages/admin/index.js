@@ -299,20 +299,6 @@ export default function DashBoard() {
             ]
         };
 
-        const dataHandCraftLine = {
-            labels: currentWeek,
-            datasets: [
-                {
-                    label: "Achat Handcraft",
-                    backgroundColor: "rgba(48, 85, 85, 0.2)",
-                    borderColor: 'rgba(255, 159, 64, 1)',
-                    data: HandcraftData,
-                    tension: 0.3,
-                    fill: true
-                }
-            ]
-        };
-
         const optionsLine = {
             maintainAspectRatio: false,
             aspectRatio: 1.9,

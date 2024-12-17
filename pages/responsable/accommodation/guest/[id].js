@@ -1,20 +1,19 @@
-import Head from "next/head";
-import { useRouter } from "next/router";
-import style from './../../../../style/pages/responsable/accommodation/guest/id.module.css';
-import Link from "next/link";
-import { Image } from "primereact/image";
-import { Button } from "primereact/button";
-import { useEffect, useState, useContext } from "react";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
-import { getCsrfFromToken } from '@/util/csrf';
 import UrlConfig from "@/util/config";
+import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Button } from "primereact/button";
+import { Column } from "primereact/column";
+import { DataTable } from "primereact/datatable";
+import { Image } from "primereact/image";
+import { useContext, useEffect, useState } from "react";
+import style from './../../../../style/pages/responsable/accommodation/guest/id.module.css';
 
 export default function DetailGuest() {
     const router = useRouter();
     const [guests, setGuests] = useState(null);
-    const [nameHotel, setNameHotel] = useState(null); 
+    const [nameHotel, setNameHotel] = useState(null);
     const [bookingSummary, setBookingSummary] = useState({});
     const [bookingHistory, setBookingHistory] = useState([]);
     const { user } = useContext(ResponsableLayoutContext);
@@ -28,52 +27,50 @@ export default function DetailGuest() {
     }, [user, id]);
 
     function FetchDetails_Guest(id_hebergement, id) {
-        getCsrfFromToken()
-            .then(csrfToken => {
-                // Fetch hotel details
-                fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/get-id-hebergement/${id_hebergement}/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(hotelData => {
-                        setNameHotel(hotelData);
-                    })
-                    .catch(err => console.error('Erreur lors de la récupération du nom de l\'hôtel:', err));
-                    
-                // Fetch guest details
-                fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/client-reservations/${id}/hebergement/${id_hebergement}/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(guestData => {
-                        setGuests(guestData);
-                        setBookingSummary(guestData.reservations[0]);
-                        setBookingHistory(
-                            guestData.reservations.map(res => ({
-                                id: res.client.id || 'N/A',
-                                name: res.client.nom || 'N/A',
-                                email: res.client.email || 'N/A',
-                                nbr_guest: res.nombre_personnes_reserve || 'N/A',
-                                room: res.chambre.nom || 'N/A',
-                                check_in: res.date_debut_reserve || 'N/A',
-                                check_out: res.date_fin_reserve || 'N/A'
-                            }))
-                        );
-                    })
-                    .catch(err => console.error('Erreur lors de la récupération des Clients de l\'hôtel:', err));
+
+        // Fetch hotel details
+        fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/get-id-hebergement/${id_hebergement}/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+
+            }
+        })
+            .then(response => response.json())
+            .then(hotelData => {
+                setNameHotel(hotelData);
             })
-            .catch(err => console.error('Erreur lors de la récupération du token CSRF:', err));   
+            .catch(err => console.error('Erreur lors de la récupération du nom de l\'hôtel:', err));
+
+        // Fetch guest details
+        fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/client-reservations/${id}/hebergement/${id_hebergement}/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+
+            }
+        })
+            .then(response => response.json())
+            .then(guestData => {
+                setGuests(guestData);
+                setBookingSummary(guestData.reservations[0]);
+                setBookingHistory(
+                    guestData.reservations.map(res => ({
+                        id: res.client.id || 'N/A',
+                        name: res.client.nom || 'N/A',
+                        email: res.client.email || 'N/A',
+                        nbr_guest: res.nombre_personnes_reserve || 'N/A',
+                        room: res.chambre.nom || 'N/A',
+                        check_in: res.date_debut_reserve || 'N/A',
+                        check_out: res.date_fin_reserve || 'N/A'
+                    }))
+                );
+            })
+            .catch(err => console.error('Erreur lors de la récupération des Clients de l\'hôtel:', err));
+
     }
 
-      // Get the first image URL from the guests data
+    // Get the first image URL from the guests data
     const firstImageUrl = guests?.reservations?.[0]?.chambre?.images?.[0]?.url;
     console.log(firstImageUrl); // Log the images
 
@@ -100,17 +97,17 @@ export default function DetailGuest() {
                     <div className={style.guest_information_container}>
                         <div className={style.guest_information_left_container}>
                             <div className={style.image_guest_container}>
-                                 {firstImageUrl ? (
-                                    <Image 
-                                        src={UrlConfig.apiBaseUrl+firstImageUrl} 
-                                        alt="Chambre" 
+                                {firstImageUrl ? (
+                                    <Image
+                                        src={UrlConfig.apiBaseUrl + firstImageUrl}
+                                        alt="Chambre"
                                         imageClassName={style.image_guest_room}
                                         onError={(e) => e.currentTarget.src = '/images/hotel/chambre.jpg'}
                                     />
                                 ) : (
-                                    <Image 
-                                        src="/images/hotel/chambre.jpg" 
-                                        alt="Chambre" 
+                                    <Image
+                                        src="/images/hotel/chambre.jpg"
+                                        alt="Chambre"
                                         imageClassName={style.image_guest_room}
                                     />
                                 )}
@@ -135,7 +132,7 @@ export default function DetailGuest() {
                                         </div>
                                         <div className={style.guest_detail}>
                                             <span className={style.guest_detail_title}>Room name</span>
-                                            <span className={style.guest_detail_value}>{guests?.reservations?.[0]?.chambre.nom }</span>
+                                            <span className={style.guest_detail_value}>{guests?.reservations?.[0]?.chambre.nom}</span>
                                         </div>
                                     </div>
                                     <div className={style.guest_detail_container}>
@@ -182,7 +179,7 @@ export default function DetailGuest() {
                                 <span className={style.guest_information_right_value}>0</span>
                             </div>
                             <div className={style.separateur}></div>
-                            
+
                             <div className={style.guest_information_right}>
                                 <span className={style.guest_information_right_label}>
                                     Total
@@ -194,13 +191,13 @@ export default function DetailGuest() {
                     <div className={style.separateur}></div>
                     <h2>Booking history</h2>
                     <DataTable value={bookingHistory}>
-                        <Column sortable field="id" header="No"/>
-                        <Column sortable field="name" header="Name"/>
-                        <Column sortable field="email" header="Email"/>
-                        <Column sortable field="nbr_guest" header="Nbr guest"/>
-                        <Column sortable field="room" header="Room"/>
-                        <Column sortable field="check_in" header="Check-in"/>
-                        <Column sortable field="check_out" header="Check-out"/>
+                        <Column sortable field="id" header="No" />
+                        <Column sortable field="name" header="Name" />
+                        <Column sortable field="email" header="Email" />
+                        <Column sortable field="nbr_guest" header="Nbr guest" />
+                        <Column sortable field="room" header="Room" />
+                        <Column sortable field="check_in" header="Check-in" />
+                        <Column sortable field="check_out" header="Check-out" />
                     </DataTable>
                 </div>
             </div>
