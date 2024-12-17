@@ -1,4 +1,5 @@
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
+import style from '@/style/pages/responsable/tour/dashboard.module.css';
 import UrlConfig from "@/util/config";
 import { getResponsableAccessToken } from "@/util/Cookies";
 import Head from "next/head";
@@ -9,7 +10,6 @@ import { Chart } from "primereact/chart";
 import { Column } from "primereact/column";
 import { DataTable } from "primereact/datatable";
 import { useContext, useEffect, useState } from "react";
-import style from './../../../style/pages/responsable/handcraft/dahsboard.module.css';
 
 export default function DashBoard() {
 

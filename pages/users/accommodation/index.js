@@ -1,18 +1,16 @@
-import Head from "next/head";
-import { useEffect, useState } from "react";
-import style from '../../../style/pages/users/accommodation/accommodation.module.css';
 import CardSuggestion from "@/components/card/CardSuggestion";
+import Filter from "@/components/Filter";
+import Review from "@/components/Review";
+import SwiperCarousel from "@/components/Swiper";
+import { UrlConfig } from "@/util/config";
+import Head from "next/head";
 import { useRouter } from "next/router";
 import { Button } from "primereact/button";
-import Review from "@/components/Review";
-import Filter from "@/components/Filter";
-import { useTranslation } from "react-i18next";
 import { Image } from "primereact/image";
-import { Carousel } from "primereact/carousel";
 import { Rating } from "primereact/rating";
-import { UrlConfig } from "@/util/config";
-import CarouselContinu from "@/components/CarouselContinu";
-import SwiperCarousel from "@/components/Swiper";
+import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
+import style from '../../../style/pages/users/accommodation/accommodation.module.css';
 export default function Home() {
 
     const { t } = useTranslation();
@@ -180,30 +178,30 @@ export default function Home() {
                         <Image imageClassName={style.image_service} alt="accommodation" className={style.image_service_container} src="/images/accommodation.webp" />
 
                         <div className={style.service_detail_container}>
-                        <div className={style.service_card}>
-    <span className={style.service_card_title}>{t("quality")}</span>
-    <span className={style.service_card_content}>
-        Nous nous engageons à fournir des produits et services de la plus haute qualité, répondant aux attentes et dépassant les standards du marché.
-    </span>
-</div>
-<div className={style.service_card}>
-    <span className={style.service_card_title}>{t("transparency")}</span>
-    <span className={style.service_card_content}>
-        La transparence est au cœur de nos valeurs. Nous assurons une communication claire et honnête avec nos clients et partenaires.
-    </span>
-</div>
-<div className={style.service_card}>
-    <span className={style.service_card_title}>{t("custormer_experience")}</span>
-    <span className={style.service_card_content}>
-        Nous mettons tout en œuvre pour offrir une expérience client exceptionnelle, en mettant l'accent sur la satisfaction et l'accompagnement.
-    </span>
-</div>
-<div className={style.service_card}>
-    <span className={style.service_card_title}>Support</span>
-    <span className={style.service_card_content}>
-        Notre équipe de support est disponible pour répondre à vos questions et résoudre vos problèmes rapidement et efficacement.
-    </span>
-</div>
+                            <div className={style.service_card}>
+                                <span className={style.service_card_title}>{t("quality")}</span>
+                                <span className={style.service_card_content}>
+                                    Nous nous engageons à fournir des produits et services de la plus haute qualité, répondant aux attentes et dépassant les standards du marché.
+                                </span>
+                            </div>
+                            <div className={style.service_card}>
+                                <span className={style.service_card_title}>{t("transparency")}</span>
+                                <span className={style.service_card_content}>
+                                    La transparence est au cœur de nos valeurs. Nous assurons une communication claire et honnête avec nos clients et partenaires.
+                                </span>
+                            </div>
+                            <div className={style.service_card}>
+                                <span className={style.service_card_title}>{t("custormer_experience")}</span>
+                                <span className={style.service_card_content}>
+                                    Nous mettons tout en œuvre pour offrir une expérience client exceptionnelle, en mettant l&apos;accent sur la satisfaction et l&apos;accompagnement.
+                                </span>
+                            </div>
+                            <div className={style.service_card}>
+                                <span className={style.service_card_title}>Support</span>
+                                <span className={style.service_card_content}>
+                                    Notre équipe de support est disponible pour répondre à vos questions et résoudre vos problèmes rapidement et efficacement.
+                                </span>
+                            </div>
 
                         </div>
                     </div>
