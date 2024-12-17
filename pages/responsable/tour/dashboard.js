@@ -1,16 +1,15 @@
-import Head from "next/head";
-import style from './../../../style/pages/responsable/handcraft/dahsboard.module.css'
-import { Button } from "primereact/button";
-import { Chart } from "primereact/chart";
-import { useEffect, useState, useContext } from "react";
-import { DataTable } from "primereact/datatable";
-import { Column } from "primereact/column";
-import { Calendar } from "primereact/calendar";
-import { useRouter } from "next/router";
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
-import { getCsrfFromToken } from '@/util/csrf';
+import style from '@/style/pages/responsable/tour/dashboard.module.css';
 import UrlConfig from "@/util/config";
 import { getResponsableAccessToken } from "@/util/Cookies";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { Button } from "primereact/button";
+import { Calendar } from "primereact/calendar";
+import { Chart } from "primereact/chart";
+import { Column } from "primereact/column";
+import { DataTable } from "primereact/datatable";
+import { useContext, useEffect, useState } from "react";
 
 export default function DashBoard() {
 
@@ -204,23 +203,20 @@ export default function DashBoard() {
     }, [user]);
 
     function FetchDetails_Guest(id_tour) {
-        getCsrfFromToken()
-            .then(csrfToken => {
-                // Fetch hotel details
-                fetch(`${UrlConfig.apiBaseUrl}/api/tour/${id_tour}/stats/`, {
-                    method: "GET",
-                    headers: {
-                        'Content-Type': 'application/json',
-                        'X-CSRFTOKEN': csrfToken,
-                    }
-                })
-                    .then(response => response.json())
-                    .then(totalData => {
-                        setTotalStat(totalData);
-                    })
-                    .catch(err => console.error('Erreur lors de la récupération du nom de l\'hôtel:', err));
+
+        // Fetch hotel details
+        fetch(`${UrlConfig.apiBaseUrl}/api/tour/${id_tour}/stats/`, {
+            method: "GET",
+            headers: {
+                'Content-Type': 'application/json',
+            }
+        })
+            .then(response => response.json())
+            .then(totalData => {
+                setTotalStat(totalData);
             })
-            .catch(err => console.error('Erreur lors de la récupération du token CSRF:', err));
+            .catch(err => console.error('Erreur lors de la récupération du nom de l\'hôtel:', err));
+
     }
 
 

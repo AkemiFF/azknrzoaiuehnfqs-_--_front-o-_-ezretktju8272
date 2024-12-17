@@ -1,16 +1,17 @@
-import Head from "next/head";
-import style from './../../../../style/pages/responsable/accommodation/setting.module.css';
-import { useContext, useEffect, useRef, useState } from "react";
-import { Button } from "primereact/button";
-import { useRouter } from "next/router";
-import { Slider } from "primereact/slider";
-import styleDropdown from '@/style/components/ListCheckbox.module.css';
-import { getResponsableAccessToken } from "@/util/Cookies";
-import { Accordion, AccordionTab } from "primereact/accordion";
-import { useTranslation } from "react-i18next";
+import SideBarMenu from "@/components/SideBarMenu";
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
+import styleDropdown from '@/style/components/ListCheckbox.module.css';
 import UrlConfig from "@/util/config";
+import { getResponsableAccessToken } from "@/util/Cookies";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { Accordion, AccordionTab } from "primereact/accordion";
+import { Button } from "primereact/button";
+import { Slider } from "primereact/slider";
 import { Toast } from "primereact/toast";
+import { useContext, useEffect, useRef, useState } from "react";
+import { useTranslation } from "react-i18next";
+import style from './../../../../style/pages/responsable/accommodation/setting.module.css';
 
 export default function Commission() {
 
@@ -19,8 +20,6 @@ export default function Commission() {
     const { t } = useTranslation();
     const { user } = useContext(ResponsableLayoutContext);
     const toast = useRef(null);
-
-
 
     const [menuSidebar, setMenuSidebar] = useState([
         { label: "Profil" },
@@ -37,6 +36,7 @@ export default function Commission() {
     const [commission, setCommission] = useState(7);
     const [selectedCommission, setSelectedCommission] = useState(7);
     useEffect(() => {
+
         const getCommission = async () => {
             try {
                 const access = await getResponsableAccessToken();
@@ -63,8 +63,12 @@ export default function Commission() {
                 console.error('Erreur lors de la récupération du token:', error);
             }
         }
-        getCommission();
+        if (user) {
+            getCommission();
+        }
+
     }, [user]);
+
     const priceByPourcentage = (percentage) => {
         const minValue = 7;
         const maxValue = 15;
@@ -159,17 +163,7 @@ export default function Commission() {
             </Head>
 
             <div className={style.container}>
-                <div className={style.left_container}>
-                    <div className={style.left_top_container}>
-                        <span className={style.left_top_subtitle}>{menuSidebar[menu].label}</span>
-                        <span className={style.left_top_title}>{user ? user.nom_hebergement : null}</span>
-                    </div>
-                    <div className={style.left_body_container}>
-                        {menuSidebar.map((item, index) => {
-                            return <Button key={index} onClick={() => router.push("/responsable/accommodation/setting/" + item.label.toLowerCase())} text className={menu == index ? "button-secondary" : style.text_button} raised={menu == index ? true : false} label={item.label} />
-                        })}
-                    </div>
-                </div>
+                <SideBarMenu menu={menu} />
                 <div className={style.right_body_container}>
                     <div className={style.left_top_container}>
                         <span className={style.left_top_subtitle}>Accommodation</span>

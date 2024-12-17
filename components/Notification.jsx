@@ -1,10 +1,10 @@
 
-import React, { useRef, useState } from 'react';
-import { Panel } from 'primereact/panel';
 import { Avatar } from 'primereact/avatar';
 import { Menu } from 'primereact/menu';
+import { Panel } from 'primereact/panel';
+import { useRef, useState } from 'react';
 // import { Button } from 'primereact/button';
-import style from "@/style/components/NotificationTemplate.module.css"
+import style from "@/style/components/NotificationTemplate.module.css";
 export default function NotificationTemplate({ notification }) {
     const configMenu = useRef(null);
     const [isTogglerEnabled, setIsTogglerEnabled] = useState(false);
@@ -29,7 +29,6 @@ export default function NotificationTemplate({ notification }) {
     const headerTemplate = (options) => {
         const className = `${options.className} justify-content-space-between`;
         options.collapsed = false
-        console.log(options.onTogglerClick);
         return (
             <div className={className}>
                 <div className={style.header}>
@@ -46,7 +45,7 @@ export default function NotificationTemplate({ notification }) {
             </div>
         );
     };
-    
+
     const formatDate = (isoDateString) => {
         const date = new Date(isoDateString);
         return `${date.toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' })} à ${date.toLocaleTimeString('fr-FR', { hour: '2-digit', minute: '2-digit' })}`;
