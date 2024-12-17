@@ -6,30 +6,28 @@ import Head from "next/head";
 import { useRouter } from "next/router";
 import { Button } from "primereact/button";
 import { Password } from "primereact/password";
+import { Skeleton } from 'primereact/skeleton';
 import { Toast } from "primereact/toast";
 import { useContext, useEffect, useRef, useState } from "react";
 import style from './../../../../style/pages/responsable/accommodation/setting.module.css';
 import style_profile from "./../../../../style/pages/responsable/accommodation/setting/profil.module.css";
 export default function Security() {
-
     const router = useRouter();
     const { user, setUser } = useContext(ResponsableLayoutContext);
     const toast = useRef(null);
     const [oldPassword, setOldPassword] = useState('');
     const [newPassword, setNewPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
-
-
+    const [isLoading, setIsLoading] = useState(true);
 
     const [detailProfil, setDetailProfil] = useState(null);
 
     const [isEditingPersonal, setIsEditingPersonal] = useState(false);
     const [isEditing, setIsEditing] = useState(false);
 
-
-
-    const menu = 3;
+    const menu = 4;
     async function FetchProfil(id_responsable) {
+        setIsLoading(true);
         const access = await getResponsableAccessToken();
 
         fetch(`${UrlConfig.apiBaseUrl}/api/accounts/detail-responsable/${id_responsable}/`, {
@@ -43,8 +41,12 @@ export default function Security() {
             .then(response => response.json())
             .then(hotelData => {
                 setDetailProfil(hotelData);
+                setIsLoading(false);
             })
-            .catch(err => console.error('Erreur lors de la récupération des details des responsable:', err));
+            .catch(err => {
+                console.error('Erreur lors de la récupération des details des responsable:', err);
+                setIsLoading(false);
+            });
     }
     useEffect(() => {
         if (user) {
@@ -136,129 +138,75 @@ export default function Security() {
             </Head>
 
             <div className={style.container}>
-                <SideBarMenu menu={menu} />
+                <SideBarMenu menu={menu} router={router} />
                 <div className={style_profile.detail_user_container}>
                     <div className={style_profile.detail_user_top_container}>
                         <span className={style.left_top_title}>Personnal information</span>
                         <hr />
                     </div>
                     <div className={style_profile.detail_user_body_container}>
-                        <div className={style_profile.detail_user}>
-                            <span className={style_profile.title}>First name</span>
-                            {isEditingPersonal ? (
-                                <input
-                                    type="text"
-
-                                    className={style_profile.input_edit}
-                                    value={detailProfil?.first_name || ''}
-                                    onChange={(e) => setDetailProfil({ ...detailProfil, first_name: e.target.value })}
-                                />
-                            ) : (
-                                <span>{detailProfil?.first_name || 'No Name'}</span>
-                            )}
-                        </div>
-                        <div className={style_profile.detail_user}>
-                            <span className={style_profile.title}>Lasts name</span>
-                            {isEditingPersonal ? (
-                                <input
-                                    type="text"
-                                    className={style_profile.input_edit}
-
-                                    value={detailProfil?.last_name || ''}
-                                    onChange={(e) => setDetailProfil({ ...detailProfil, last_name: e.target.value })}
-                                />
-                            ) : (
-                                <span>{detailProfil?.last_name || 'No Last name'}</span>
-                            )
-                            }
-                        </div>
-                        <div className={style_profile.detail_user}>
-                            <span className={style_profile.title}>Email address</span>
-                            {isEditingPersonal ? (
-                                // <input
-                                //     type="text"
-                                //     value={detailProfil?.email || ''}
-                                //     onChange={(e) => setDetailProfil({ ...detailProfil, email: e.target.value })}
-                                // />
-                                <span>{detailProfil?.email || 'No Email'}</span>
-                            ) : (
-                                <span>{detailProfil?.email || 'No Email'}</span>
-                            )}
-                        </div>
-                        <div className={style_profile.detail_user}>
-                            <span className={style_profile.title}>Phone number</span>
-                            {isEditingPersonal ? (
-                                <input
-                                    type="text"
-                                    className={style_profile.input_edit}
-
-                                    value={detailProfil?.numero_responsable || ''}
-                                    onChange={(e) => setDetailProfil({ ...detailProfil, numero_responsable: e.target.value })}
-                                />
-                            ) : (
-                                <span>{detailProfil?.numero_responsable || 'No Number'}</span>
-                            )}
-                        </div>
+                        {['first_name', 'last_name', 'email', 'numero_responsable'].map((field) => (
+                            <div key={field} className={style_profile.detail_user}>
+                                <span className={style_profile.title}>{field.replace('_', ' ').charAt(0).toUpperCase() + field.replace('_', ' ').slice(1)}</span>
+                                {isLoading ? (
+                                    <Skeleton width="200px" height="2rem" />
+                                ) : isEditingPersonal && field !== 'email' ? (
+                                    <input
+                                        type="text"
+                                        className={style_profile.input_edit}
+                                        value={detailProfil?.[field] || ''}
+                                        onChange={(e) => setDetailProfil({ ...detailProfil, [field]: e.target.value })}
+                                    />
+                                ) : (
+                                    <span>{detailProfil?.[field] || `No ${field.replace('_', ' ')}`}</span>
+                                )}
+                            </div>
+                        ))}
                     </div>
                     <div className={style_profile.detail_user_top_container}>
                         <span className={style.left_top_title}>Password</span>
                         <hr />
                     </div>
                     <div className={style_profile.detail_user_body_container}>
-                        <Button
-                            text
-                            icon="pi pi-pen-to-square"
-                            raised
-                            label="Change Password"
-                            disabled={isEditing}
-                            onClick={() => setIsEditing(!isEditing)}
-                        />
+                        {isLoading ? (
+                            <Skeleton width="150px" height="2.5rem" />
+                        ) : (
+                            <Button
+                                text
+                                icon="pi pi-pen-to-square"
+                                raised
+                                label="Change Password"
+                                disabled={isEditing}
+                                onClick={() => setIsEditing(!isEditing)}
+                            />
+                        )}
                         <div className={style_profile.detail_user_body_container} style={{ flexDirection: "column" }}>
-                            <div className={style_profile.detail_user}>
-                                {isEditing ? (
-                                    <>
-                                        <span className={style_profile.title}>Old Password</span>
-                                        <Password
-                                            type="text"
-                                            className={style_profile.input_edit}
-                                            value={oldPassword}
-                                            onChange={(e) => setOldPassword(e.target.value)}
-                                        />
-                                    </>
-                                ) : null}
-                            </div>
-
-                            <div className={style_profile.detail_user}>
-                                {isEditing ? (
-                                    <>
-                                        <span className={style_profile.title}>New Password</span>
-                                        <Password
-                                            type="text"
-                                            className={style_profile.input_edit}
-                                            value={newPassword}
-                                            onChange={(e) => setNewPassword(e.target.value)}
-                                        />
-                                    </>
-                                ) : null}
-                            </div>
-
-                            <div className={style_profile.detail_user}>
-                                {isEditing ? (
-                                    <>
-                                        <span className={style_profile.title}>Confirm Password</span>
-                                        <Password
-                                            type="text"
-                                            className={style_profile.input_edit}
-                                            hideIcon
-                                            value={confirmPassword}
-                                            onChange={(e) => setConfirmPassword(e.target.value)}
-                                        />
-                                    </>
-                                ) : null}
-                            </div>
+                            {['Old Password', 'New Password', 'Confirm Password'].map((label, index) => (
+                                <div key={index} className={style_profile.detail_user}>
+                                    {isEditing && (
+                                        <>
+                                            <span className={style_profile.title}>{label}</span>
+                                            {isLoading ? (
+                                                <Skeleton width="200px" height="2rem" />
+                                            ) : (
+                                                <Password
+                                                    type="text"
+                                                    className={style_profile.input_edit}
+                                                    value={index === 0 ? oldPassword : index === 1 ? newPassword : confirmPassword}
+                                                    onChange={(e) => {
+                                                        if (index === 0) setOldPassword(e.target.value);
+                                                        else if (index === 1) setNewPassword(e.target.value);
+                                                        else setConfirmPassword(e.target.value);
+                                                    }}
+                                                    hideIcon={index === 2}
+                                                />
+                                            )}
+                                        </>
+                                    )}
+                                </div>
+                            ))}
                         </div>
-                        {isEditing ? (
-
+                        {isEditing && !isLoading && (
                             <Button
                                 text
                                 icon="pi pi-pen-to-square"
@@ -266,12 +214,12 @@ export default function Security() {
                                 label="Save Password"
                                 disabled={!isEditing}
                                 onClick={() => handleSave()}
-                            />) : null}
-
-
+                            />
+                        )}
                     </div>
                 </div>
             </div>   <Toast ref={toast} />
         </>
     )
 }
+

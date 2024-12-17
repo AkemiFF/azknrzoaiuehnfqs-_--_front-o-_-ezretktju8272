@@ -39,13 +39,13 @@ export default function DashBoard() {
             labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             datasets: [
                 {
-                    label: "New booking",
+                    label: "New travel",
                     backgroundColor: "#D4E4E2",
                     borderColor: "#D4E4E2",
                     data: [40, 88, 60, 87, 36, 36, 30]
                 },
                 {
-                    label: "Confirmed booking",
+                    label: "Confirmed travel",
                     backgroundColor: "#305555",
                     borderColor: "#305555",
                     data: [43, 44, 74, 52, 29, 96, 24]
@@ -143,7 +143,7 @@ export default function DashBoard() {
             labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
             datasets: [
                 {
-                    label: "New booking",
+                    label: "New travel",
                     backgroundColor: "rgba(48, 85, 85,0.2)",
                     borderColor: "#305555",
                     data: [40, 88, 60, 87, 36, 36, 30],
@@ -223,15 +223,15 @@ export default function DashBoard() {
     return (
         <>
             <Head>
-                <title>Dashboard - Accommodation</title>
+                <title>Dashboard - Tour</title>
             </Head>
 
             <div className={style.top_container}>
                 <div className={style.top_container_title_container}>
                     <span className={style.top_container_title}>Dashboard</span>
-                    <span className={style.top_container_subtitle}>Carlton Hotel</span>
+                    <span className={style.top_container_subtitle}>Tour de voyage</span>
                 </div>
-                <Button onClick={() => router.push("/responsable/accommodation/addNewRoom")} label="+ Add new room" className={style.button_add} />
+                <Button onClick={() => router.push("/responsable/tour/addTrip")} label="+ Add new travel" className={style.button_add} />
             </div>
 
 
@@ -248,7 +248,7 @@ export default function DashBoard() {
                         <div className={style.card_detail}>
                             <i className="pi pi-calendar" style={{ fontSize: "32px" }} />
                             <div className={style.card_detail_text}>
-                                <span className={style.card_detail_title}>Total Booking</span>
+                                <span className={style.card_detail_title}>Total tour de voyage</span>
                                 <span className={style.card_detail_value}>{totalStat?.booking_count}</span>
                             </div>
                         </div>
@@ -261,17 +261,17 @@ export default function DashBoard() {
                         </div>
                     </div>
 
-                    <span>All booking</span>
+                    <span>All travels</span>
 
                     <div className={style.detail_dashboard}>
-                        <span className={style.detail_dashboard_title}>Booking state</span>
+                        <span className={style.detail_dashboard_title}>Tour state</span>
                         <div className={style.card}>
                             <Chart type="bar" data={barData} options={barOptions} />
                         </div>
                     </div>
 
                     <div className={style.detail_dashboard}>
-                        <span className={style.detail_dashboard_title}>Recent Booking</span>
+                        <span className={style.detail_dashboard_title}>Recent tour</span>
                         <div className={style.card}>
                             <DataTable value={recentBooking}>
                                 <Column sortable field="id" header="No" />

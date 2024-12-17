@@ -350,7 +350,7 @@ export default function Info() {
             </Head>
 
             <div className={style.container}>
-                <SideBarMenu menu={menu} />
+                <SideBarMenu menu={menu} router={router} />
                 <div className={style_image.right_body_container}>
 
                     <div className="card">

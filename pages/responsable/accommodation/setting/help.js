@@ -75,7 +75,7 @@ export default function Help() {
             </Head>
 
             <div className={style.container}>
-                <SideBarMenu menu={menu} />
+                <SideBarMenu menu={menu} router={router} />
                 <div className={style.right_body_container}>
                     <br />
                     <span className={style.left_top_title}>Base section</span>
