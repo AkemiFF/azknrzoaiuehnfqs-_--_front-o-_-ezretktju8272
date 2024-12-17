@@ -15,7 +15,7 @@ export default function AppFooter() {
                             <Image src={"/images/logo-aftrip.png"} alt='Logo' width={100} height={106} />
                         </Link>
                         <span className={style.about_aftrip_label}>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus corporis sed expedita
+                        Aftrip est une plateforme de destination touristique pour ceux qui recherchent des expériences authentiques et responsables, visant à promouvoir la richesse culturelle de chaque région, en facilitant la découverte des trésors cachés, qu'il s'agisse d'hôtels uniques ou de voyages organisés par des experts locaux.
                         </span>
                     </div>
                     <div className={style.about_menu1}>
