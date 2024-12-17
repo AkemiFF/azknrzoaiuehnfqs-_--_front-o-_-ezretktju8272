@@ -1,6 +1,6 @@
 const UrlConfig = {
-    // apiBaseUrl: 'https://api.craft-aftrip.com',
-    apiBaseUrl: 'http://127.0.0.1:8000',
+    apiBaseUrl: 'https://api.craft-aftrip.com',
+    // apiBaseUrl: 'http://127.0.0.1:8000',
     // apiBaseUrl: 'http://192.168.88.57:8000',
     // apiBaseUrl: 'http://127.0.0.1:8000',
     adminUrl: '/admin',
