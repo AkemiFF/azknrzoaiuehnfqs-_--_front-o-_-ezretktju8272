@@ -5,11 +5,14 @@
     gap: 40px;
 }
 
-.left_container {
+.sidebar_container {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    width: 200px;
+    width: 250px;
+    /* Largeur fixe */
+    flex-shrink: 0;
+    /* Empêche la sidebar de rétrécir */
 }
 
 .left_top_container {
@@ -24,6 +27,7 @@
     letter-spacing: -2px;
     font-weight: 100;
     font-style: oblique;
+    width: 200px;
     color: #305555;
 }
 
@@ -50,43 +54,17 @@
 
 .right_body_container {
     width: 100%;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
+    flex: 1;
+    min-width: 0;
+    /* Permet au contenu de rétrécir si nécessaire */
 }
 
-.button_edit {
-    color: #305555;
-    border: 2px solid #305555;
-    transition: all 0.3s ease;
-}
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
 
-.button_edit:hover {
-    background-color: #305555;
-    color: #fff;
-}
-
-.button_save {
-    background-color: #305555;
-    color: #fff;
-}
-
-.button_save:hover {
-    background-color: #264444;
-}
-
-.button_cancel {
-    color: #e74c3c;
-    border: 2px solid #e74c3c;
-}
-
-.button_cancel:hover {
-    background-color: #e74c3c;
-    color: #fff;
-}
-
-.divider {
-    margin: 20px 0;
-    border-color: rgba(48, 85, 85, 0.2);
+    .sidebar_container {
+        width: 100%;
+    }
 }
