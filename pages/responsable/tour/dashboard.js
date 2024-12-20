@@ -1,7 +1,9 @@
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
 import style from '@/style/pages/responsable/tour/dashboard.module.css';
+import BookingChartCard from "@/util/BookingChartCard";
 import UrlConfig from "@/util/config";
 import { getResponsableAccessToken } from "@/util/Cookies";
+import totalBookingTour from "@/util/TotalBookingTour";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Button } from "primereact/button";
@@ -17,11 +19,14 @@ export default function DashBoard() {
     const [barData, setBarData] = useState({});
     const [barOptions, setBarOptions] = useState({});
 
-    const [barHorizontalData, setBarHorizontalData] = useState({});
-    const [barHorizontalOptions, setBarHorizontalOptions] = useState({});
-
     const [lineData, setLineData] = useState({});
     const [lineOptions, setLineOptions] = useState({});
+
+    const [barHorizontalData, setBarHorizontalData] = useState({
+        labels: [],
+        datasets: []
+    });
+
 
     const [recentBooking, setRecentBooking] = useState([
         { id: "#41", name: "Paul Adamas", room: "203", guests: "2", check_in: "07-07-2024", check_out: "08-07-2024" },
@@ -30,10 +35,6 @@ export default function DashBoard() {
         { id: "#41", name: "Paul Adamas", room: "203", guests: "2", check_in: "07-07-2024", check_out: "08-07-2024" },
         { id: "#41", name: "Paul Adamas", room: "203", guests: "2", check_in: "07-07-2024", check_out: "08-07-2024" }
     ])
-    useEffect(() => {
-        const x = getResponsableAccessToken()
-        console.log(x);
-    }, []);
     useEffect(() => {
         const data = {
             labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
@@ -89,7 +90,10 @@ export default function DashBoard() {
 
         setBarData(data);
         setBarOptions(options);
+
+
         const dataHorizontal = {
+
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
             datasets: [
                 {
@@ -136,7 +140,6 @@ export default function DashBoard() {
             }
         };
         setBarHorizontalData(dataHorizontal);
-        setBarHorizontalOptions(optionsHorizontal);
 
 
         const dataLine = {
@@ -287,7 +290,7 @@ export default function DashBoard() {
                 <div className={style.right_container}>
                     <Calendar inline showWeek />
                     <div className={style.card}>
-                        <Chart type="bar" data={barHorizontalData} options={barHorizontalOptions} />
+                        <BookingChartCard />
                     </div>
                     <div className={style.card}>
                         <Chart type="line" data={lineData} options={lineOptions} />

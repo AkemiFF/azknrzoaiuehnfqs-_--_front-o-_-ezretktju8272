@@ -1,5 +1,5 @@
 import Head from "next/head";
-import style from './../../../style/pages/responsable/tour/booking.module.css';
+import style from '@/style/pages/responsable/tour/booking.module.css';
 import { Button } from "primereact/button";
 import { useEffect, useState , useContext } from "react";
 import { DataTable } from "primereact/datatable";

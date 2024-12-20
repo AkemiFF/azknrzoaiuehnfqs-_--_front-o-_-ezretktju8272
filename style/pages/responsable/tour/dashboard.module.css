@@ -112,6 +112,102 @@
     gap: 20px;
 }
 
+/* .card {
+    background: #ffffff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+} */
+
+.skeletonContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 400px;
+    /* Adjust based on your chart's typical height */
+}
+
+.skeletonHeader {
+    margin-bottom: 1rem;
+}
+
+.skeletonChart {
+    flex-grow: 1;
+    display: flex;
+    align-items: flex-end;
+    gap: 0.5rem;
+    padding-top: 2rem;
+    /* Space for "y-axis" labels */
+    padding-bottom: 2rem;
+    /* Space for "x-axis" labels */
+}
+
+.skeletonBar {
+    flex-grow: 1;
+    background-color: #f0f0f0;
+    /* Light grey color for bars */
+    border-radius: 4px 4px 0 0;
+}
+
+.skeletonXAxis {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.5rem;
+}
+
+.skeletonXLabel {
+    width: 30px;
+    height: 12px;
+}
+
+.skeletonYAxis {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.5rem;
+    bottom: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    pointer-events: none;
+}
+
+.skeletonYLabel {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #666;
+}
+
+.skeletonYLabelText {
+    min-width: 24px;
+    /* Ensure consistent width for all labels */
+}
+
+.skeletonLegend {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.skeletonLegendItem {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skeletonLegendColor {
+    width: 20px;
+    height: 20px;
+    border-radius: 4px;
+}
+
+.skeletonLegendLabel {
+    width: 60px;
+    height: 12px;
+}
+
 @media screen and (max-width: 1000px) {
     .container {
         display: inline;
