@@ -41,16 +41,16 @@ export default async function handler(req, res) {
     ];
 
 
-    let sitemapXml = '<?xml version="1.0" encoding="UTF-8"?>\n';
-    sitemapXml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
+    let sitemapXml = '<?xml version="1.0" encoding="UTF-8"?>';
+    sitemapXml += '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">';
 
     sitemap.forEach((url) => {
-        sitemapXml += `<url>\n`;
-        sitemapXml += `<loc>${url.url}</loc>\n`;
-        sitemapXml += `<lastmod>${url.lastModified}</lastmod>\n`;
-        sitemapXml += `<changefreq>${url.changeFrequency}</changefreq>\n`;
-        sitemapXml += `<priority>${url.priority}</priority>\n`;
-        sitemapXml += `</url>\n`;
+        sitemapXml += `<url>`;
+        sitemapXml += `<loc>${url.url}</loc>`;
+        sitemapXml += `<lastmod>${url.lastModified}</lastmod>`;
+        sitemapXml += `<changefreq>${url.changeFrequency}</changefreq>`;
+        sitemapXml += `<priority>${url.priority}</priority>`;
+        sitemapXml += `</url>`;
     });
 
     sitemapXml += '</urlset>';
