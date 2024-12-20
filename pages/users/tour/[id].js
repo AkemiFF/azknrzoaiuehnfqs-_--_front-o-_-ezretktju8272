@@ -1,19 +1,20 @@
+import DetailTravel from "@/components/card/DetailTravel";
+import PopularTripCard from "@/components/card/PopularTripCard";
+import FilterTour from "@/components/FilterTour";
+import GallerieVoyage from "@/components/GallerieVoyage";
+import TripModal from "@/components/modal/TripModal";
+import PayPalScriptLoader from "@/components/PaypalScriptLoad";
+import TimelineEvent from "@/layouts/users/tour/TimelineEvent";
+import { UrlConfig } from "@/util/config";
+import dynamic from "next/dynamic";
 import Head from "next/head";
+import { useRouter } from "next/router";
+import { Avatar } from "primereact/avatar";
+import { Button } from "primereact/button";
+import { TabPanel, TabView } from "primereact/tabview";
+import { useEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import style from '../../../style/pages/users/tour/id.module.css';
-import FilterTour from "@/components/FilterTour";
-import { Button } from "primereact/button";
-import GallerieVoyage from "@/components/GallerieVoyage";
-import { TabPanel, TabView } from "primereact/tabview";
-import DetailTravel from "@/components/card/DetailTravel";
-import dynamic from "next/dynamic";
-import TimelineEvent from "@/layouts/users/tour/TimelineEvent";
-import { Avatar } from "primereact/avatar";
-import PopularTripCard from "@/components/card/PopularTripCard";
-import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
-import { UrlConfig } from "@/util/config";
-import TripModal from "@/components/modal/TripModal";
 
 const Map = dynamic(() => import('@/components/Map'), { ssr: false });
 
@@ -73,7 +74,7 @@ export default function InfoTour() {
     };
 
     return (
-        <>
+        <><PayPalScriptLoader />
             <Head>
                 <title>Info {t("tour")}</title>
             </Head>

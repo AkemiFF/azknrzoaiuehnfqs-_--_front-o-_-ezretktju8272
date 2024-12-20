@@ -1,24 +1,25 @@
-import Head from "next/head";
-import style from './../../../style/pages/users/accommodation/id.module.css';
-import { Image } from "primereact/image";
-import { Button } from "primereact/button";
-import GallerieHotel from "@/components/GallerieHotel";
-import { TabPanel, TabView } from "primereact/tabview";
-import dynamic from "next/dynamic";
-import { Rating } from "primereact/rating";
-import { Divider } from "primereact/divider";
-import { ScrollPanel } from "primereact/scrollpanel";
-import BookingModal from "../../../components/modal/BookingModal";
-import { useContext, useEffect, useRef, useState } from "react";
-import DetailChambre from "@/components/modal/DetailChambre";
 import Filter from "@/components/Filter";
-import { useRouter } from "next/router";
-import { UrlConfig } from "@/util/config";
-import { FloatLabel } from 'primereact/floatlabel';
-import { InputNumber } from "primereact/inputnumber";
-import { Calendar } from "primereact/calendar";
-import { Toast } from "primereact/toast";
+import GallerieHotel from "@/components/GallerieHotel";
+import DetailChambre from "@/components/modal/DetailChambre";
+import PayPalScriptLoader from "@/components/PaypalScriptLoad";
 import LayoutContext from '@/layouts/context/layoutContext';
+import { UrlConfig } from "@/util/config";
+import dynamic from "next/dynamic";
+import Head from "next/head";
+import { useRouter } from "next/router";
+import { Button } from "primereact/button";
+import { Calendar } from "primereact/calendar";
+import { Divider } from "primereact/divider";
+import { FloatLabel } from 'primereact/floatlabel';
+import { Image } from "primereact/image";
+import { InputNumber } from "primereact/inputnumber";
+import { Rating } from "primereact/rating";
+import { ScrollPanel } from "primereact/scrollpanel";
+import { TabPanel, TabView } from "primereact/tabview";
+import { Toast } from "primereact/toast";
+import { useContext, useEffect, useRef, useState } from "react";
+import BookingModal from "../../../components/modal/BookingModal";
+import style from './../../../style/pages/users/accommodation/id.module.css';
 
 
 
@@ -251,6 +252,7 @@ export default function HotelInfos() {
 
     return (
         <>
+            <PayPalScriptLoader />
             <Head>
                 <title>Accommodation</title>
             </Head>
