@@ -55,5 +55,5 @@ export default async function handler(req, res) {
 
     sitemapXml += '</urlset>';
     res.setHeader("Content-Type", "application/xml");
-    res.status(200).json(sitemapXml);
+    res.status(200).send(sitemapXml);
 }
