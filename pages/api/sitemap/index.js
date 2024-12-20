@@ -3,31 +3,31 @@ export default async function handler(req, res) {
     const sitemap = [
         {
             url: 'https://craft-aftrip.com',
-            lastModified: new Date().toISOString(),
+            lastModified: new Date().toISOString().split('T')[0],
             changeFrequency: 'daily',
             priority: 1,
         },
         {
             url: 'https://craft-aftrip.com/users',
-            lastModified: new Date().toISOString(),
+            lastModified: new Date().toISOString().split('T')[0],
             changeFrequency: 'daily',
             priority: 1,
         },
         {
             url: 'https://craft-aftrip.com/users/accommodation',
-            lastModified: new Date().toISOString(),
+            lastModified: new Date().toISOString().split('T')[0],
             changeFrequency: 'daily',
             priority: 0.8,
         },
         {
             url: 'https://craft-aftrip.com/users/tour',
-            lastModified: new Date().toISOString(),
+            lastModified: new Date().toISOString().split('T')[0],
             changeFrequency: 'daily',
             priority: 0.8,
         },
         {
             url: 'https://craft-aftrip.com/users/about',
-            lastModified: new Date().toISOString(),
+            lastModified: new Date().toISOString().split('T')[0],
             changeFrequency: 'monthly',
             priority: 0.5,
         },
