@@ -1,14 +1,16 @@
+import { OperatorCardSkeleton } from "@/components/card/OperatorCardSkeleton";
+import PopularTripCard from "@/components/card/PopularTripCard";
+import PopularTripCardSkeleton from "@/components/card/PopularTripCardSkeleton";
 import FilterTour from "@/components/FilterTour";
+import { UrlConfig } from "@/util/config";
 import Head from "next/head";
+import Link from "next/link";
+import { useRouter } from "next/router";
+import { Button } from "primereact/button";
+import { Image } from "primereact/image";
+import React, { useEffect, useState } from 'react';
 import { useTranslation } from "react-i18next";
 import style from './../../../style/pages/users/tour/tour.module.css';
-import { Image } from "primereact/image";
-import { Button } from "primereact/button";
-import { useRouter } from "next/router";
-import PopularTripCard from "@/components/card/PopularTripCard";
-import Link from "next/link";
-import { UrlConfig } from "@/util/config";
-import React, { useState, useEffect } from 'react';
 
 export default function Tour() {
     const router = useRouter();
@@ -42,9 +44,7 @@ export default function Tour() {
             .catch(error => console.log(error));
     }, []);
 
-    if (loadingVoyages || loadingOperators) {
-        return <div>Loading...</div>;
-    }
+
 
     return (
         <>
@@ -148,17 +148,23 @@ export default function Tour() {
                 <div className={style.suggestion_container}>
                     <div className={style.suggestion_title_container}>
                         <span className={style.suggestion_title}>Popular trip at the moment</span>
-                        <span className={style.suggestion_subtitle}>Don’t wait until tomorrow! Discover your adventure now and feel the sensation of closeness to nature around you here in Madagascar. To get the best adventure, you just need to leave and go where you like.</span>
+                        <span className={style.suggestion_subtitle}>Don&apos;t wait until tomorrow! Discover your adventure now and feel the sensation of closeness to nature around you here in Madagascar. To get the best adventure, you just need to leave and go where you like.</span>
                     </div>
-                    <div className={style.suggestion_item_container}>
-                        {popular_voyage.map(voyage => (
+                </div>
+                <div className={style.suggestion_item_container}>
+                    {loadingVoyages
+                        ? Array(4).fill(0).map((_, index) => (
+                            <PopularTripCardSkeleton key={index} />
+                        ))
+                        : popular_voyage.map(voyage => (
                             <PopularTripCard
                                 key={voyage.id}
                                 voyage={voyage}
                             />
-                        ))}
-                    </div>
+                        ))
+                    }
                 </div>
+
 
                 <div className={style.group_trip_container}>
                     <Image src="/images/tours/group.png" alt="group" imageClassName={style.image_group_trip} />
@@ -172,27 +178,32 @@ export default function Tour() {
                 <div className={style.list_operator_container}>
                     <span className={style.list_operator_title}>{t("popular_operator_tour")}</span>
                     <div className={style.list_operator}>
-                        {popular_operateur.map((operator) => {
-                            const imageUrl = (operator.images_tour[0] ? UrlConfig.apiBaseUrl + operator.images_tour[0]?.image : '/images/default-image.jpg');
+                        {loadingOperators
+                            ? Array(3).fill(0).map((_, index) => (
+                                <OperatorCardSkeleton key={index} />
+                            ))
+                            : popular_operateur.map((operator) => {
+                                const imageUrl = (operator.images_tour[0] ? UrlConfig.apiBaseUrl + operator.images_tour[0]?.image : '/images/default-image.jpg');
 
-                            return (
-                                <Link key={operator.id} href={`/users/tour/operator/${operator.id}`} className={style.operator}>
-                                    <Image
-                                        className={style.image_operator}
-                                        src={imageUrl}
-                                        alt={operator.nom_operateur}
-                                        width={400}
-                                        height={250}
-                                    />
-                                    <div className={style.operator_detail}>
-                                        <span>{operator.nom_operateur}</span>
-                                    </div>
-                                </Link>
-                            );
-                        })}
+                                return (
+                                    <Link key={operator.id} href={`/users/tour/operator/${operator.id}`} className={style.operator}>
+                                        <Image
+                                            className={style.image_operator}
+                                            src={imageUrl}
+                                            alt={operator.nom_operateur}
+                                            width={400}
+                                            height={250}
+                                        />
+                                        <div className={style.operator_detail}>
+                                            <span>{operator.nom_operateur}</span>
+                                        </div>
+                                    </Link>
+                                );
+                            })
+                        }
                     </div>
                 </div>
-            </div>
+            </div >
         </>
     );
 }

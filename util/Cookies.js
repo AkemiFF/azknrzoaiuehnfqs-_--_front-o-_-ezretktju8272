@@ -222,7 +222,7 @@ const customLogin = async (email, password) => {
 };
 
 const COOKIE_OPTIONS = {
-    expires: 5 / 1440, // 5 minutes (en jours)
+    expires: 5 / 1440,
     secure: true,
     sameSite: 'Strict'
 };

@@ -2,12 +2,12 @@ import SideBarMenu from "@/components/SideBarMenu";
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
 import UrlConfig from "@/util/config";
 import { getResponsableAccessToken } from "@/util/Cookies";
-import fetchHotelDetails from "@/util/HotelDetails";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Avatar } from "primereact/avatar";
 import { Button } from "primereact/button";
 import { Divider } from "primereact/divider";
+import { Skeleton } from "primereact/skeleton";
 import { useContext, useEffect, useState } from "react";
 import style from './../../../../style/pages/responsable/accommodation/setting.module.css';
 import style_profile from "./../../../../style/pages/responsable/accommodation/setting/profil.module.css";
@@ -17,7 +17,6 @@ export default function Profil() {
     const { user, setUser } = useContext(ResponsableLayoutContext);
     const { id } = router.query;
 
-    const [nameHotel, setNameHotel] = useState(null);
     const [infosHotel, setInfosHotel] = useState(null);
     const [totalRooms, setTotalRooms] = useState(0);
     const [detailProfil, setDetailProfil] = useState(null);
@@ -34,10 +33,6 @@ export default function Profil() {
             const access = await getResponsableAccessToken();
 
             try {
-                const hotelResponse = await fetchHotelDetails(user.id_etablissement);
-                setNameHotel(hotelResponse);
-
-                // Fetch Detail Responsable
                 const responsableResponse = await fetch(`${UrlConfig.apiBaseUrl}/api/accounts/detail-responsable/${id_responsable}/`, {
                     method: "GET",
                     headers: {
@@ -48,7 +43,7 @@ export default function Profil() {
                 if (!responsableResponse.ok) throw new Error('Failed to fetch responsable details');
                 const responsableData = await responsableResponse.json();
                 setDetailProfil(responsableData);
-
+ 
                 // Fetch Informations Hotels
                 const infoResponse = await fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/info/${id_hebergement}/`, {
                     method: "GET",
@@ -83,8 +78,6 @@ export default function Profil() {
             FetchProfil(id_hebergement, user.id);
         }
     }, [id, user]);
-
-
 
     function handleSave() {
         setIsLoading(true);
@@ -152,14 +145,6 @@ export default function Profil() {
     }
     const menu = 0;
 
-    if (isLoading) {
-        return <div className={style.container}>Loading...</div>;
-    }
-
-    if (error) {
-        return <div className={style.container}>{error}</div>;
-    }
-
     return (
         <>
             <Head>
@@ -167,15 +152,28 @@ export default function Profil() {
             </Head>
 
             <div className={style.container}>
-                <SideBarMenu menu={menu} />
+                <SideBarMenu menu={menu} router={router} />
                 <div className={style.right_body_container}>
                     <div className={style_profile.container}>
                         <div className={style_profile.user_title_container}>
                             <div className={style_profile.user_title_left}>
-                                <Avatar label={detailProfil?.first_name?.[0]} shape="circle" className={style_profile.user_avatar} />
+                                {isLoading ? (
+                                    <Skeleton shape="circle" size="5rem" className={style_profile.user_avatar} />
+                                ) : (
+                                    <Avatar label={detailProfil?.first_name?.[0]} shape="circle" className={style_profile.user_avatar} />
+                                )}
                                 <div className={style_profile.user_title}>
-                                    <span className={style_profile.title}>{detailProfil?.first_name || 'No Name'}</span>
-                                    <span>Manager</span>
+                                    {isLoading ? (
+                                        <>
+                                            <Skeleton width="150px" className={style_profile.title} />
+                                            <Skeleton width="100px" />
+                                        </>
+                                    ) : (
+                                        <>
+                                            <span className={style_profile.title}>{detailProfil?.first_name || 'No Name'}</span>
+                                            <span>Manager</span>
+                                        </>
+                                    )}
                                 </div>
                             </div>
                         </div>
@@ -183,7 +181,9 @@ export default function Profil() {
                         <div className={style_profile.detail_user_container}>
                             <div className={style_profile.detail_user_top_container}>
                                 <span className={style_profile.title}>Personal information</span>
-                                {isEditingPersonal ? (
+                                {isLoading ? (
+                                    <Skeleton width="100px" height="36px" />
+                                ) : isEditingPersonal ? (
                                     <>
                                         <Button
                                             text
@@ -220,7 +220,9 @@ export default function Profil() {
                                 {['first_name', 'last_name', 'email', 'numero_responsable'].map((field) => (
                                     <div key={field} className={style_profile.detail_user}>
                                         <span className={style_profile.title}>{field.replace('_', ' ').charAt(0).toUpperCase() + field.replace('_', ' ').slice(1)}</span>
-                                        {isEditingPersonal && field !== 'email' ? (
+                                        {isLoading ? (
+                                            <Skeleton width="200px" height="24px" />
+                                        ) : isEditingPersonal && field !== 'email' ? (
                                             <input
                                                 type="text"
                                                 className={style_profile.input_edit}
@@ -238,7 +240,9 @@ export default function Profil() {
                         <div className={style_profile.detail_user_container}>
                             <div className={style_profile.detail_user_top_container}>
                                 <span className={style_profile.title}>Hotel information</span>
-                                {isEditingHotel ? (
+                                {isLoading ? (
+                                    <Skeleton width="100px" height="36px" />
+                                ) : isEditingHotel ? (
                                     <>
                                         <Button
                                             text
@@ -283,7 +287,9 @@ export default function Profil() {
                                 ].map(({ label, field }) => (
                                     <div key={field} className={style_profile.detail_user}>
                                         <span className={style_profile.title}>{label}</span>
-                                        {isEditingHotel && field !== 'available_room_count' ? (
+                                        {isLoading ? (
+                                            <Skeleton width="200px" height="24px" />
+                                        ) : isEditingHotel && field !== 'available_room_count' ? (
                                             <input
                                                 type="text"
                                                 className={style_profile.input_edit}

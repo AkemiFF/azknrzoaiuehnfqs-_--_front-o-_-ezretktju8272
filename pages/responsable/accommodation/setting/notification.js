@@ -52,7 +52,7 @@ export default function Notification() {
             </Head>
 
             <div className={style.container}>
-                <SideBarMenu menu={menu} />
+                <SideBarMenu menu={menu} router={router} />
                 <div className={style.right_body_container}>
                     {notifications.map((notification) => (
                         <NotificationTemplate key={notification.id} notification={notification} />
