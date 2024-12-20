@@ -5,6 +5,10 @@ export function middleware(req) {
     const responsable_token = req.cookies.get('responsable_refresh_token');
     const url = req.nextUrl.clone();
 
+    if (url.pathname === '/') {
+        return NextResponse.redirect(new URL('/users', req.url));
+    }
+
     // Redirection pour la page de connexion admin
     if (url.pathname.startsWith('/admin/login')) {
         if (admin_token) {
@@ -28,9 +32,17 @@ export function middleware(req) {
         }
         return NextResponse.next();
     }
+    const response = NextResponse.next()
+
+
+    response.headers.set('X-DNS-Prefetch-Control', 'on')
+    response.headers.set('Strict-Transport-Security', 'max-age=63072000; includeSubDomains; preload')
+    response.headers.set('X-Frame-Options', 'SAMEORIGIN')
+    response.headers.set('X-Content-Type-Options', 'nosniff')
+    response.headers.set('Referrer-Policy', 'origin-when-cross-origin')
 
     // Pour les autres cas
-    return NextResponse.next();
+    return response;
 }
 
 export const config = {
