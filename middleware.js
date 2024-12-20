@@ -5,6 +5,10 @@ export function middleware(req) {
     const responsable_token = req.cookies.get('responsable_refresh_token');
     const url = req.nextUrl.clone();
 
+    if (url.pathname === '/') {
+        return NextResponse.redirect(new URL('/users', req.url));
+    }
+
     // Redirection pour la page de connexion admin
     if (url.pathname.startsWith('/admin/login')) {
         if (admin_token) {

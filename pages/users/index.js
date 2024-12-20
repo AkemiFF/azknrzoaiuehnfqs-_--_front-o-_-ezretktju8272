@@ -1,9 +1,9 @@
-import Head from "next/head";
-import { useTranslation } from "react-i18next";
-import style from './../../style/pages/users/Home.module.css';
 import AppTopbar from "@/layouts/AppTopbar";
+import Head from "next/head";
 import Link from "next/link";
 import { Image } from "primereact/image";
+import { useTranslation } from "react-i18next";
+import style from './../../style/pages/users/Home.module.css';
 
 export default function Home() {
 
@@ -54,9 +54,9 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={style.footer}>
-                    <Link style={{ textDecoration: "none", color: "#fff" }} href={""}>{t("terms_services")}</Link>
+                    <Link style={{ textDecoration: "none", color: "#fff" }} href={"/users/terms"}>{t("terms_services")}</Link>
                     <span>Copyright - 2024</span>
-                    <Link style={{ textDecoration: "none", color: "#fff" }} href={""}>{t("private_policy")}</Link>
+                    <Link style={{ textDecoration: "none", color: "#fff" }} href={"/users/privacy"}>{t("private_policy")}</Link>
                 </div>
             </div>
         </>
