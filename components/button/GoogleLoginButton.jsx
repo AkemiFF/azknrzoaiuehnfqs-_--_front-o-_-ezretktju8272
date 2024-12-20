@@ -1,17 +1,15 @@
+import LayoutContext from "@/layouts/context/layoutContext";
+import style from '@/style/components/button/GoogleButton.module.css';
+import { UrlConfig, firebaseConfig } from "@/util/config";
+import { setTokensInCookies } from "@/util/Cookies";
+import { getCsrfTokenDirect } from "@/util/csrf";
 import { initializeApp } from "firebase/app";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
-import Image from "next/image";
 import Cookies from "js-cookie";
-import React, { useEffect, useState, useRef } from 'react';
-import { getCsrfTokenDirect } from "@/util/csrf";
-import { UrlConfig } from "@/util/config";
-import { Toast } from 'primereact/toast';
-import style from '@/style/components/button/GoogleButton.module.css';
+import Image from "next/image";
 import { Button } from "primereact/button";
-import { useContext } from "react";
-import LayoutContext from "@/layouts/context/layoutContext";
-import { firebaseConfig } from '@/util/config'
-import { setTokensInCookies } from "@/util/Cookies";
+import { Toast } from 'primereact/toast';
+import React, { useContext, useEffect, useRef, useState } from 'react';
 
 const setCookieWithExpiry = (name, value, days, secure = true, sameSite = 'Strict') => {
     const date = new Date();
@@ -91,7 +89,7 @@ export default function GoogleLoginButton() {
     const toast = useRef(null);
 
     const app = initializeApp(firebaseConfig);
-
+    // const analytics = getAnalytics(app);
     const handleSignIn = () => {
         const provider = new GoogleAuthProvider();
         provider.addScope('https://www.googleapis.com/auth/contacts.readonly');
