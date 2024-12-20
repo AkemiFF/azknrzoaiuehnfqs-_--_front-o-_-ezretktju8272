@@ -115,9 +115,17 @@ export default function AddNewRoom() {
 
         // Check if any fields are missing
         if (Object.values(newMissingFields).some(isMissing => isMissing)) {
-            toast.current.show({ severity: 'warn', summary: 'Warning', detail: 'All fields are required', life: 3000 });
+            if (toast.current) { // Vérification de la référence
+                toast.current.show({
+                    severity: 'warn',
+                    summary: 'Warning',
+                    detail: 'All fields are required',
+                    life: 3000
+                });
+            }
             return;
         }
+        
 
         const formData = new FormData();
         formData.append('nom_chambre', document.getElementById('name_input').value);
@@ -181,13 +189,16 @@ export default function AddNewRoom() {
             }
         } catch (error) {
             console.error('Error:', error);
-            toast.current.show({
-                severity: 'error',
-                summary: 'Error',
-                detail: 'Failed to add room',
-                life: 3000
-            });
+            if (toast.current) { // Vérification de la référence
+                toast.current.show({
+                    severity: 'error',
+                    summary: 'Error',
+                    detail: 'Failed to add room',
+                    life: 3000
+                });
+            }
         }
+        
     };
 
     return (
