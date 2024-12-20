@@ -4,7 +4,7 @@
     "button_home_handcraft": "Des saveurs locales, un monde à portée de main. Votre boutique en ligne de confiance pour tous vos besoins.",
     "button_home_tour": "Planifiez vos aventures avec nos partenaires voyagistes, experts dans l'organisation de voyages mémorables. Trouvez et réservez votre prochaine expérience en toute simplicité.",
     "avis_clients_title": "Découvrez les avis de nos clients",
-    "avis_clients_subtitle":"Nos clients partagent leurs expériences et témoignages sur la qualité de nos services et leur satisfaction.",
+    "avis_clients_subtitle": "Nos clients partagent leurs expériences et témoignages sur la qualité de nos services et leur satisfaction.",
     "login": "Connexion",
     "welcome_login": "Bon retour! Veuillez entrer vos détails.",
     "email": "Email",
@@ -320,6 +320,47 @@
     "modifPrivacyText": "Nous nous réservons le droit de modifier cette politique de confidentialité à tout moment. Toute modification sera publiée sur cette page avec une date de mise à jour. Nous vous encourageons à consulter régulièrement cette page pour rester informé de tout changement.",
     "contactUs": "Contact",
     "contactUsText": "Si vous avez des questions ou des préoccupations concernant cette politique de confidentialité ou la manière dont nous traitons vos informations personnelles, vous pouvez nous contacter à l'adresse e-mail du service client ou via le live chat",
+    "terms": {
+        "pageTitle": "Conditions d'Utilisation",
+        "metaDescription": "Conditions d'utilisation d'Aftrip - Votre plateforme de voyage authentique et responsable.",
+        "lastUpdated": "Dernière mise à jour : {{date}}",
+        "acceptance": {
+            "title": "1. Acceptation des Conditions",
+            "content": "En accédant à la plateforme Aftrip, vous acceptez d'être lié par les présentes conditions d'utilisation. Si vous n'acceptez pas ces conditions, veuillez ne pas utiliser notre service."
+        },
+        "services": {
+            "title": "2. Description des Services",
+            "content": "Aftrip est une plateforme de destination touristique qui met en relation les voyageurs avec des expériences authentiques et responsables. Nous facilitons la découverte et la réservation d'hébergements uniques et de voyages organisés par des experts locaux."
+        },
+        "registration": {
+            "title": "3. Inscription et Compte",
+            "content": "Pour utiliser certaines fonctionnalités de notre plateforme, vous devez créer un compte. Vous êtes responsable de maintenir la confidentialité de vos informations de connexion et de toutes les activités qui se produisent sous votre compte."
+        },
+        "booking": {
+            "title": "4. Réservations et Paiements",
+            "content": "Les réservations sont soumises à disponibilité et à confirmation. Les prix sont affichés en devise locale et peuvent être soumis à des taxes supplémentaires. Les conditions d'annulation varient selon les prestataires."
+        },
+        "responsibilities": {
+            "title": "5. Responsabilités",
+            "content": "Aftrip agit en tant qu'intermédiaire entre les voyageurs et les prestataires de services. Nous nous efforçons de vérifier nos partenaires mais ne pouvons être tenus responsables des services fournis par des tiers."
+        },
+        "intellectual": {
+            "title": "6. Propriété Intellectuelle",
+            "content": "Tout le contenu présent sur Aftrip (textes, images, logos) est protégé par des droits de propriété intellectuelle. Toute reproduction sans autorisation est interdite."
+        },
+        "privacy": {
+            "title": "7. Protection des Données",
+            "content": "Nous collectons et traitons vos données conformément à notre politique de confidentialité. En utilisant nos services, vous consentez à notre politique de traitement des données."
+        },
+        "termination": {
+            "title": "8. Résiliation",
+            "content": "Nous nous réservons le droit de suspendre ou de résilier votre accès à nos services en cas de non-respect des présentes conditions."
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "Pour toute question concernant ces conditions d'utilisation, veuillez nous contacter à : "
+        }
+    },
     "policy": {
         "overview": {
             "title": "Aperçu",

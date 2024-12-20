@@ -4,7 +4,7 @@
     "button_home_handcraft": "Local flavors, a world at your fingertips. Your trusted online shop for all your needs.",
     "button_home_tour": "Plan your adventures with our partner tour operators, experts in organizing memorable trips. Find and book your next experience with ease.",
     "avis_clients_title": "Discover our customers' reviews",
-    "avis_clients_subtitle":"Our customers share their experiences and testimonials about the quality of our services and their satisfaction.",
+    "avis_clients_subtitle": "Our customers share their experiences and testimonials about the quality of our services and their satisfaction.",
     "login": "Login",
     "welcome_login": "Welcome back! Please enter your details.",
     "email": "Email",
@@ -320,6 +320,47 @@
     "modifPrivacyText": "We reserve the right to modify this privacy policy at any time. Any changes will be posted on this page with an updated date. We encourage you to periodically review this page to stay informed of any changes.",
     "contactUs": "Contact",
     "contactUsText": "If you have any questions or concerns about this privacy policy or how we treat your personal information, you can contact us at the customer service email or via live chat",
+    "terms": {
+        "pageTitle": "Terms of Use",
+        "metaDescription": "Terms of Use for Aftrip - Your platform for authentic and responsible travel experiences.",
+        "lastUpdated": "Last updated: {{date}}",
+        "acceptance": {
+            "title": "1. Acceptance of Terms",
+            "content": "By accessing the Aftrip platform, you agree to be bound by these terms of use. If you do not accept these terms, please do not use our service."
+        },
+        "services": {
+            "title": "2. Service Description",
+            "content": "Aftrip is a tourism destination platform that connects travelers with authentic and responsible experiences. We facilitate the discovery and booking of unique accommodations and tours organized by local experts."
+        },
+        "registration": {
+            "title": "3. Registration and Account",
+            "content": "To use certain features of our platform, you must create an account. You are responsible for maintaining the confidentiality of your login information and for all activities that occur under your account."
+        },
+        "booking": {
+            "title": "4. Bookings and Payments",
+            "content": "Bookings are subject to availability and confirmation. Prices are displayed in local currency and may be subject to additional taxes. Cancellation policies vary by service provider."
+        },
+        "responsibilities": {
+            "title": "5. Responsibilities",
+            "content": "Aftrip acts as an intermediary between travelers and service providers. While we strive to verify our partners, we cannot be held responsible for services provided by third parties."
+        },
+        "intellectual": {
+            "title": "6. Intellectual Property",
+            "content": "All content on Aftrip (text, images, logos) is protected by intellectual property rights. Any reproduction without authorization is prohibited."
+        },
+        "privacy": {
+            "title": "7. Data Protection",
+            "content": "We collect and process your data in accordance with our privacy policy. By using our services, you consent to our data processing policy."
+        },
+        "termination": {
+            "title": "8. Termination",
+            "content": "We reserve the right to suspend or terminate your access to our services if you fail to comply with these terms."
+        },
+        "contact": {
+            "title": "Contact",
+            "content": "For any questions regarding these terms of use, please contact us at: "
+        }
+    },
     "policy": {
         "overview": {
             "title": "Overview",
