@@ -218,7 +218,7 @@ export default function InfoTour() {
                     </div>
                 </div>
                 <div className={style.suggestion_container}>
-                    <span className={style.suggestion_title}>{t("you_would_like_it")}</span>
+                    <span className={style.suggestion_title}>{/* t("you_would_like_it") */}</span>
                     <div className={style.suggestion_body}>
                         {popularVoyages.map((popularVoyage) => (
                             <PopularTripCard key={popularVoyage.id} voyage={popularVoyage} />
