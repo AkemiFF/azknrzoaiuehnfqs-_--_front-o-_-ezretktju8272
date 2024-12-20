@@ -1,12 +1,7 @@
 
 export default async function handler(req, res) {
+
     const sitemap = [
-        {
-            url: 'https://craft-aftrip.com',
-            lastModified: new Date().toISOString().split('T')[0],
-            changeFrequency: 'daily',
-            priority: 1,
-        },
         {
             url: 'https://craft-aftrip.com/users',
             lastModified: new Date().toISOString().split('T')[0],
@@ -31,13 +26,42 @@ export default async function handler(req, res) {
             changeFrequency: 'monthly',
             priority: 0.5,
         },
-        // Ajoutez des routes dynamiques ici, par exemple :
-        // ...tours.map((tour) => ({
-        //   url: `https://craft-aftrip.com/tour/${tour.slug}`,
-        //   lastModified: new Date(tour.updatedAt).toISOString(),
-        //   changeFrequency: 'weekly',
-        //   priority: 0.7,
-        // })),
+        {
+            url: 'https://craft-aftrip.com/users/privacy',
+            lastModified: new Date().toISOString().split('T')[0],
+            changeFrequency: 'monthly',
+            priority: 0.5,
+        },
+        {
+            url: 'https://craft-aftrip.com/users/register',
+            lastModified: new Date().toISOString().split('T')[0],
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: 'https://craft-aftrip.com/users/login',
+            lastModified: new Date().toISOString().split('T')[0],
+            changeFrequency: 'monthly',
+            priority: 0.7,
+        },
+        {
+            url: 'https://craft-aftrip.com/users/faq',
+            lastModified: new Date().toISOString().split('T')[0],
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
+        {
+            url: 'https://craft-aftrip.com/users/forgot',
+            lastModified: new Date().toISOString().split('T')[0],
+            changeFrequency: 'monthly',
+            priority: 0.6,
+        },
+        {
+            url: 'https://craft-aftrip.com/users/etablissement/login',
+            lastModified: new Date().toISOString().split('T')[0],
+            changeFrequency: 'weekly',
+            priority: 0.7,
+        },
     ];
 
 
