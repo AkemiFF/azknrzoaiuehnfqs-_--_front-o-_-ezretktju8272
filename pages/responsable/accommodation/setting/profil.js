@@ -2,7 +2,6 @@ import SideBarMenu from "@/components/SideBarMenu";
 import ResponsableLayoutContext from "@/layouts/context/responsableLayoutContext";
 import UrlConfig from "@/util/config";
 import { getResponsableAccessToken } from "@/util/Cookies";
-import fetchHotelDetails from "@/util/HotelDetails";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import { Avatar } from "primereact/avatar";
@@ -18,7 +17,6 @@ export default function Profil() {
     const { user, setUser } = useContext(ResponsableLayoutContext);
     const { id } = router.query;
 
-    const [nameHotel, setNameHotel] = useState(null);
     const [infosHotel, setInfosHotel] = useState(null);
     const [totalRooms, setTotalRooms] = useState(0);
     const [detailProfil, setDetailProfil] = useState(null);
@@ -35,10 +33,6 @@ export default function Profil() {
             const access = await getResponsableAccessToken();
 
             try {
-                const hotelResponse = await fetchHotelDetails(user.id_etablissement);
-                setNameHotel(hotelResponse);
-
-                // Fetch Detail Responsable
                 const responsableResponse = await fetch(`${UrlConfig.apiBaseUrl}/api/accounts/detail-responsable/${id_responsable}/`, {
                     method: "GET",
                     headers: {
@@ -49,7 +43,7 @@ export default function Profil() {
                 if (!responsableResponse.ok) throw new Error('Failed to fetch responsable details');
                 const responsableData = await responsableResponse.json();
                 setDetailProfil(responsableData);
-
+ 
                 // Fetch Informations Hotels
                 const infoResponse = await fetch(`${UrlConfig.apiBaseUrl}/api/hebergement/info/${id_hebergement}/`, {
                     method: "GET",
