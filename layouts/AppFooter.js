@@ -15,7 +15,7 @@ export default function AppFooter() {
                             <Image src={"/images/logo-aftrip.png"} alt='Logo' width={100} height={106} />
                         </Link>
                         <span className={style.about_aftrip_label}>
-                        Aftrip est une plateforme de destination touristique pour ceux qui recherchent des expériences authentiques et responsables, visant à promouvoir la richesse culturelle de chaque région, en facilitant la découverte des trésors cachés, qu'il s'agisse d'hôtels uniques ou de voyages organisés par des experts locaux.
+                            Aftrip est une plateforme de destination touristique pour ceux qui recherchent des expériences authentiques et responsables, visant à promouvoir la richesse culturelle de chaque région, en facilitant la découverte des trésors cachés, qu&apos;il s&apos;agisse d&apos;hôtels uniques ou de voyages organisés par des experts locaux.
                         </span>
                     </div>
                     <div className={style.about_menu1}>
@@ -44,7 +44,7 @@ export default function AppFooter() {
                             <Link style={{ textDecoration: "none" }} href={"/users/faq"}>
                                 <span className={style.about_menu_item}>FAQs</span>
                             </Link>
-                            <Link style={{ textDecoration: "none" }} href={"/users"}>
+                            <Link style={{ textDecoration: "none" }} href={"/users/terms"}>
                                 <span className={style.about_menu_item}>{t("terms_services")}</span>
                             </Link>
                             <Link style={{ textDecoration: "none" }} href={"/users/privacy"}>
@@ -70,7 +70,7 @@ export default function AppFooter() {
                             <Link style={{ textDecoration: "none" }} href={"/users"}>
                                 <div className={style.about_info_item}>
                                     <Image src={"/images/footer/mail.svg"} alt='location_icon' width={14} height={14} />
-                                    <span>support@gmail.com</span>
+                                    <span>support@craft-aftrip.com</span>
                                 </div>
                             </Link>
                         </div>
@@ -100,7 +100,7 @@ export default function AppFooter() {
                     </div>
                 </div>
 
-                <span className={style.copyright}>Copyright 2024 - All rights reserved</span>
+                <span className={style.copyright}>Copyright 2025 - All rights reserved</span>
             </div>
         </div>
     );
