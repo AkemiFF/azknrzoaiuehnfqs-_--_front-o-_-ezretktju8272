@@ -2,14 +2,18 @@
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // async rewrites() {
-  //   return [
-  //     {
-  //       source: '/dashboard/:path*',
-  //       destination: '/admin/:path*',
-  //     },
-  //   ];
-  // },
+  async rewrites() {
+    return [
+      {
+        source: '/sitemap.xml',
+        destination: '/api/sitemap',
+      },
+      {
+        source: '/robots.xml',
+        destination: '/api/robots',
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
